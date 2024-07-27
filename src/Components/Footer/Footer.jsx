@@ -1,0 +1,19 @@
+import React from 'react';
+import { Box, Container } from '@mui/material';
+
+const Footer = () => {
+  return (
+    <Container>
+      <Box 
+        sx={{ 
+          p: 2,  // padding: 16px
+          m: 2   // margin: 16px
+        }}
+      >
+Footer
+      </Box>
+    </Container>
+  );
+};
+
+export default Footer;
