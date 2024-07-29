@@ -1,12 +1,13 @@
 import React from "react";
-import Button from "@mui/material/Button";
 import "@fontsource/poppins";
-import Home from "./Components/Home/Home";
+import Navbar from "./Components/Navabar/Navbar";
+import HomePage from "./Components/Home/HomePage/HomePage";
 
 const App = () => {
   return (
     <>
-      <Home />
+      <Navbar />
+      <HomePage />
     </>
   );
 };
