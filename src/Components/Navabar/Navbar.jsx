@@ -32,14 +32,14 @@ const Navbar = () => {
   return (
     <div className="flex justify-center items-center ">
       <AppBar
-        className="bg-transparent shadow-none border-none m-2 p-2 flex justify-center"
+        className="bg-transparent shadow-none border-none mt-2 pt-2 flex justify-center"
         position="fixed"
       >
         <Toolbar className="align-middle">
           <Avatar
             alt="64 FRAMEZ"
             src={logoImg}
-            sx={{ height: "137px", width: "137px" }}
+            sx={{ height: "100px", width: "100px" }}
           />
 
           {isMatch ? (
@@ -65,7 +65,7 @@ const Navbar = () => {
               </Tabs>
               <Button
                 variant="contained"
-                className="text-buttonTextColor bg-buttonBgColor ml-4"
+                className="text-buttonTextColor bg-buttonBgColor ml-2"
                 sx={{ borderRadius: "5px" }}
               >
                 Let's Talk
