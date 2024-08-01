@@ -5,7 +5,8 @@ module.exports = {
   important: "#root",
   theme: {
     screens: {
-      xs: { max: "639px" },
+      "2xs": { max: "424px" },
+      xs: { min: "425px" },
       sm: { min: "640px" },
       md: { min: "768px" },
       lg: { min: "1024px" },

@@ -2,13 +2,11 @@ import React from "react";
 import { Box } from "@mui/material";
 import { styled, keyframes } from "@mui/system";
 
-// Keyframes for the scrolling animation
 const scroll = keyframes`
   0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+  100% { transform: translateX(-50%); }
 `;
 
-// Styled component for the scrolling container
 const ScrollingContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   overflow: "hidden",
@@ -23,7 +21,7 @@ const images = [
   "src/assets/ScrollingCompo/blender.png",
   "src/assets/ScrollingCompo/photoshop.png",
   "src/assets/ScrollingCompo/illustrator.png",
-  "src/assets/ScrollingCompo/premierpro.png",
+  "src/assets/ScrollingCompo/premierepro.png",
   "src/assets/ScrollingCompo/aftereffects.png",
   "src/assets/ScrollingCompo/animator.png",
   "src/assets/ScrollingCompo/jitter.png",
@@ -38,24 +36,69 @@ const images = [
 
 const ScrollingCompo = () => {
   return (
-    <Box className="relative w-full h-64 overflow-hidden flex justify-center">
-      <ScrollingContainer className="absolute w-max self-center">
+    <Box className="relative w-full h-64 overflow-hidden flex justify-center items-center">
+      <Box className="absolute left-0 top-0 h-full w-40 bg-gradient-to-r from-backgroundColor via-transparent to-transparent rounded-full z-10" />
+      <Box className="absolute right-0 top-0 h-full w-40 bg-gradient-to-l from-backgroundColor via-transparent to-transparent rounded-full z-10" />
+
+      <ScrollingContainer className="absolute w-max ">
         {images.map((src, index) => (
           <Box
-            key={index}
+            key={`image-${index}`}
             component="img"
             src={src}
-            alt={`Image ${index + 1}`}
-            className="h-full m-2"
+            alt={`Image ${index}`}
+            className="mx-2"
+            sx={{
+              height: "64px",
+              width: "64px",
+              objectFit: "cover",
+              objectPosition: "center",
+            }}
           />
         ))}
         {images.map((src, index) => (
           <Box
-            key={index + images.length}
+            key={`image-duplicate-${index}`}
             component="img"
             src={src}
             alt={`Image ${index + 1}`}
-            className="h-full m-2"
+            className="mx-2"
+            sx={{
+              height: "64px",
+              width: "64px",
+              objectFit: "cover",
+              objectPosition: "center",
+            }}
+          />
+        ))}
+        {images.map((src, index) => (
+          <Box
+            key={`image-duplicate-${index + 2}`}
+            component="img"
+            src={src}
+            alt={`Image ${index + 2}`}
+            className="mx-2"
+            sx={{
+              height: "64px",
+              width: "64px",
+              objectFit: "cover",
+              objectPosition: "center",
+            }}
+          />
+        ))}
+        {images.map((src, index) => (
+          <Box
+            key={`image-duplicate-${index + 3}`}
+            component="img"
+            src={src}
+            alt={`Image ${index + 3}`}
+            className="mx-2"
+            sx={{
+              height: "64px",
+              width: "64px",
+              objectFit: "cover",
+              objectPosition: "center",
+            }}
           />
         ))}
       </ScrollingContainer>

@@ -10,10 +10,60 @@ import {
   CardContent,
   CardMedia,
   CardActions,
+  styled,
 } from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
 import KeyboardArrowRightTwoToneIcon from "@mui/icons-material/KeyboardArrowRightTwoTone";
 import CallMadeIcon from "@mui/icons-material/CallMade";
+
+const HoverCard = styled(Card)(({ theme }) => ({
+  backgroundColor: "#292930",
+  maxWidth: "300px",
+  justifySelf: "center",
+  borderRadius: "30px",
+  flexDirection: "column",
+  opacity: "0.35",
+  transition: "opacity .3s ease-in-out",
+  border: "1px solid #424245",
+  "&:hover": {
+    opacity: "1",
+    "& .hoverButtonText": {
+      width: "auto",
+      opacity: 1,
+      marginLeft: "4px",
+      transition: ".3s ease-in-out",
+    },
+  },
+}));
+
+const CustomButton = styled(Button)(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  overflow: "hidden",
+  whiteSpace: "nowrap",
+  "& .hoverButtonText": {
+    opacity: 0,
+    width: 0,
+    overflow: "hidden",
+    transition: "opacity 0.4s ease, width 0.4s ease",
+  },
+}));
+
+const ColoredButton = styled(Button)(({ theme }) => ({
+  background: "#ffffff",
+  color: "#171717",
+  "&:hover": {
+    backgroundColor: "#5a56e8",
+    color: "#ffffff",
+    transition: ".5s ease",
+    "& #buttonIcon": {
+      color: "#5a56e8",
+      backgroundColor: "#ffffff",
+      transition: ".3s ease",
+    },
+  },
+}));
 
 const ServicesData = [
   {
@@ -26,25 +76,25 @@ const ServicesData = [
     image: "src/assets/Services/motiongraphics.png",
     title: "Motion Graphics",
     description:
-      "We create high-quality, accurate web apps for iOS and Android platforms. ",
+      "Our motion graphics bring your ideas to life with dynamic animations. ",
   },
   {
     image: "src/assets/Services/interiordesign.png",
     title: "Interior Design",
     description:
-      "With our development team, we are here to create the website in a personalized way and with excellent outcomes.",
+      "We create innovative and stylish interior spaces tailored to your needs.",
   },
   {
     image: "src/assets/Services/webdevelopment.png",
     title: "Web Design",
     description:
-      "We have extensive expertise editing videos, and we provide amazing insights into your thoughts.",
+      "Our web designs are user-friendly and visually stunning, enhancing your online presence.",
   },
   {
     image: "src/assets/Services/photography.png",
-    title: "Photography & Cinematography",
+    title: "Photography",
     description:
-      "We create high-quality, accurate web apps for iOS and Android platforms. ",
+      "We capture your moments with professional and creative photography.",
   },
   {
     image: "src/assets/Services/digitalmarketing.png",
@@ -54,21 +104,21 @@ const ServicesData = [
   },
   {
     image: "src/assets/Services/cinematography.png",
-    title: "Photography & Cinematography",
+    title: "Cinematography",
     description:
-      "We create high-quality, accurate web apps for iOS and Android platforms. ",
+      "We have extensive expertise editing videos, and we provide amazing insights into your thoughts.",
   },
   {
     image: "src/assets/Services/3dcinematography.png",
-    title: "Photography & Cinematography",
+    title: "3D Cinematography",
     description:
-      "We create high-quality, accurate web apps for iOS and Android platforms.",
+      "We produce immersive 3D cinematography that captivates and engages viewers.",
   },
 ];
 const Services = ({ cards = ServicesData }) => {
   return (
-    <div className="w-full relative z-10">
-      <Box className="w-full mt-20 md:mt-0 h-[350px] md:h-[250px] blur-[90px] absolute z-[-99] opacity-60 rounded-full bg-gradient-to-r from-[#171717] via-[#f087ff5b] to-[#171717] "></Box>
+    <div className="w-full relative z-10" id="services">
+      <Box className="w-full mt-20 md:mt-0 h-[350px] md:h-[250px] blur-[100px] absolute z-[-99] opacity-60 rounded-full bg-gradient-to-r from-[#171717] via-[#f087ff5b] to-[#171717] "></Box>
 
       <Container maxWidth="lg" className="my-5 p-5 flex flex-col">
         <Box className="flex flex-col md:flex-row my-3 py-2 md-my-2 md:py-1">
@@ -93,25 +143,25 @@ const Services = ({ cards = ServicesData }) => {
               </Typography>
             </div>
           </div>
-          <Button
-            className="text-[16px] bg-buttonBgColor text-buttonTextColor font-poppins font-normal py-4 px-6 md:ml-auto rounded-lg gap-1 mx-auto md:mx-0"
+          <ColoredButton
+            className="text-[16px] font-poppins font-normal py-4 px-6 md:ml-auto rounded-lg gap-1 mx-auto md:mx-0 "
             sx={{
               maxWidth: "255px",
               maxHeight: "62px",
               textTransform: "capitalize",
+              transition: ".3s ease-in-out",
             }}
           >
             Our Services
-            <KeyboardArrowRightTwoToneIcon className=" bg-iconBgColor text-iconColor border-none w-[14px] h-[14px] rounded-lg p-[1px] " />
-          </Button>
+            <KeyboardArrowRightTwoToneIcon
+              className="bg-iconBgColor text-iconColor border-none w-[14px] h-[14px] rounded-lg p-[1px] "
+              id="buttonIcon"
+            />
+          </ColoredButton>
         </Box>
         <Container className="my-5 py-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-10 gap-y-[73px] text-headColor justify-self-center">
           {cards.map((card, index) => (
-            <Card
-              key={index}
-              className="bg-[#292930] w-[320px] md:w-auto justify-self-center  rounded-[30px] hover:shadow-serviceCardShadow flex flex-col"
-              sx={{ border: "1px solid #424245", animation: ".3s ease-in-out" }}
-            >
+            <HoverCard key={index} className="justify-self-center">
               <CardActionArea className="flex flex-col">
                 <CardMedia
                   component="img"
@@ -136,17 +186,17 @@ const Services = ({ cards = ServicesData }) => {
                   </Typography>
                 </CardContent>
               </CardActionArea>
-              <CardActions className=" gap-0 mx-3 mb-4 align-baseline">
-                <Button
+              <CardActions className="gap-0 mx-3 mb-4 align-baseline">
+                <CustomButton
                   size="small"
                   className="font-poppins text-headColor text-[12px] self-center font-light"
                   sx={{ letterSpacing: "2px" }}
                 >
-                  More
+                  <span className="hoverButtonText">More</span>
                   <CallMadeIcon className="text-[#848895] w-5 h-5 mx-2 self-center" />
-                </Button>
+                </CustomButton>
               </CardActions>
-            </Card>
+            </HoverCard>
           ))}
         </Container>
       </Container>

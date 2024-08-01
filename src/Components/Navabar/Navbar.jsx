@@ -9,6 +9,7 @@ import {
   useMediaQuery,
   createTheme,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 import logoImg from "../../assets/logo.png";
 import DrawerComp from "./DrawerComp";
 
@@ -19,7 +20,8 @@ const Navbar = () => {
   const theme = createTheme({
     breakpoints: {
       values: {
-        xs: 0,
+        "2xs": 0,
+        xs: 425,
         sm: 640,
         md: 768,
         lg: 1024,
@@ -58,8 +60,14 @@ const Navbar = () => {
                 {pages.map((page, index) => (
                   <Tab
                     key={index}
-                    label={page}
-                    className="text-navlinkColor font-poppins"
+                    label={
+                      <Link
+                        to={`/${page.toLowerCase()}`}
+                        className="text-navlinkColor font-poppins"
+                      >
+                        {page}
+                      </Link>
+                    }
                   />
                 ))}
               </Tabs>
