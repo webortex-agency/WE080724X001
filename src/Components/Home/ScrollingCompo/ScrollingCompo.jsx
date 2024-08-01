@@ -21,7 +21,7 @@ const images = [
   "src/assets/ScrollingCompo/blender.png",
   "src/assets/ScrollingCompo/photoshop.png",
   "src/assets/ScrollingCompo/illustrator.png",
-  "src/assets/ScrollingCompo/premierepro.png",
+  "src/assets/ScrollingCompo/premierpro.png",
   "src/assets/ScrollingCompo/aftereffects.png",
   "src/assets/ScrollingCompo/animator.png",
   "src/assets/ScrollingCompo/jitter.png",
@@ -36,7 +36,7 @@ const images = [
 
 const ScrollingCompo = () => {
   return (
-    <Box className="relative w-full h-64 overflow-hidden flex justify-center items-center">
+    <Box className="relative w-full h-48 overflow-hidden flex justify-center items-center">
       <Box className="absolute left-0 top-0 h-full w-40 bg-gradient-to-r from-backgroundColor via-transparent to-transparent rounded-full z-10" />
       <Box className="absolute right-0 top-0 h-full w-40 bg-gradient-to-l from-backgroundColor via-transparent to-transparent rounded-full z-10" />
 
@@ -47,10 +47,10 @@ const ScrollingCompo = () => {
             component="img"
             src={src}
             alt={`Image ${index}`}
-            className="mx-2"
+            className="mx-3"
             sx={{
-              height: "64px",
-              width: "64px",
+              height: "90px",
+              width: "60px",
               objectFit: "cover",
               objectPosition: "center",
             }}
@@ -62,10 +62,10 @@ const ScrollingCompo = () => {
             component="img"
             src={src}
             alt={`Image ${index + 1}`}
-            className="mx-2"
+            className="mx-3"
             sx={{
-              height: "64px",
-              width: "64px",
+              height: "90px",
+              width: "60px",
               objectFit: "cover",
               objectPosition: "center",
             }}
@@ -77,10 +77,10 @@ const ScrollingCompo = () => {
             component="img"
             src={src}
             alt={`Image ${index + 2}`}
-            className="mx-2"
+            className="mx-3"
             sx={{
-              height: "64px",
-              width: "64px",
+              height: "90px",
+              width: "60px",
               objectFit: "cover",
               objectPosition: "center",
             }}
@@ -92,10 +92,10 @@ const ScrollingCompo = () => {
             component="img"
             src={src}
             alt={`Image ${index + 3}`}
-            className="mx-2"
+            className="mx-3"
             sx={{
-              height: "64px",
-              width: "64px",
+              height: "90px",
+              width: "60px",
               objectFit: "cover",
               objectPosition: "center",
             }}
