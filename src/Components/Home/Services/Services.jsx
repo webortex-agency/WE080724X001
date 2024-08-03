@@ -22,7 +22,7 @@ const HoverCard = styled(Card)(({ theme }) => ({
   justifySelf: "center",
   borderRadius: "30px",
   flexDirection: "column",
-  opacity: "0.35",
+  opacity: ".85",
   transition: "opacity .3s ease-in-out",
   border: "1px solid #424245",
   "&:hover": {
@@ -33,6 +33,13 @@ const HoverCard = styled(Card)(({ theme }) => ({
       marginLeft: "4px",
       transition: ".3s ease-in-out",
     },
+    "& .cardImg": {
+      opacity: 1,
+      transition: ".5s ease",
+    },
+  },
+  "& .cardImg": {
+    opacity: ".35",
   },
 }));
 
@@ -46,7 +53,8 @@ const CustomButton = styled(Button)(({ theme }) => ({
     opacity: 0,
     width: 0,
     overflow: "hidden",
-    transition: "opacity 0.4s ease, width 0.4s ease",
+    transition: "opacity 0.8s ease, width 0.4s ease",
+    transitionDelay: "1000ms",
   },
 }));
 
@@ -167,7 +175,7 @@ const Services = ({ cards = ServicesData }) => {
                   component="img"
                   image={card.image}
                   alt={card.title}
-                  className="mt-3 mx-5 w-[210px] h-[210px] justify-self-center"
+                  className="cardImg mt-3 mx-5 w-[210px] h-[210px] justify-self-center"
                 />
                 <CardContent className="mt-0 mx-1 gap-[14px] relative h-[145px]">
                   <Typography
