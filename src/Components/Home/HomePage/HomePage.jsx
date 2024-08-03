@@ -7,7 +7,7 @@ import {
   Button,
   styled,
 } from "@mui/material";
-import coverImg from "../../../assets/cover.png";
+import coverImg from "../../../assets/logo.gif";
 import ScrollingCompo from "../ScrollingCompo/ScrollingCompo";
 import EastIcon from "@mui/icons-material/East";
 
@@ -17,7 +17,7 @@ const CustomButton = styled(Button)(({ theme }) => ({
   justifyContent: "center",
   overflow: "hidden",
   whiteSpace: "nowrap",
-  transition: "width 0.4s ease, background-color 0.4s ease, color 0.4s ease",
+  transition: "width 0.4s ease, background-color 0.5s ease, color 0.4s ease",
   width: "140px",
   "& #buttonText": {
     opacity: 0,
@@ -28,7 +28,6 @@ const CustomButton = styled(Button)(({ theme }) => ({
   "&:hover": {
     width: "220px",
     backgroundColor: "transparent",
-    color: "#000000",
     transition: ".3s ease, width .5s ease",
     "& #buttonText": {
       opacity: 1,
@@ -43,14 +42,14 @@ const HomePage = () => {
       <Box className="flex justify-center">
         <Container
           maxWidth="lg"
-          className="self-center md:mt-24 lg:mt-48 pt-10 pb-5 xs:py-10 md:pt-5 md:pb-0 xl:py-10"
+          className="self-center md:mt-12 lg:mt-28 pt-10 pb-5 xs:py-10 md:pt-5 md:pb-0 xl:py-10"
         >
           <Box className="" sx={{ alignSelf: "center" }}>
             <div className="flex md:flex-row flex-col-reverse justify-center gap-0 xs:gap-2 md:gap-4 px-10">
               <div className="grid-rows-12 md:grid-rows-6 self-center px-1 xs:px-2 md:px-3">
                 <Typography
                   variant="h2"
-                  className="font-poppins text-headColor text-center md:text-left text-3xl xs:text-5xl sm:text-6xl md:text-5xl lg:text-7xl xl:text-8xl md:pe-36  font-light"
+                  className="font-poppins text-headColor text-center md:text-left text-3xl xs:text-5xl sm:text-6xl md:text-5xl lg:text-7xl md:pe-36  font-light"
                 >
                   We Are Creative Designers
                 </Typography>
@@ -77,12 +76,13 @@ const HomePage = () => {
                     <span id="buttonText">Get Started</span>
                     <EastIcon
                       className="ml-1 md:ml-2 text-3xl"
+                      sx={{ transition: ".5s ease-in-out" }}
                       id="buttonIcon"
                     />
                   </CustomButton>
                 </div>
               </div>
-              <div className="grid-rows-12 md:grid-rows-6 text-center self-center px-3 pt-24 sm:pt-6 md:pt-0">
+              <div className="grid-rows-12 md:grid-rows-6 text-center px-3 pt-24 sm:pt-6 md:pt-0">
                 <Avatar
                   alt="64 FRAMEZ"
                   src={coverImg}

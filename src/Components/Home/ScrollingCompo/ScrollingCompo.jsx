@@ -37,8 +37,8 @@ const images = [
 const ScrollingCompo = () => {
   return (
     <Box className="relative w-full h-48 overflow-hidden flex justify-center items-center">
-      <Box className="absolute left-0 top-0 h-full w-40 bg-gradient-to-r from-backgroundColor via-transparent to-transparent rounded-full z-10" />
-      <Box className="absolute right-0 top-0 h-full w-40 bg-gradient-to-l from-backgroundColor via-transparent to-transparent rounded-full z-10" />
+      <Box className="absolute left-0 top-0 h-full w-40 bg-gradient-to-r from-backgroundColor via-transparent to-transparent z-10" />
+      <Box className="absolute right-0 top-0 h-full w-40 bg-gradient-to-l from-backgroundColor via-transparent to-transparent z-10" />
 
       <ScrollingContainer className="absolute w-max ">
         {images.map((src, index) => (

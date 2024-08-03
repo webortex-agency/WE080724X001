@@ -13,21 +13,46 @@ import { Menu } from "@mui/icons-material";
 
 const pages = ["Home", "Services", "Projects", "Team", "About"];
 
-const CustomizedDrawer = styled(Drawer)`
-  background-color: #171717;
-  color: #ffffff;
-  .css-4t3x6l-MuiPaper-root-MuiDrawer-paper {
-    background-color: #171717;
-    color: #ffffff;
-  }
-`;
+const CustomizedDrawer = styled(Drawer)(({ theme }) => ({
+  ".css-4t3x6l-MuiPaper-root-MuiDrawer-paper": {
+    backgroundColor: "#171717;",
+    width: "80%",
+    height: "max-content",
+  },
+  ".css-h4y409-MuiList-root": {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    margin: "20px",
+    "& *": {
+      color: "#ffffff",
+      fontFamily: "Poppins",
+      justifyContent: "center",
+    },
+  },
+}));
+
+const ColoredButton = styled(Button)(({ theme }) => ({
+  background: "#ffffff",
+  fontFamily: "Poppins",
+  fontWeight: "500",
+  color: "#171717 !important",
+  marginTop: "30px",
+  marginBottom: "20px",
+  transition: ".4s ease",
+  "&:hover": {
+    backgroundColor: "#5a56e8",
+    color: "#ffffff !important",
+    transition: ".5s ease",
+  },
+}));
 
 const DrawerComp = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
 
   return (
     <React.Fragment>
-      <Drawer
+      <CustomizedDrawer
         open={openDrawer}
         onClose={() => setOpenDrawer(false)}
         variant="temporary"
@@ -40,15 +65,15 @@ const DrawerComp = () => {
               </ListItemIcon>
             </ListItemButton>
           ))}
-          <Button
+          <ColoredButton
             variant="contained"
-            className="text-buttonTextColor bg-buttonBgColor"
+            className="font-semibold text-nowrap"
             sx={{ borderRadius: "5px" }}
           >
             Let's Talk
-          </Button>
+          </ColoredButton>
         </List>
-      </Drawer>
+      </CustomizedDrawer>
 
       <IconButton
         className="font-poppins text-buttonTextColor bg-buttonBgColor"
