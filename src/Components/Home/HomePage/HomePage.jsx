@@ -42,9 +42,9 @@ const HomePage = () => {
       <Box className="flex justify-center">
         <Container
           maxWidth="lg"
-          className="self-center md:mt-12 lg:mt-28 pt-10 pb-5 xs:py-10 md:pt-5 md:pb-0 xl:py-10"
+          className="self-center mt-0 md:mt-0 lg:my-6 pt-0 pb-5 xs:py-10 md:pt-0 md:pb-0 lg:py-10"
         >
-          <Box className="" sx={{ alignSelf: "center" }}>
+          <Box className="">
             <div className="flex md:flex-row flex-col-reverse justify-center gap-0 xs:gap-2 md:gap-4 px-10">
               <div className="grid-rows-12 md:grid-rows-6 self-center px-1 xs:px-2 md:px-3">
                 <Typography
@@ -82,10 +82,11 @@ const HomePage = () => {
                   </CustomButton>
                 </div>
               </div>
-              <div className="grid-rows-12 md:grid-rows-6 text-center px-3 pt-24 sm:pt-6 md:pt-0">
+              <div className="grid-rows-12 md:grid-rows-6 text-center px-3 pt-6 sm:pt-6 md:pt-0">
                 <Avatar
                   alt="64 FRAMEZ"
                   src={coverImg}
+                  sx={{ zIndex: "-1 !important" }}
                   className="w-full h-full scale-125  sm:scale-100 lg:scale-[130%] xl:scale-[150%]"
                 ></Avatar>
                 <Box className="w-[156px] sm:w-[464px] md:w-[664px] lg:w-full  h-[586px] md:h-[362px] lg:h-[542px] lg:max-h-full top-0 md:left-[100px] lg:left-0 blur-[90px] 2xl:blur-[150px] absolute z-[-99] opacity-80 2xl:bg-opacity-55 rounded-full bg-gradient-to-r from-backgroundColor from-10%  via-[#f087ff5b] via-85% to-backgroundColor to-10%"></Box>
