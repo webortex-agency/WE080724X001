@@ -1,12 +1,13 @@
-import React from "react";
-import Button from "@mui/material/Button";
+
 import "@fontsource/poppins";
 import Home from "./Components/Home/Home";
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
   return (
     <>
       <Home />
+      <Footer/>
     </>
   );
 };
