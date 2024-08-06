@@ -42,8 +42,10 @@ const HomePage = () => {
       <Box className="flex justify-center">
         <Container
           maxWidth="lg"
+          className="self-center md:mt-0 pt-0 pb-5 xs:py-10 md:pt-0 md:pb-0"
           className="self-center mt-0 md:mt-0 lg:my-6 pt-0 pb-5 xs:py-10 md:pt-0 md:pb-0 lg:py-10"
         >
+          <Box className="" >
           <Box className="">
             <div className="flex md:flex-row flex-col-reverse justify-center gap-0 xs:gap-2 md:gap-4 px-10">
               <div className="grid-rows-12 md:grid-rows-6 self-center px-1 xs:px-2 md:px-3">
@@ -82,6 +84,7 @@ const HomePage = () => {
                   </CustomButton>
                 </div>
               </div>
+              <div className="grid-rows-12 md:grid-rows-6 text-center px-3 pt-6 md:pt-24 sm:pt-6 md:pt-0">
               <div className="grid-rows-12 md:grid-rows-6 text-center px-3 pt-6 sm:pt-6 md:pt-0">
                 <Avatar
                   alt="64 FRAMEZ"
