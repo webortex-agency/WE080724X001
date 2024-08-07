@@ -6,5 +6,7 @@
 
 :root {
   font-family: "Poppins", sans-serif;
-  /* background: #171717; */
+  background: #171717;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
