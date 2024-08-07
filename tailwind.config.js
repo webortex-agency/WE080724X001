@@ -26,10 +26,6 @@ module.exports = {
         iconBgColor: "#5956e8",
         footerBgColor: "#292930",
       },
-      boxShadow: {
-        serviceCardShadow:
-          "rgba(240, 135, 255, 0.5) 0px 0px 30px 5px, rgba(89, 86, 232, 0.5) 0px 0px 15px 5px, rgba(96, 107, 255, 0.5) 0px 0px 15px 15px !important",
-      },
     },
     fontFamily: {
       poppins: ["Poppins", "regular"],

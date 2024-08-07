@@ -1,4 +1,3 @@
-
 import React from "react";
 import "@fontsource/poppins";
 import Navbar from "./Components/Navabar/Navbar";
@@ -9,10 +8,10 @@ import Process from "./Components/Process/Process";
 const App = () => {
   return (
     <>
-      <Process />
       <Navbar />
       <Home />
-      <Footer/>
+      <Process />
+      <Footer />
     </>
   );
 };

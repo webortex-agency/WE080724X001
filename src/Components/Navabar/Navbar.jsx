@@ -61,10 +61,10 @@ const Navbar = () => {
   const navbarClasses = `
     ${
       isScrolled
-        ? "fixed bg-[#171717] mix-blend-screen shadow-none rounded-full scroll-smooth"
+        ? "fixed md:left-auto md:right-auto mx-4 px-2 md:px-0 md:mx-0 left-0 right-0 bg-[#292930] shadow-none rounded-full scroll-smooth"
         : "bg-transparent"
     }
-    transition-all duration-150 ease
+    transition-all duration-200 ease
   `;
 
   return (
