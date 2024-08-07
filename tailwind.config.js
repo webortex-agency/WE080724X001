@@ -2,7 +2,17 @@
 
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  important: "#root",
   theme: {
+    screens: {
+      "2xs": { max: "424px" },
+      xs: { min: "425px" },
+      sm: { min: "640px" },
+      md: { min: "768px" },
+      lg: { min: "1024px" },
+      xl: { min: "1280px" },
+      "2xl": { min: "1536px" },
+    },
     extend: {
       colors: {
         backgroundColor: "#171717",
@@ -16,9 +26,13 @@ module.exports = {
         iconBgColor: "#5956e8",
         footerBgColor: "#292930",
       },
+      boxShadow: {
+        serviceCardShadow:
+          "rgba(240, 135, 255, 0.5) 0px 0px 30px 5px, rgba(89, 86, 232, 0.5) 0px 0px 15px 5px, rgba(96, 107, 255, 0.5) 0px 0px 15px 15px !important",
+      },
     },
     fontFamily: {
-      poppins: ["Poppins", "sans-serif"],
+      poppins: ["Poppins", "regular"],
     },
   },
   plugins: [],
