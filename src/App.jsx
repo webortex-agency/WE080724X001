@@ -9,11 +9,11 @@ import Process from "./Components/Process/Process";
 const App = () => {
   return (
     <>
-      <Process />
       <Navbar />
       <Home />
+      <Process />
       <Team/>
-      <Footer/>
+      <Footer />
     </>
   );
 };
