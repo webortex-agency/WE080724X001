@@ -30,28 +30,25 @@ const images = [
 
 const ClientsCompo = () => {
   return (
-    <Container className="relative w-full h-48 overflow-hidden flex justify-center items-center">
-      <Box className="absolute left-0 h-full w-40 bg-gradient-to-r from-backgroundColor z-10" />
-      <Box className="absolute right-0 h-full w-40 bg-gradient-to-l from-backgroundColor z-10" />
-
-      <ScrollingContainer>
-        <Marquee>
+    <Box className="relative w-full mt-5 mb-10 pt-5 pb-10 overflow-hidden flex justify-center items-center">
+      <ScrollingContainer className="self-center">
+        <Marquee className="grid grid-cols-7 md:grid-cols-none md:grid-flow-col">
           {images.map((src, index) => (
             <Box
               key={`image-${index}`}
               component="img"
               src={src}
               alt={`Image ${index}`}
-              className="mx-3 w-40 h-auto"
+              className="me-1 my-2 w-20 h-16 sm:w-24 sm:h-20 md:w-14 md:h-12 lg:w-20 lg:h-16 xl:w-24 xl:h-20"
               sx={{
-                objectFit: "cover",
+                objectFit: "contain",
                 objectPosition: "center",
               }}
             />
           ))}
         </Marquee>
       </ScrollingContainer>
-    </Container>
+    </Box>
   );
 };
 
