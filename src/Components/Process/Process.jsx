@@ -14,6 +14,7 @@ import process3 from "../../assets/Process/process3.svg";
 import ladder from "../../assets/Process/ladder.svg";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function Process() {
   const controls1 = useAnimation();
@@ -21,11 +22,12 @@ export default function Process() {
   const controls2_2 = useAnimation();
   const controls2_3 = useAnimation();
   const controls3 = useAnimation();
+  const isMobile = useMediaQuery("(max-width:600px)");
 
   const { ref: ref1, inView: inView1 } = useInView({ threshold: 0.1 });
-  const { ref: ref2_1, inView: inView2_1 } = useInView({ threshold: 0.1 });
-  const { ref: ref2_2, inView: inView2_2 } = useInView({ threshold: 0.1 });
-  const { ref: ref2_3, inView: inView2_3 } = useInView({ threshold: 0.1 });
+  const { ref: ref2_1, inView: inView2_1 } = useInView({ threshold: 0.4 });
+  const { ref: ref2_2, inView: inView2_2 } = useInView({ threshold: 0.4 });
+  const { ref: ref2_3, inView: inView2_3 } = useInView({ threshold: 0.4 });
   const { ref: ref3, inView: inView3 } = useInView({ threshold: 0.1 });
 
   React.useEffect(() => {
@@ -64,29 +66,42 @@ export default function Process() {
         background:
           "linear-gradient(111.05deg, #E9F7FF 9.66%, #FFDBD5 57.52%, #FFF3CA 103.42%)",
         overflowX: "hidden",
+        fontFamily: "Poppins, sans-serif", // Apply Poppins font
       }}
     >
       <div className="flex-col flex justify-center items-center">
         <img src={ladder} alt="logo" width={105} height={105} />
         <div style={{ width: "500px" }}>
           <Typography
-            sx={{ fontSize: "15px", textAlign: "center", marginTop: "20px" }}
+            sx={{ 
+              fontSize: isMobile ? "12px" : "15px", 
+              textAlign: "center", 
+              marginTop: "20px",
+              fontFamily: "Poppins, sans-serif" // Apply Poppins font
+            }}
           >
             03 . Process
           </Typography>
           <Typography
-            sx={{ fontSize: "40px", textAlign: "center", marginBottom: "50px" }}
+            sx={{ 
+              fontSize: isMobile ? "30px" : "40px", 
+              textAlign: "center", 
+              marginBottom: "50px",
+              fontFamily: "Poppins, sans-serif" // Apply Poppins font
+            }}
           >
             A simple, yet powerful and efficient process
           </Typography>
         </div>
       </div>
+
       <TimelineItem>
         <TimelineOppositeContent
           sx={{
             display: "flex",
             justifyContent: "flex-end",
             alignItems: "center",
+            fontFamily: "Poppins, sans-serif" // Apply Poppins font
           }}
           color="text.secondary"
         >
@@ -94,7 +109,10 @@ export default function Process() {
             <motion.img
               src={process1}
               alt="Process Step 1"
-              className="w-full sm:w-2/3 md:w-1/2 lg:w-2/4 mb-28"
+              className="mb-28"
+              style={{
+                width: isMobile ? "80%" : "50%", // Increased size for mobile
+              }}
               initial="hidden"
               animate={controls1}
               variants={imageVariants}
@@ -124,12 +142,20 @@ export default function Process() {
             animate={controls1}
             variants={textVariants}
           >
-            <Typography variant="h6" component="span" sx={{ fontSize: "25px" }}>
+            <Typography 
+              variant="h6" 
+              component="span" 
+              sx={{ 
+                fontSize: isMobile ? "20px" : "25px", 
+                fontFamily: "Poppins, sans-serif" // Apply Poppins font
+              }}
+            >
               Marketing Plan
             </Typography>
-            <Typography sx={{ fontSize: "18px" }}>
-              We are here to assist with a marketing plan that will provide
-              incredible and outstanding results in line with your goal.
+            <Typography sx={{ fontSize: isMobile ? "15px" : "18px", fontFamily: "Poppins, sans-serif" }}>
+              {isMobile
+                ? "We offer a marketing plan that aligns with your goals."
+                : "We are here to assist with a marketing plan that will provide incredible and outstanding results in line with your goal."}
             </Typography>
           </motion.div>
         </TimelineContent>
@@ -137,7 +163,11 @@ export default function Process() {
 
       <TimelineItem>
         <TimelineOppositeContent
-          sx={{ display: "flex", justifyContent: "flex-start" }}
+          sx={{ 
+            display: "flex", 
+            justifyContent: "flex-start", 
+            fontFamily: "Poppins, sans-serif" // Apply Poppins font
+          }}
           color="text.secondary"
         >
           <div className="flex flex-col justify-start items-start py-0">
@@ -145,7 +175,10 @@ export default function Process() {
               <motion.img
                 src={process2_1}
                 alt="Process Step 2.1"
-                className="w-full sm:w-2/3 md:w-2/3 lg:w-3/4 mb-28"
+                className="mb-28"
+                style={{
+                  width: isMobile ? "80%" : "70%", // Increased size for mobile
+                }}
                 initial="hidden"
                 animate={controls2_1}
                 variants={textVariants}
@@ -159,7 +192,10 @@ export default function Process() {
               <motion.img
                 src={process2_2}
                 alt="Process Step 2.2"
-                className="w-full sm:w-2/3 md:w-2/3 lg:w-3/4 mb-28"
+                className="mb-28"
+                style={{
+                  width: isMobile ? "80%" : "70%", // Increased size for mobile
+                }}
                 initial="hidden"
                 animate={controls2_2}
                 variants={textVariants}
@@ -173,7 +209,10 @@ export default function Process() {
               <motion.img
                 src={process2_3}
                 alt="Process Step 2.3"
-                className="w-full sm:w-2/3 md:w-2/3 lg:w-3/4 mb-28"
+                className="mb-28"
+                style={{
+                  width: isMobile ? "80%" : "70%", // Increased size for mobile
+                }}
                 initial="hidden"
                 animate={controls2_3}
                 variants={textVariants}
@@ -204,12 +243,20 @@ export default function Process() {
             animate={controls2_1}
             variants={imageVariants}
           >
-            <Typography variant="h6" component="span" sx={{ fontSize: "25px" }}>
+            <Typography 
+              variant="h6" 
+              component="span" 
+              sx={{ 
+                fontSize: isMobile ? "20px" : "25px", 
+                fontFamily: "Poppins, sans-serif" // Apply Poppins font
+              }}
+            >
               Marketing Plan
             </Typography>
-            <Typography sx={{ fontSize: "18px" }}>
-              We are here to assist with a marketing plan that will provide
-              incredible and outstanding results in line with your goal.
+            <Typography sx={{ fontSize: isMobile ? "15px" : "18px", fontFamily: "Poppins, sans-serif" }}>
+              {isMobile
+                ? "We provide audience targeting strategies."
+                : "We provide audience targeting strategies to ensure your marketing reaches the ideal audience and delivers optimal results."}
             </Typography>
           </motion.div>
         </TimelineContent>
@@ -221,7 +268,8 @@ export default function Process() {
             display: "flex",
             justifyContent: "flex-end",
             alignItems: "flex-start",
-            marginTop: "-100px",
+            marginTop: isMobile ? "20px" : "-100px", // Add margin on top for mobile
+            fontFamily: "Poppins, sans-serif" // Apply Poppins font
           }}
           color="text.secondary"
         >
@@ -229,7 +277,10 @@ export default function Process() {
             <motion.img
               src={process3}
               alt="Process Step 3"
-              className="w-full sm:w-2/3 md:w-1/2 lg:w-2/4"
+              style={{
+                width: isMobile ? "80%" : "50%", // Increased size for mobile
+                marginTop:isMobile ?'0px':'30px',
+              }}
               initial="hidden"
               animate={controls3}
               variants={imageVariants}
@@ -249,20 +300,27 @@ export default function Process() {
             </div>
           </div>
         </TimelineSeparator>
-        <TimelineContent sx={{ py: "12px", px: 2, marginTop: "-20px" }}>
+        <TimelineContent sx={{ py: "12px", px: 2 }}>
           <motion.div
             className="w-full sm:w-2/3 md:w-1/2 lg:w-1/2"
             initial="hidden"
             animate={controls3}
             variants={textVariants}
           >
-            <Typography variant="h6" component="span" sx={{ fontSize: "25px" }}>
-              Growth & Scale
+            <Typography 
+              variant="h6" 
+              component="span" 
+              sx={{ 
+                fontSize: isMobile ? "20px" : "25px", 
+                fontFamily: "Poppins, sans-serif" // Apply Poppins font
+              }}
+            >
+              Analytics
             </Typography>
-            <Typography sx={{ fontSize: "18px" }}>
-              As previously stated, we are here to support your growth and we
-              nearly guarantee that you will see 100% success in your digital or
-              social media marketing endeavors.
+            <Typography sx={{ fontSize: isMobile ? "15px" : "18px", fontFamily: "Poppins, sans-serif" }}>
+              {isMobile
+                ? "Track performance and optimize strategies."
+                : "We provide comprehensive analytics to track performance and optimize strategies for the best results."}
             </Typography>
           </motion.div>
         </TimelineContent>
