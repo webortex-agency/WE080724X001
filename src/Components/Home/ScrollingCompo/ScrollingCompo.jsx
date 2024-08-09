@@ -41,7 +41,7 @@ const images = [
 
 const ScrollingCompo = () => {
   return (
-    <Container className="relative w-full h-48 overflow-hidden flex justify-center items-center">
+    <Box className="relative w-full h-48 overflow-hidden flex justify-center items-center">
       <Box className="absolute left-0 h-full w-40 bg-gradient-to-r from-backgroundColor z-10" />
       <Box className="absolute right-0 h-full w-40 bg-gradient-to-l from-backgroundColor z-10" />
 
@@ -79,7 +79,7 @@ const ScrollingCompo = () => {
           ))}
         </AnimatedMarquee>
       </ScrollingContainer>
-    </Container>
+    </Box>
   );
 };
 
