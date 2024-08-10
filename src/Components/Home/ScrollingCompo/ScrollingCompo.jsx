@@ -1,8 +1,8 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import { styled, keyframes } from "@mui/system";
 
-const scroll = keyframes`
+const scrollX = keyframes`
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 `;
@@ -11,7 +11,12 @@ const ScrollingContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   overflow: "hidden",
   whiteSpace: "nowrap",
-  animation: `${scroll} 35s linear infinite`,
+}));
+
+const AnimatedMarquee = styled(Box)(({ theme }) => ({
+  display: "flex",
+  animation: `${scrollX} 30s linear infinite`,
+  transition: ".3s ease",
 }));
 
 const images = [
@@ -37,70 +42,42 @@ const images = [
 const ScrollingCompo = () => {
   return (
     <Box className="relative w-full h-48 overflow-hidden flex justify-center items-center">
-      <Box className="absolute left-0 top-0 h-full w-40 bg-gradient-to-r from-backgroundColor via-transparent to-transparent z-10" />
-      <Box className="absolute right-0 top-0 h-full w-40 bg-gradient-to-l from-backgroundColor via-transparent to-transparent z-10" />
+      <Box className="absolute left-0 h-full w-40 bg-gradient-to-r from-backgroundColor z-10" />
+      <Box className="absolute right-0 h-full w-40 bg-gradient-to-l from-backgroundColor z-10" />
 
-      <ScrollingContainer className="absolute w-max ">
-        {images.map((src, index) => (
-          <Box
-            key={`image-${index}`}
-            component="img"
-            src={src}
-            alt={`Image ${index}`}
-            className="mx-3"
-            sx={{
-              height: "90px",
-              width: "60px",
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
-          />
-        ))}
-        {images.map((src, index) => (
-          <Box
-            key={`image-duplicate-${index}`}
-            component="img"
-            src={src}
-            alt={`Image ${index + 1}`}
-            className="mx-3"
-            sx={{
-              height: "90px",
-              width: "60px",
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
-          />
-        ))}
-        {images.map((src, index) => (
-          <Box
-            key={`image-duplicate-${index + 2}`}
-            component="img"
-            src={src}
-            alt={`Image ${index + 2}`}
-            className="mx-3"
-            sx={{
-              height: "90px",
-              width: "60px",
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
-          />
-        ))}
-        {images.map((src, index) => (
-          <Box
-            key={`image-duplicate-${index + 3}`}
-            component="img"
-            src={src}
-            alt={`Image ${index + 3}`}
-            className="mx-3"
-            sx={{
-              height: "90px",
-              width: "60px",
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
-          />
-        ))}
+      <ScrollingContainer>
+        <AnimatedMarquee>
+          {images.map((src, index) => (
+            <Box
+              key={`image-${index}`}
+              component="img"
+              src={src}
+              alt={`Image ${index}`}
+              className="mx-3"
+              sx={{
+                height: "90px",
+                width: "60px",
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+            />
+          ))}
+          {images.map((src, index) => (
+            <Box
+              key={`image-duplicate-${index}`}
+              component="img"
+              src={src}
+              alt={`Image ${index + 1}`}
+              className="mx-3"
+              sx={{
+                height: "90px",
+                width: "60px",
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+            />
+          ))}
+        </AnimatedMarquee>
       </ScrollingContainer>
     </Box>
   );
