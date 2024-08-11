@@ -17,6 +17,7 @@ const Projects = () => {
     <Container
       maxWidth="lg"
       className="w-full h-auto gap-14 flex flex-col p-5 bg-[#171717] box-border mt-10 mb-16"
+      id="projects"
     >
       <Typography className="text-2xl sm:text-4xl md:text-3xl lg:text-5xl text-headColor font-poppins font-semibold">
         Projects

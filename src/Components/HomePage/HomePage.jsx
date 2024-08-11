@@ -7,7 +7,7 @@ import {
   Button,
   styled,
 } from "@mui/material";
-import coverImg from "../../../assets/logo.gif";
+import coverImg from "../../assets/logo.gif";
 import ScrollingCompo from "../ScrollingCompo/ScrollingCompo";
 import EastIcon from "@mui/icons-material/East";
 

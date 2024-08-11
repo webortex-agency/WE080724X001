@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "@fontsource/poppins";
 import Navbar from "./Components/Navabar/Navbar";
-import Home from "./Components/Home/Home";
-import Team from "./Components/Team/Team";
 import Footer from "./Components/Footer/Footer";
-import Process from "./Components/Process/Process";
-import Projects from "./Components/Home/Projects/Projects";
-import Testimonials from "./Components/Testimonials/Testimonials";
+import LandingPage from "./Components/LandingPage/LandingPage";
+import { Route, Routes } from "react-router-dom";
+import NotFound from "./Components/NotFound/NotFound";
+import About from "./Components/About/About";
+import Contact from "./Components/Contact/Contact";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -22,11 +22,12 @@ const App = () => {
     !loading && (
       <>
         <Navbar />
-        <Home />
-        <Projects />
-        <Process />
-        <Testimonials />
-        <Team />
+        <Routes>
+          <Route exact path="/" element={<LandingPage />} />
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
         <Footer />
       </>
     )

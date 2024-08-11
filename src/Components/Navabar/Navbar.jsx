@@ -10,11 +10,15 @@ import {
   Container,
   styled,
 } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logoImg from "../../assets/logo.png";
 import DrawerComp from "./DrawerComp";
 
-const pages = ["Services", "Projects", "About"];
+const pages = [
+  { pageName: "Services", path: "#services", type: "section" },
+  { pageName: "Projects", path: "#projects", type: "section" },
+  { pageName: "About", path: "/about", type: "route" },
+];
 
 const CustomTabs = styled(Tabs)(({ theme }) => ({
   "& .css-1aquho2-MuiTabs-indicator": {
@@ -25,6 +29,8 @@ const CustomTabs = styled(Tabs)(({ theme }) => ({
 const Navbar = () => {
   const [value, setValue] = useState();
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const theme = createTheme({
     breakpoints: {
@@ -57,6 +63,26 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId.substring(1));
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleNavigation = (page) => {
+    if (page.type === "section") {
+      if (location.pathname !== "/") {
+        navigate("/");
+        setTimeout(() => scrollToSection(page.path), 100);
+      } else {
+        scrollToSection(page.path);
+      }
+    } else {
+      navigate(page.path);
+    }
+  };
 
   const navbarClasses = `
     ${
@@ -92,23 +118,25 @@ const Navbar = () => {
                     <Tab
                       key={index}
                       label={
-                        <Link
-                          to={`/${page.toLowerCase()}`}
-                          className="text-navlinkColor font-poppins text-xs lg:text-sm mx-0"
+                        <span
+                          onClick={() => handleNavigation(page)}
+                          className="text-navlinkColor font-poppins text-xs lg:text-sm mx-0 cursor-pointer"
                         >
-                          {page}
-                        </Link>
+                          {page.pageName}
+                        </span>
                       }
                     />
                   ))}
                 </CustomTabs>
-                <Button
-                  variant="contained"
-                  className="text-buttonTextColor bg-buttonBgColor py-1 px-4 sm:py-2 sm:px-6 md:py-3 md:px-6 hover:bg-navlinkActiveColor hover:text-headColor rounded-lg font-semibold h-10 mx-auto md:mx-0 text-sm md:text-xs lg:text-sm text-nowrap"
-                  sx={{ transition: ".3s ease-in-out" }}
-                >
-                  Let's Talk
-                </Button>
+                <Link to="/contact">
+                  <Button
+                    variant="contained"
+                    className="text-buttonTextColor bg-buttonBgColor py-1 px-4 sm:py-2 sm:px-6 md:py-3 md:px-6 hover:bg-navlinkActiveColor hover:text-headColor rounded-lg font-semibold h-10 mx-auto md:mx-0 text-sm md:text-xs lg:text-sm text-nowrap"
+                    sx={{ transition: ".3s ease-in-out" }}
+                  >
+                    Let's Talk
+                  </Button>
+                </Link>
               </>
             )}
           </Toolbar>

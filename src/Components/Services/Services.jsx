@@ -15,6 +15,7 @@ import {
 import SettingsIcon from "@mui/icons-material/Settings";
 import KeyboardArrowRightTwoToneIcon from "@mui/icons-material/KeyboardArrowRightTwoTone";
 import CallMadeIcon from "@mui/icons-material/CallMade";
+import { useNavigate } from "react-router-dom";
 
 const HoverCard = styled(Card)(({ theme }) => ({
   backgroundColor: "#292930",
@@ -79,51 +80,66 @@ const ServicesData = [
     title: "Graphic Designing",
     description:
       "We have extensive graphic design experience, and we provide high-quality, more accurate outcomes.",
+    path: "/services/graphic-design",
   },
   {
     image: "src/assets/Services/motiongraphics.png",
     title: "Motion Graphics",
     description:
       "Our motion graphics bring your ideas to life with dynamic animations. ",
+    path: "/services/motion-graphics",
   },
   {
     image: "src/assets/Services/interiordesign.png",
     title: "Interior Design",
     description:
       "We create innovative and stylish interior spaces tailored to your needs.",
+    path: "/services/interior-design",
   },
   {
     image: "src/assets/Services/webdevelopment.png",
     title: "Web Design",
     description:
       "Our web designs are user-friendly and visually stunning, enhancing your online presence.",
+    path: "/services/web-design",
   },
   {
     image: "src/assets/Services/photography.png",
     title: "Photography",
     description:
       "We capture your moments with professional and creative photography.",
+    path: "/services/photography",
   },
   {
     image: "src/assets/Services/digitalmarketing.png",
     title: "Digital Marketing",
     description:
       "Our main goal is to provide 100% results and maintain social media with high precision.",
+    path: "/services/digital-marketing",
   },
   {
     image: "src/assets/Services/cinematography.png",
     title: "Cinematography",
     description:
       "We have extensive expertise editing videos, and we provide amazing insights into your thoughts.",
+    path: "/services/cinematography",
   },
   {
     image: "src/assets/Services/3dcinematography.png",
     title: "3D Cinematography",
     description:
       "We produce immersive 3D cinematography that captivates and engages viewers.",
+    path: "/services/3d-cinematography",
   },
 ];
+
 const Services = ({ cards = ServicesData }) => {
+  const navigate = useNavigate();
+
+  const handleMoreClick = (path) => {
+    navigate(path);
+  };
+
   return (
     <div className="w-full relative z-10" id="services">
       <Box className="w-full mt-20 md:mt-0 h-[350px] md:h-[250px] blur-[100px] absolute z-[-99] opacity-60 rounded-full bg-gradient-to-r from-[#171717] via-[#f087ff5b] to-[#171717] "></Box>
@@ -199,6 +215,7 @@ const Services = ({ cards = ServicesData }) => {
                   size="small"
                   className="font-poppins text-headColor text-[12px] self-center font-light"
                   sx={{ letterSpacing: "2px" }}
+                  onClick={() => handleMoreClick(card.path)}
                 >
                   <span className="hoverButtonText">More</span>
                   <CallMadeIcon className="text-[#848895] w-5 h-5 mx-2 self-center" />
