@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Container } from "@mui/material";
-import { styled, keyframes } from "@mui/system";
+import { Box } from "@mui/material";
+import { styled } from "@mui/system";
 
 const ScrollingContainer = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -30,7 +30,7 @@ const images = [
 
 const ClientsCompo = () => {
   return (
-    <Box className="relative w-full mt-5 mb-10 pt-5 pb-10 overflow-hidden flex justify-center items-center">
+    <Box className="relative w-full my-5 pt-5 pb-10 overflow-hidden flex justify-center items-center">
       <ScrollingContainer className="self-center">
         <Marquee className="grid grid-cols-7 md:grid-cols-none md:grid-flow-col">
           {images.map((src, index) => (
@@ -39,7 +39,7 @@ const ClientsCompo = () => {
               component="img"
               src={src}
               alt={`Image ${index}`}
-              className="me-1 my-2 w-20 h-16 sm:w-24 sm:h-20 md:w-14 md:h-12 lg:w-20 lg:h-16 xl:w-24 xl:h-20"
+              className="me-1 my-2 w-16 h-12 sm:w-24 sm:h-20 md:w-14 md:h-12 lg:w-20 lg:h-16 xl:w-24 xl:h-20"
               sx={{
                 objectFit: "contain",
                 objectPosition: "center",

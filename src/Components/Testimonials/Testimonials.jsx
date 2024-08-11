@@ -1,286 +1,174 @@
-import React from 'react';
-import styled from 'styled-components';
-// import './App.css';
+import React from "react";
+import { Container, Typography, Box, styled } from "@mui/material";
+import ContactSupportIcon from "@mui/icons-material/ContactSupport";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
-// Main container
-const Container = styled.div`
-  width: 2200px;
-  height: 532px;
-  background: black;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 50px; /* Added top padding for space above all components */
-`;
+const testimonialsData = [
+  {
+    content:
+      "Lorem Ipsum has been the industry's standard from dummy text ever since the unknown printer to galley of type and make a type specimen book.",
+    image: "src/assets/Testimonials/Image1.png",
+    name: "John Carter",
+    role: "Marketing Lead at Google",
+  },
+  {
+    content:
+      "Lorem Ipsum has been the industry's standard from dummy text ever since the unknown printer to galley of type and make a type specimen book.",
+    image: "src/assets/Testimonials/Image2.png",
+    name: "Peeter pawl",
+    role: "Designer",
+  },
+  {
+    content:
+      "Lorem Ipsum has been the industry's standard from dummy text ever since the unknown printer to galley of type and make a type specimen book.",
+    image: "src/assets/Testimonials/Image2.png",
+    name: "Peeter pawl",
+    role: "Designer",
+  },
+  {
+    content:
+      "Lorem Ipsum has been the industry's standard from dummy text ever since the unknown printer to galley of type and make a type specimen book.",
+    image: "src/assets/Testimonials/Image2.png",
+    name: "Peeter pawl",
+    role: "Designer",
+  },
+];
 
-// Circle with message icon
-const Circle = styled.div`
-  width: 104.97px;
-  height: 104.97px;
-  background: #665AEA;
-  border-radius: 50%;
-  border: 1.19px solid #C4C2FF;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 10px; /* Adjusted for spacing from the top */
-  left: 10px; /* Adjusted for spacing from the left */
-`;
+const GridCard = styled(Box)(({ theme }) => ({
+  background: "linear-gradient(151.16deg, #FFF8F8 10.38%, #F5F7FF 95.44%)",
+  borderRadius: "18px",
+  display: "flex",
+  flexDirection: "column",
+}));
 
-const MessageIcon = styled.div`
-  width: 40.56px;
-  height: 40.56px;
-  background: transparent;
-  border: 2.39px solid #C4C2FF;
-  border-radius: 50%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &:after {
-    content: '\\2022 \\2022 \\2022'; /* Unicode for dots */
-    color: #FFFFFF;
-    font-size: 20px;
-  }
-`;
+const InnerCard = styled(Box)(({ theme }) => ({
+  background: "#FFFFFF",
+  borderRadius: "18px",
+  boxShadow: "0px 1.31px 2.63px 0px #92929240",
+  display: "flex",
+  flexDirection: "column",
+}));
 
-// Text components
-const TextContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-left: 20px;
-  margin-top: 20px;
-`;
+const GreenCircle = styled(Box)(({ theme }) => ({
+  width: "19.03px",
+  height: "19.03px",
+  background: "#6FDB5D",
+  borderRadius: "50%",
+  top: "10px",
+  left: "10px",
+}));
 
-const SmallText = styled.div`
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 17.89px;
-  font-weight: 500;
-  line-height: 28px;
-  letter-spacing: 0.135em;
-  text-align: left;
-  color: white;
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-`;
+const OrangeTriangle = styled(Box)(({ theme }) => ({
+  width: 0,
+  height: 0,
+  borderLeft: "12.5px solid transparent",
+  borderRight: "12.5px solid transparent",
+  borderBottom: "25px solid #FFDC60",
+  top: "10px",
+  left: "35px",
+}));
 
-const OrangeText = styled.span`
-  color: orange;
-  margin-right: 5px;
-`;
+const Stars = styled(Box)(({ theme }) => ({
+  display: "flex",
+  top: "10px",
+  right: "10px",
+}));
 
-const BigText = styled.div`
-  font-family: 'Nunito', sans-serif;
-  font-size: 47.71px;
-  font-weight: 600;
-  line-height: 52.72px;
-  text-align: left;
-  color: white;
-`;
-
-// Navigation buttons
-const NavigationButton = styled.div`
-  width: 83.5px;
-  height: 83.5px;
-  background: ${props => props.white ? 'white' : '#454545'};
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 10px;
-  color: ${props => props.white ? '#454545' : 'white'};
-  font-size: 26px;
-`;
-
-const NavIconLeft = styled.div`
-  &:before {
-    content: '<';
-  }
-`;
-
-const NavIconRight = styled.div`
-  &:before {
-    content: '>';
-  }
-`;
-
-// Grid container for cards
-const Grid = styled.div`
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 51.29px; /* Adjusted gap between cards */
-  position: absolute;
-  top: 120px; /* Adjusted to position the grid correctly */
-  left: 0;
-  padding: 20px;
-`;
-
-// Individual card component
-const GridCard = styled.div`
-  width: 384.61px;
-  height: 274.35px;
-  background: linear-gradient(151.16deg, #FFF8F8 10.38%, #F5F7FF 95.44%);
-  border-radius: 18px; /* Applied border radius to all corners */
-  padding: 21px 17.06px 22.13px 17.07px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-`;
-
-// Inner content of the card
-const InnerCard = styled.div`
-  width: 100%;
-  height: 100%;
-  background: #FFFFFF;
-  border-radius: 18px;
-  box-shadow: 0px 1.31px 2.63px 0px #92929240;
-  padding: 31.5px 24.28px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-`;
-
-// Adjusted text row to ensure proper alignment
-const TextRow = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0 20px;
-`;
-
-// Additional card elements
-const GreenCircle = styled.div`
-  width: 19.03px;
-  height: 19.03px;
-  background: #6FDB5D;
-  border-radius: 50%;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-`;
-
-const OrangeTriangle = styled.div`
-  width: 0;
-  height: 0;
-  border-left: 12.5px solid transparent;
-  border-right: 12.5px solid transparent;
-  border-bottom: 25px solid #FFDC60;
-  position: absolute;
-  top: 10px;
-  left: 35px;
-`;
-
-const Stars = styled.div`
-  display: flex;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-`;
-
-const Star = styled.span`
-  color: #FFB545;
-  font-size: 20px;
-`;
-
-const CardText = styled.p`
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 11.81px;
-  font-weight: 400;
-  line-height: 18.49px;
-  text-align: left;
-  color: #000000;
-  margin-top: 50px;
-  margin-bottom: 60px; /* Added bottom margin for spacing */
-`;
-
-const ProfileImage = styled.div`
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: url("image.png");
-  background-size: cover;
-  background-position: center;
-`;
-
-const NameDesigner = styled.div`
-  margin-left: 10px;
-`;
-
-const Name = styled.div`
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 11.81px;
-  font-weight: 400;
-  color: #000000;
-`;
-
-const Designer = styled.div`
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 11.81px;
-  font-weight: 400;
-  color: #000000;
-`;
-
+const Star = styled(Typography)(({ theme }) => ({
+  color: "#FFB545",
+  fontSize: "20px",
+}));
 
 const Testimonials = () => {
   return (
-    <Container>
-      <TextRow>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <Circle>
-            <MessageIcon />
-          </Circle>
-          <TextContainer>
-            <SmallText>
-              <OrangeText>//</OrangeText> 04. Testimonial
-            </SmallText>
-            <BigText>We work with customers across all industries</BigText>
-          </TextContainer>
+    <Container
+      maxWidth="lg"
+      className="w-full h-full bg-backgroundColor font-poppins relative flex flex-col my-16"
+    >
+      <Box className="flex flex-col md:flex-row my-3 py-2 md-my-2 md:py-1">
+        <div className="gap-4 md:inline-flex md:justify-start text-center md:text-left">
+          <ContactSupportIcon
+            className="bg-iconBgColor text-iconColor h-[70px] w-[70px] p-[14px] rounded-full 
+            "
+          />
+          <div className="my-5 md:my-0">
+            <Typography
+              className="text-[15px] text-[#D0D0D0] font-poppins"
+              sx={{ letterSpacing: "3px", textTransform: "uppercase" }}
+            >
+              <span className="text-[#FEC90C] mx-1">//</span>
+              04 . Testimonial
+            </Typography>
+            <Typography
+              variant="h4"
+              className="text-2xl sm:text-3xl md:text-xl lg:text-4xl text-headColor px-5 md:px-0 text-center md:text-left w-auto md:w-[450px] lg:w-[550px] font-poppins font-normal mt-4"
+            >
+              We work with customers across all industries
+            </Typography>
+          </div>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <NavigationButton white>
-            <NavIconLeft />
-          </NavigationButton>
-          <NavigationButton>
-            <NavIconRight />
-          </NavigationButton>
+        <div className="flex items-end justify-end md:ml-auto rounded-lg gap-5 mx-auto md:mx-0 mt-3 md:mt-0">
+          <ArrowBackIosNewIcon
+            className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#454545] p-5 sm:p-7 text-headColor hover:bg-headColor hover:text-[#454545] cursor-pointer"
+            sx={{ transition: ".4s ease" }}
+          />
+          <ArrowBackIosNewIcon
+            className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#454545] p-5 sm:p-7 text-headColor hover:bg-headColor hover:text-[#454545] cursor-pointer rotate-180"
+            sx={{ transition: ".4s ease" }}
+          />
         </div>
-      </TextRow>
-      <Grid>
-        {Array(4).fill(0).map((_, index) => (
-          <GridCard key={index}>
-            <InnerCard>
-              <GreenCircle />
-              <OrangeTriangle />
-              <Stars>
-                <Star>★</Star>
-                <Star>★</Star>
-                <Star>★</Star>
-                <Star>★</Star>
-                <Star>★</Star>
-              </Stars>
-              <CardText>
-                Lorem Ipsum has been the industry's standard from dummy text ever since the unknown printer to galley of type and make a type specimen book.
-              </CardText>
-              <div style={{ display: 'flex', alignItems: 'center', position: 'absolute', bottom: '20px', left: '20px', width: 'calc(100% - 40px)' }}>
-                <ProfileImage />
-                <NameDesigner>
-                  <Name>Name</Name>
-                  <Designer>Designer</Designer>
-                </NameDesigner>
-              </div>
+      </Box>
+
+      <Box className="w-full h-full grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-flow-row gap-x-4 gap-y-5 my-10 px-2 md:px-0 rounded-lg">
+        {testimonialsData.map((testimonialData, index) => (
+          <GridCard key={index} className="py-3 px-4 h-max">
+            <InnerCard className="py-4 px-5 rounded-lg">
+              <Box className="flex items-center">
+                <Box className="flex justify-start items-center">
+                  <GreenCircle />
+                  <OrangeTriangle />
+                </Box>
+
+                <Stars className="justify-self-end ml-auto">
+                  <Star>★</Star>
+                  <Star>★</Star>
+                  <Star>★</Star>
+                  <Star>★</Star>
+                  <Star>★</Star>
+                </Stars>
+              </Box>
+              <Typography className="font-poppins text-backgroundColor text-[11px] leading-[18px] font-normal text-left mt-5">
+                {testimonialData.content}
+              </Typography>
             </InnerCard>
+            <div
+              className="mt-4 mb-2"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                width: "calc(100% - 40px)",
+              }}
+            >
+              <Box className="flex justify-start">
+                <img
+                  className="w-10 h-10 rounded-full object-cover object-center"
+                  alt={`testimonial ${index}`}
+                  src={testimonialData.image}
+                />
+                <Box className="self-center pl-2">
+                  <Typography className="text-xs text-backgroundColor font-poppins font-medium">
+                    {testimonialData.name}
+                  </Typography>
+                  <Typography className="text-[11px] text-backgroundColor font-poppins font-normal">
+                    {testimonialData.role}
+                  </Typography>
+                </Box>
+              </Box>
+            </div>
           </GridCard>
         ))}
-      </Grid>
+      </Box>
     </Container>
-
   );
 };
 

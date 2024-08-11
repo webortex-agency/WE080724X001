@@ -10,9 +10,28 @@
         margin: 0;
         padding: 0;
       }
+      .spinner {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background-color: #171717;
+        display: grid;
+        place-items: center;
+        transition: opacity 0.25s, visibility 1s;
+      }
+      .spinner > img {
+        transform: scale(0.15);
+      }
+      .spinnerfade {
+        opacity: 0;
+        visibility: hidden;
+      }
     </style>
   </head>
   <body>
+    <div class="spinner" id="spinner">
+      <img src="src\assets\logo.gif" alt="" />
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

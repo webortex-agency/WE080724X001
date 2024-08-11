@@ -1,369 +1,328 @@
-import { Box, Button, Grid, Link, TextField, Typography } from '@mui/material';
-import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
-import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
-import FilterNoneOutlinedIcon from '@mui/icons-material/FilterNoneOutlined';
-import CampaignOutlinedIcon from '@mui/icons-material/CampaignOutlined';
+import {
+  Box,
+  Button,
+  Container,
+  createTheme,
+  Grid,
+  Link,
+  TextField,
+  ThemeProvider,
+  Typography,
+} from "@mui/material";
+import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
+import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+import FilterNoneOutlinedIcon from "@mui/icons-material/FilterNoneOutlined";
+import CampaignOutlinedIcon from "@mui/icons-material/CampaignOutlined";
+import footerLogo from "../../assets/footerLogo.png";
+
+const PageLinks = [
+  {
+    name: "Home",
+    source: "#",
+  },
+  {
+    name: "Services",
+    source: "#",
+  },
+  {
+    name: "Projects",
+    source: "#",
+  },
+  {
+    name: "Team",
+    source: "#",
+  },
+  {
+    name: "About",
+    source: "#",
+  },
+];
+
+const SocialLinks = [
+  {
+    name: "Facebook",
+    source: "#",
+  },
+  {
+    name: "Instagram",
+    source: "#",
+  },
+  {
+    name: "Twitter",
+    source: "#",
+  },
+  {
+    name: "LinkedIn",
+    source: "#",
+  },
+  {
+    name: "Pinterest",
+    source: "#",
+  },
+];
 
 const Footer = () => {
   return (
-    <Box >
-      <Box 
-        sx={{ 
-          paddingLeft:{
-            xs: '10%',  
-            sm: '20%',   
-            md: '6%',  
-            lg: '6%',   
-            xl: '6%'},
-            paddingRight:
-            {xs: '10%',  
-            sm: '20%',   
-            md: '6%',  
-            lg: '6%',   
-            xl: '6%'},
-          paddingTop: '3%',
-          paddingBottom: 2, 
-          
-          backgroundColor: '#292930',
-          display: "flex",
-          justifyContent: 'space-around',
-          width: {
-              xs: '100%',  
-              sm: '100%',   
-              md: '100%',  
-              lg: '100%',   
-              xl: '100%',   
-            }
-        }}
-      >
-        <Grid container sx={{ display: "flex", justifyContent: "space-around" }}>
-          <Grid 
-            xs={12}
-            sm={12}
-            md={5}
-            lg={4}
-            xl={4} 
-            item 
-            sx={{display:"flex",justifyContent:"center"}}
-          >
-            <Grid item sx={{ height: {
-                xs: '100%',  
-                sm: '100%',   
-                md: '100%',  
-                lg: '100%',   
-                xl: '100%'},
-                width: {
-                xs: '80%',  
-                sm: '75%',   
-                md: '75%',  
-                lg: '75%',   
-                xl: '75%',   
-              },backgroundColor: "#3C3C45", display: "flex", alignItems: "center", flexDirection: "column", borderRadius: 5 }}>
-              <Grid item >
-                <Box component="img" sx={{ height: {
-                xs: '130px',  
-                sm: '150px',   
-                md: '150px',  
-                lg: '140px',   
-                xl: '150px'},
-                width: {
-                xs: '130px',  
-                sm: '150px',   
-                md: '150px',  
-                lg: '140px',   
-                xl: '160px',   
-              }}} src='https://s3-alpha-sig.figma.com/img/1d6c/92cd/92601fbe2dc4264ebac1377173947f4d?Expires=1723420800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YUA1UmaaOFtOoc7v8pTHBXqCV2WQetr7uWIvvyIAhsC3QItPVLUeiqZydEl9~7bvsq5S~Cag1DBNo4r75GrFyCShOyecC1oDIsveEMBxmjUv3Z9WipwkpbKKVk03Fb-bCka56A1KvtSeN9rxOTbHxFz~pilcNk2IoYdcqKAsqa04CO~fetpz4EVkdQ9TQ-Qt~IKF935toGtwX6KLtfSaklKcYSidTX9uu-fNK3vT567y00F5Xx8x~eBnwYiaK6eIy2VzX7j3y8trfQAbbOovFZpNJkqZq~WgODbh9FF5Npk8TRRQko1alrXvYYjRydE9~CxINSdobn1WmySSX8gq3w__' alt='Contact Image' />
-              </Grid>
-              
-              <Grid item style={{ width: "100%",paddingLeft: "10%", paddingRight: "10%",float:"right" }}>
-                <Typography variant="h6" sx={{fontSize: {        
-                                              xs: '60%',  
-                                              sm: '70%',   
-                                              md: '70%',  
-                                              lg: '75%',   
-                                              xl: '80%'}, fontFamily:"Poppins", color: "white" }}>Contact us</Typography>
-                
-                <Typography variant="body1" sx={{ fontSize: {        
-                                              xs: '60%',  
-                                              sm: '70%',   
-                                              md: '70%',  
-                                              lg: '75%',   
-                                              xl: '80%'},fontFamily:"Poppins", color: "#D0D0D0" }}>Industry&apos;s standard from dummy and make a type  book.</Typography>
-              </Grid>
-              <Grid item sx={{ display: "flex", paddingLeft: "10%", paddingRight: "10%", paddingTop: "3%", paddingBottom: '5%', flexDirection: "column", width: "100%",gap:1}}>
-                <TextField  type="email" name="email" sx={{
-                  '& .MuiOutlinedInput-root':{
-                    display:'flex',
-                    alignItems:'center',
-                 '& .MuiOutlinedInput-input':{
-                    padding:'8px 8px',
-                  },
-                  '& fieldset':{
-                    borderColor:'transparent',
-                  },
-                  '&:hover fieldset':{
-                    borderColor:'transparent',
-                  },
-                  '&.Mui-focused fieldset':{
-                    borderColor:'transparent',
-                  },
-                },
-                fontFamily:"Poppins",height: {xs: '45px',  
-                                                sm: '45px',   
-                                                md: '40px',  
-                                                lg: '40px',   
-                                                xl:'40px'},
-                                       width: {
-                                                xs: '100%',  
-                                                sm: '100%',   
-                                                md: '100%',  
-                                                lg: '100%',   
-                                                xl: '100%',   
-                                              },
-                    backgroundColor: "#5B5B61", borderRadius: 1.5 }} label="Enter Your Email" InputLabelProps={{ sx: { fontSize: {        
-                                                                                                                  xs: '60%',  
-                                                                                                                  sm: '70%',   
-                                                                                                                  md: '70%',  
-                                                                                                                  lg: '75%',   
-                                                                                                                  xl: '80%'},color: "white",textAlign:'center'} }}/>
-                
-                <TextField multiline rows={2} name="comments" sx={{ '& .MuiOutlinedInput-root':{
-                 '& .MuiOutlinedInput-input':{
-                    padding:'4px 4px',
-                  },
-                  '& fieldset':{
-                    borderColor:'transparent',
-                  },
-                  '&:hover fieldset':{
-                    borderColor:'transparent',
-                  },
-                  '&.Mui-focused fieldset':{
-                    borderColor:'transparent',
-                  }},fontFamily:"Poppins", backgroundColor: "#5B5B61", borderRadius: 1.5}}  label="Message" InputLabelProps={{ sx: {fontSize: {        
-                                              xs: '60%',  
-                                              sm: '70%',   
-                                              md: '70%',  
-                                              lg: '75%',   
-                                              xl: '80%'}, color: "white" } }}></TextField>
-              </Grid>
-              <Grid item style={{ paddingLeft: "10%", paddingRight: "10%", width: "100%",paddingBottom:"7%", }}>
-                <Button fullWidth variant='contained' sx={{'&:hover': {
-                                              backgroundColor: '#FFBF00'},fontSize: {        
-                                              xs: '70%',  
-                                              sm: '75%',   
-                                              md: '85%',  
-                                              lg: '85%',   
-                                              xl: '85%'},fontFamily:"Poppins",color: "black", backgroundColor: "#FFDC60", height: '90%' }}>Send</Button>
-              </Grid>
-            </Grid>
-          </Grid>
-
-          <Grid 
-            xs={12}
-            sm={12}
-            md={7}
-            lg={8} 
-            xl={8}
-            item
-            sx={{ marginTop: "3%", paddingTop:{xs:'10%',sm:'10%',md:'0%',lg:'0%',xl:'0%'}, paddingLeft:{  xs:'5%',
-                                                                                        sm:'5%', 
-                                                                                        md: '7%',  
-                                                                                        lg: '10%',   
-                                                                                        xl: '10%'}, 
-                                                                                        paddingRight:
-                                                                                        {xs:'5%',
-                                                                                        sm:'5%', 
-                                                                                        md: '3%',  
-                                                                                        lg: '5%',   
-                                                                                        xl: '5%'} }}
-          >
-            <Grid item style={{ display: "flex", justifyContent: "space-between" }}>
-              <Grid item sx={{width: {        
-                                              xs: '50%',  
-                                              sm: '50%',   
-                                              md: '50%',  
-                                              lg: '40%',   
-                                              xl: '40%'},paddingRight:{xs: '5%',  
-                                                sm: '5%',   
-                                                md: '2%',  
-                                                lg: '2%',   
-                                                xl: '2%'}}}>
-                <Typography variant='h6' sx={{fontSize: {        
-                                               xs: '60%',  
-                                               sm: '70%',   
-                                               md: '70%',  
-                                               lg: '75%',   
-                                               xl: '80%'},fontFamily:"Poppins", color: 'white' }}><span style={{ color: '#42E052' }}><LocalPhoneOutlinedIcon/></span> Get in touch with</Typography>
-                <br/>
-                <Typography variant='h6' sx={{'&:hover': {
-          color: '#FFBF00'},fontFamily:"Poppins", backgroundColor: '#3C3C45', height: {xs: '30px',  
-                                              sm: '30px',   
-                                              md: '35px',  
-                                              lg: '35px',   
-                                              xl: '35px'}, width: {        
-                                              xs: '90%',  
-                                              sm: '80%',   
-                                              md: '80%',  
-                                              lg: '85%',   
-                                              xl: '70%'},fontSize: {        
-                                                xs: '60%',  
-                                                sm: '70%',   
-                                                md: '70%',  
-                                                lg: '75%',   
-                                                xl: '80%'}, display: 'flex', alignItems: "center", justifyContent: "center", textAlign: "center", borderRadius: 2, color: "#FFDC60" }}>+91 8688281821</Typography>
-               
-               
-                <Link variant='body1' href='#' sx={{fontFamily:"Poppins", color: 'white',fontSize: {        
-                                               xs: '60%',  
-                                              sm: '70%',   
-                                              md: '70%',  
-                                              lg: '75%',   
-                                              xl: '80%'}, }}>contact@64framez.com</Link>
-              </Grid>
-
-              <Grid item sx={{width: {        
-                                              xs: '50%',  
-                                              sm: '50%',   
-                                              md: '50%',  
-                                              lg: '50%',   
-                                              xl: '50%'} ,
-                                              paddingLeft:{xs: '3%',  
-                                                sm: '5%',   
-                                                md: '3%',  
-                                                lg: '3%',   
-                                                xl: '3%'}}} >
-               
-                  <Typography variant='h6' sx={{ fontSize: {        
-                                               xs: '60%',  
-                                               sm: '70%',   
-                                               md: '70%',  
-                                               lg: '75%',   
-                                               xl: '80%'},fontFamily:"Poppins",color: 'white' }}><span style={{ color: '#FFDC60' }}><LocationOnOutlinedIcon/></span> Location</Typography>
-                  <br/>
-                  <Typography variant='body1' sx={{ fontSize: {        
-                                               xs: '60%',  
-                                               sm: '70%',   
-                                               md: '70%',  
-                                               lg: '75%',   
-                                               xl: '80%'},fontFamily:"Poppins",color: 'white' }}>Sample city, Tirupati, Andhra Pradesh, India.</Typography>
-                  
-                  <Link variant='body1' href='#' sx={{'&:hover': {
-          color: '#FFBF00'},fontSize: {        
-                                               xs: '60%',  
-                                               sm: '70%',   
-                                               md: '70%',  
-                                               lg: '75%',   
-                                               xl: '80%'}, fontFamily:"Poppins",color: '#FFDC60' }}>location</Link>
+    <ThemeProvider
+      theme={createTheme({
+        breakpoints: {
+          values: {
+            "2xs": 0,
+            xs: 425,
+            sm: 640,
+            md: 768,
+            lg: 1024,
+            xl: 1280,
+            "2xl": 1536,
+          },
+        },
+      })}
+    >
+      <Box className="w-full flex justify-center bg-[#292930]">
+        <Container className="mx-2 md:mx-2 lg:mx-5 my-10 flex justify-around font-poppins">
+          <Grid container className="flex">
+            <Grid
+              xs={12}
+              sm={12}
+              md={6}
+              lg={5}
+              xl={5}
+              item
+              className="text-headColor flex justify-center self-center"
+            >
+              <Box className="w-full sm:w-4/5 md:w-full bg-[#3C3C45] flex flex-col justify-around rounded-lg">
+                <Box className="flex justify-center">
+                  <img
+                    style={{ height: "230px", width: "230px" }}
+                    src={footerLogo}
+                    alt="Contact Image"
+                  />
+                </Box>
+                <Grid
+                  item
+                  className="px-[5%] xs:px-[10%] md:px-[5%] lg:px-[10%]"
+                  style={{
+                    width: "100%",
+                  }}
+                >
+                  <Typography
+                    variant="h6"
+                    className="font-poppins text-headColor text-base sm:text-xl lg:text-2xl font-semibold"
+                  >
+                    Contact us
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    className="text-[#d0d0d0] pt-2 font-poppins text-sm sm:text-base md:text-sm lg:text-base"
+                  >
+                    Industry&apos;s standard from dummy and make a type book.
+                  </Typography>
                 </Grid>
+                <Grid
+                  item
+                  className="px-[5%] xs:px-[10%] md:px-[5%] lg:px-[10%]"
+                  style={{
+                    display: "flex",
+                    paddingTop: "6%",
+                    paddingBottom: "5%",
+                    flexDirection: "column",
+                    width: "100%",
+                    gap: 15,
+                  }}
+                >
+                  <TextField
+                    type="email"
+                    name="email"
+                    className="bg-[#5B5B61] font-poppins rounded-lg"
+                    label="Enter Your Email"
+                    InputLabelProps={{
+                      style: { color: "white", fontFamily: "Poppins" },
+                    }}
+                  />
+                  <TextField
+                    multiline
+                    rows={4}
+                    name="comments"
+                    className="bg-[#5B5B61] font-poppins rounded-lg"
+                    label="Message"
+                    InputLabelProps={{
+                      style: { color: "white", fontFamily: "Poppins" },
+                    }}
+                  ></TextField>
+                </Grid>
+                <Grid
+                  item
+                  className="px-[5%] xs:px-[10%] md:px-[5%] lg:px-[10%]"
+                  style={{
+                    width: "100%",
+                    paddingBottom: "10%",
+                  }}
+                >
+                  <Button
+                    fullWidth
+                    variant="contained"
+                    className="h-10 sm:h-12 font-poppins text-black bg-[#ffdd60ae] font-medium text-sm sm:text-base lg:text-lg hover:bg-[#FFDC60] rounded-lg"
+                    sx={{ transition: ".4s ease" }}
+                  >
+                    Send
+                  </Button>
+                </Grid>
+              </Box>
             </Grid>
-            <br/>
-            
-            <hr style={{ color: "#727274" }} />
-            <br/>
-            
-            <Grid item style={{display: "flex", justifyContent: "flex-start" }}>
-              <Grid item sx={{ paddingRight:"40%", display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
-                <Typography variant='h6' sx={{ fontSize: {        
-                                               xs: '60%',  
-                                               sm: '70%',   
-                                               md: '70%',  
-                                               lg: '75%',   
-                                               xl: '80%'},color: 'white' }}><span style={{ color: "#FF5449" }}><FilterNoneOutlinedIcon/></span> Pages</Typography>
-                <br/>
-                <Link variant="body1" href='#' sx={{fontSize: {        
-                                               xs: '60%',  
-                                               sm: '70%',   
-                                               md: '70%',  
-                                               lg: '75%',   
-                                               xl: '80%'}, fontFamily:"Poppins",color: 'white' }}>Home</Link>
-                
-                <Link variant="body1" href='#' sx={{fontSize: {        
-                                             xs: '60%',  
-                                             sm: '70%',   
-                                             md: '70%',  
-                                             lg: '75%',   
-                                             xl: '80%'}, fontFamily:"Poppins",color: 'white' }}>Services</Link>
-             
-                <Link variant="body1" href='#' sx={{fontSize: {        
-                                              xs: '60%',  
-                                              sm: '70%',   
-                                              md: '70%',  
-                                              lg: '75%',   
-                                              xl: '80%'},fontFamily:"Poppins", color: 'white' }}>Projects</Link>
-              
-                <Link variant="body1" href='#' sx={{fontSize: {        
-                                              xs: '60%',  
-                                              sm: '70%',   
-                                              md: '70%',  
-                                              lg: '75%',   
-                                              xl: '80%'},fontFamily:"Poppins", color: 'white' }}>Team</Link>
-                
-                <Link variant="body1" href='#' sx={{fontSize: {        
-                                              xs: '60%',  
-                                              sm: '70%',   
-                                              md: '70%',  
-                                              lg: '75%',   
-                                              xl: '80%'}, color: 'white' }}>About</Link>
-              </Grid>
-              <Grid item style={{ display: "flex", flexDirection: "column", alignItems: "flex-start",float:"right" }}>
-                <Typography variant='h6' sx={{fontSize: {        
-                                               xs: '60%',  
-                                               sm: '70%',   
-                                               md: '70%',  
-                                               lg: '75%',   
-                                               xl: '80%'}, fontFamily:"Poppins",color: 'white' }}><span style={{ color: "#42E052" }}><CampaignOutlinedIcon/></span> Follows</Typography>
-                <br/>
-                <Link variant="body1" href='#' sx={{ fontSize: {        
-                                               xs: '60%',  
-                                               sm: '70%',   
-                                               md: '70%',  
-                                               lg: '75%',   
-                                               xl: '80%'},fontFamily:"Poppins",color: 'white' }}>Facebook</Link>
-                
-                <Link variant="body1" href='#' sx={{fontSize: {        
-                                              xs: '60%',  
-                                              sm: '70%',   
-                                              md: '70%',  
-                                              lg: '75%',   
-                                              xl: '80%'},fontFamily:"Poppins", color: 'white' }}>Instagram</Link>
-                
-                <Link variant="body1" href='#' sx={{ fontSize: {        
-                                              xs: '60%',  
-                                              sm: '70%',   
-                                              md: '70%',  
-                                              lg: '75%',   
-                                              xl: '80%'},fontFamily:"Poppins",color: 'white' }}>Twitter</Link>
-                
-                <Link variant="body1" href='#' sx={{fontSize: {        
-                                               xs: '60%',  
-                                               sm: '70%',   
-                                               md: '70%',  
-                                               lg: '75%',   
-                                               xl: '80%'}, fontFamily:"Poppins",color: 'white' }}>LinkedIn</Link>
-                
-                <Link variant="body1" href='#' sx={{ fontSize: {        
-                                               xs: '60%',  
-                                               sm: '70%',   
-                                               md: '70%',  
-                                               lg: '75%',   
-                                               xl: '80%'},fontFamily:"Poppins",color: 'white' }}>Pinterest</Link>
-              </Grid>
-            </Grid>
-            <br/>
-              <hr style={{color:"#727274"}}/>
-              <br/>
-              <Typography variant='body1' sx={{fontSize: {        
-                                              xs: '60%',  
-                                              sm: '70%',   
-                                              md: '70%',  
-                                              lg: '75%',   
-                                              xl: '80%'},fontFamily:"Poppins",color:'white'}}>Copyright © 64 FRAMEZ | Designed by Webortex</Typography>
+            <Grid
+              xs={12}
+              sm={12}
+              md={6}
+              lg={7}
+              xl={7}
+              item
+              className="px-3 xs:px-5 sm:px-16 md:px-7 lg:px-12 my-10 flex flex-col self-center"
+            >
+              <Grid
+                item
+                style={{ display: "flex", justifyContent: "space-between" }}
+              >
+                <Grid item className="flex flex-col gap-3">
+                  <Typography
+                    variant="h6"
+                    className="font-poppins text-headColor text-base sm:text-lg md:text-base lg:text-xl font-normal"
+                  >
+                    <span style={{ color: "#42E052" }}>
+                      <LocalPhoneOutlinedIcon />
+                    </span>
+                    Get in touch with
+                  </Typography>
+                  <Typography
+                    variant="h6"
+                    className="h-10 md:h-12 font-poppins text-base lg:text-xl text-headColor"
+                    sx={{
+                      backgroundColor: "#3C3C45",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      textAlign: "center",
+                      borderRadius: 2,
+                    }}
+                  >
+                    +91 8688281821
+                  </Typography>
 
+                  <Link
+                    variant="body1"
+                    className="font-poppins text-sm sm:text-base md:text-sm lg:text-base"
+                    href="#"
+                    style={{ color: "#FFDC60" }}
+                  >
+                    contact@64framez.com
+                  </Link>
+                </Grid>
+
+                <Grid
+                  item
+                  className="flex flex-col gap-3 pl-5 sm:pl-9 md:pl-5 lg:pl-14"
+                >
+                  <Typography
+                    variant="h6"
+                    style={{ color: "white" }}
+                    className="font-poppins text-headColor text-base sm:text-lg md:text-base lg:text-xl font-normal"
+                  >
+                    <span style={{ color: "#FFDC60" }}>
+                      <LocationOnOutlinedIcon />
+                    </span>
+                    Location
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    className="font-poppins text-sm sm:text-base md:text-sm lg:text-base"
+                    style={{ color: "white" }}
+                  >
+                    Sample city, Tirupati, Andhra Pradesh, India.
+                  </Typography>
+                  <Link
+                    variant="body1"
+                    className="font-poppins text-sm sm:text-base md:text-sm lg:text-base"
+                    href="#"
+                    style={{ color: "#FFDC60" }}
+                  >
+                    location
+                  </Link>
+                </Grid>
+              </Grid>
+
+              <hr className="my-12 text-[#727274]" />
+
+              <Grid
+                item
+                className="flex justify-start gap-10 xs:gap-16 lg:gap-20"
+              >
+                <Grid item className="flex flex-col items-start">
+                  <Typography
+                    variant="h6"
+                    className="font-poppins text-headColor text-base sm:text-lg md:text-base lg:text-xl font-normal"
+                    style={{ color: "white" }}
+                  >
+                    <span className="pe-2" style={{ color: "#FF5449" }}>
+                      <FilterNoneOutlinedIcon />
+                    </span>
+                    Pages
+                  </Typography>
+                  <Box className="flex flex-col pl-8 pt-4 gap-1">
+                    {PageLinks.map((PageLink, index) => (
+                      <Link
+                        key={index}
+                        variant="body1"
+                        className="font-poppins text-sm sm:text-base md:text-sm lg:text-base"
+                        href={PageLink.source}
+                        style={{ color: "white" }}
+                      >
+                        {PageLink.name}
+                      </Link>
+                    ))}
+                  </Box>
+                </Grid>
+                <Grid item className="flex flex-col items-start">
+                  <Typography
+                    variant="h6"
+                    className="font-poppins text-headColor text-base sm:text-lg md:text-base lg:text-xl font-normal"
+                    style={{ color: "white" }}
+                  >
+                    <span className="pe-2" style={{ color: "#42E052" }}>
+                      <CampaignOutlinedIcon />
+                    </span>
+                    Follows
+                  </Typography>
+                  <Box className="flex flex-col pl-8 pt-4 gap-1">
+                    {SocialLinks.map((SocialLink, index) => (
+                      <Link
+                        key={index}
+                        variant="body1"
+                        className="font-poppins text-sm sm:text-base md:text-sm lg:text-base"
+                        href={SocialLink.source}
+                        style={{ color: "white" }}
+                      >
+                        {SocialLink.name}
+                      </Link>
+                    ))}
+                  </Box>
+                </Grid>
+              </Grid>
+
+              <hr className="mt-12 mb-7 text-[#727274]" />
+
+              <Box>
+                <Typography
+                  variant="body1"
+                  className="font-poppins text-center md:text-left text-[10px] sm:text-sm md:text-xs lg:text-sm text-textColor"
+                >
+                  Copyright © 64 FRAMEZ | Designed by Webortex
+                </Typography>
+              </Box>
+            </Grid>
           </Grid>
-        </Grid>
+        </Container>
       </Box>
-    </Box>
+    </ThemeProvider>
   );
-}
+};
 
 export default Footer;

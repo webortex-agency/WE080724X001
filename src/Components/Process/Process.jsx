@@ -11,7 +11,7 @@ import process2_1 from "../../assets/Process/process2_1.svg";
 import process2_2 from "../../assets/Process/process2_2.svg";
 import process2_3 from "../../assets/Process/process2_3.svg";
 import process3 from "../../assets/Process/process3.svg";
-import ladder from "../../assets/Process/ladder.svg";
+import ladder from "../../assets/Process/ladder.png";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -62,46 +62,44 @@ export default function Process() {
   return (
     <Timeline
       position="alternate"
+      className="pt-10 pb-16"
       style={{
         background:
           "linear-gradient(111.05deg, #E9F7FF 9.66%, #FFDBD5 57.52%, #FFF3CA 103.42%)",
         overflowX: "hidden",
-        fontFamily: "Poppins, sans-serif", // Apply Poppins font
+        fontFamily: "Poppins, regular", // Apply Poppins font
       }}
     >
-      <div className="flex-col flex justify-center items-center">
-        <img src={ladder} alt="logo" width={105} height={105} />
+      <div className="flex-col flex justify-center items-center my-10">
+        <img
+          src={ladder}
+          alt="logo"
+          className="bg-iconBgColor text-iconColor h-[70px] w-[70px] p-[14px] rounded-full"
+        />
         <div style={{ width: "500px" }}>
           <Typography
-            sx={{ 
-              fontSize: isMobile ? "12px" : "15px", 
-              textAlign: "center", 
-              marginTop: "20px",
-              fontFamily: "Poppins, sans-serif" // Apply Poppins font
-            }}
+            className="text-[15px] text-backgroundColor font-poppins text-center mt-4"
+            sx={{ letterSpacing: "3px", textTransform: "uppercase" }}
           >
+            <span className="text-[#FEC90C] mx-1">//</span>
             03 . Process
           </Typography>
           <Typography
-            sx={{ 
-              fontSize: isMobile ? "30px" : "40px", 
-              textAlign: "center", 
-              marginBottom: "50px",
-              fontFamily: "Poppins, sans-serif" // Apply Poppins font
-            }}
+            variant="h4"
+            className="text-2xl sm:text-4xl md:text-3xl lg:text-4xl text-center font-poppins font-normal mt-4"
           >
             A simple, yet powerful and efficient process
           </Typography>
         </div>
       </div>
 
-      <TimelineItem>
+      <TimelineItem className="my-5">
         <TimelineOppositeContent
           sx={{
             display: "flex",
             justifyContent: "flex-end",
             alignItems: "center",
-            fontFamily: "Poppins, sans-serif" // Apply Poppins font
+            fontFamily: "Poppins, regular", // Apply Poppins font
           }}
           color="text.secondary"
         >
@@ -142,17 +140,22 @@ export default function Process() {
             animate={controls1}
             variants={textVariants}
           >
-            <Typography 
-              variant="h6" 
-              component="span" 
-              sx={{ 
-                fontSize: isMobile ? "20px" : "25px", 
-                fontFamily: "Poppins, sans-serif" // Apply Poppins font
+            <Typography
+              variant="h6"
+              component="span"
+              sx={{
+                fontSize: isMobile ? "20px" : "25px",
+                fontFamily: "Poppins, regular", // Apply Poppins font
               }}
             >
               Marketing Plan
             </Typography>
-            <Typography sx={{ fontSize: isMobile ? "15px" : "18px", fontFamily: "Poppins, sans-serif" }}>
+            <Typography
+              sx={{
+                fontSize: isMobile ? "15px" : "18px",
+                fontFamily: "Poppins, regular",
+              }}
+            >
               {isMobile
                 ? "We offer a marketing plan that aligns with your goals."
                 : "We are here to assist with a marketing plan that will provide incredible and outstanding results in line with your goal."}
@@ -163,10 +166,10 @@ export default function Process() {
 
       <TimelineItem>
         <TimelineOppositeContent
-          sx={{ 
-            display: "flex", 
-            justifyContent: "flex-start", 
-            fontFamily: "Poppins, sans-serif" // Apply Poppins font
+          sx={{
+            display: "flex",
+            justifyContent: "flex-start",
+            fontFamily: "Poppins, regular", // Apply Poppins font
           }}
           color="text.secondary"
         >
@@ -243,17 +246,22 @@ export default function Process() {
             animate={controls2_1}
             variants={imageVariants}
           >
-            <Typography 
-              variant="h6" 
-              component="span" 
-              sx={{ 
-                fontSize: isMobile ? "20px" : "25px", 
-                fontFamily: "Poppins, sans-serif" // Apply Poppins font
+            <Typography
+              variant="h6"
+              component="span"
+              sx={{
+                fontSize: isMobile ? "20px" : "25px",
+                fontFamily: "Poppins, regular", // Apply Poppins font
               }}
             >
               Marketing Plan
             </Typography>
-            <Typography sx={{ fontSize: isMobile ? "15px" : "18px", fontFamily: "Poppins, sans-serif" }}>
+            <Typography
+              sx={{
+                fontSize: isMobile ? "15px" : "18px",
+                fontFamily: "Poppins, regular",
+              }}
+            >
               {isMobile
                 ? "We provide audience targeting strategies."
                 : "We provide audience targeting strategies to ensure your marketing reaches the ideal audience and delivers optimal results."}
@@ -269,7 +277,7 @@ export default function Process() {
             justifyContent: "flex-end",
             alignItems: "flex-start",
             marginTop: isMobile ? "20px" : "-100px", // Add margin on top for mobile
-            fontFamily: "Poppins, sans-serif" // Apply Poppins font
+            fontFamily: "Poppins, regular", // Apply Poppins font
           }}
           color="text.secondary"
         >
@@ -279,7 +287,7 @@ export default function Process() {
               alt="Process Step 3"
               style={{
                 width: isMobile ? "80%" : "50%", // Increased size for mobile
-                marginTop:isMobile ?'0px':'30px',
+                marginTop: isMobile ? "0px" : "30px",
               }}
               initial="hidden"
               animate={controls3}
@@ -307,17 +315,22 @@ export default function Process() {
             animate={controls3}
             variants={textVariants}
           >
-            <Typography 
-              variant="h6" 
-              component="span" 
-              sx={{ 
-                fontSize: isMobile ? "20px" : "25px", 
-                fontFamily: "Poppins, sans-serif" // Apply Poppins font
+            <Typography
+              variant="h6"
+              component="span"
+              sx={{
+                fontSize: isMobile ? "20px" : "25px",
+                fontFamily: "Poppins, regular", // Apply Poppins font
               }}
             >
               Analytics
             </Typography>
-            <Typography sx={{ fontSize: isMobile ? "15px" : "18px", fontFamily: "Poppins, sans-serif" }}>
+            <Typography
+              sx={{
+                fontSize: isMobile ? "15px" : "18px",
+                fontFamily: "Poppins, regular",
+              }}
+            >
               {isMobile
                 ? "Track performance and optimize strategies."
                 : "We provide comprehensive analytics to track performance and optimize strategies for the best results."}
