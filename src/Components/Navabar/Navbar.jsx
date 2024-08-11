@@ -76,6 +76,7 @@ const Navbar = () => {
               alt="64 FRAMEZ"
               src={logoImg}
               sx={{ height: "80px", width: "80px" }}
+              className="mr-24"
             />
             {isMatch ? (
               <DrawerComp />
@@ -85,7 +86,7 @@ const Navbar = () => {
                   textColor="inherit"
                   value={value}
                   onChange={(e, value) => setValue(value)}
-                  className="ml-0 md:ml-auto h-12 mx-0 md:mx-5 lg:mx-8"
+                  className="ml-0 md:ml-auto h-12 mx-0 md:mx-5 lg:mx-4"
                 >
                   {pages.map((page, index) => (
                     <Tab
