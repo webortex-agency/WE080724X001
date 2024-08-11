@@ -1,4 +1,5 @@
 import React from "react";
+import { createTheme } from '@mui/material/styles';
 import {
   Box,
   Container,
@@ -52,6 +53,16 @@ const Team = () => {
     },
     {
       id: 4,
+      FirstName: "Nandha",
+      LastName: "Kishore",
+      Role: "Lead Manager",
+      pic: "./src/assets/TeamMembers/profile.png",
+      insta: "https://www.instagram.com/",
+      fb: "https://www.facebook.com/",
+      x: "",
+    },
+    {
+      id: 5,
       FirstName: "Indu",
       LastName: "T",
       Role: "Lead Manager",
@@ -61,7 +72,7 @@ const Team = () => {
       x: "https://x.com/?lang=en",
     },
     {
-      id: 5,
+      id: 6,
       FirstName: "Prathyusha",
       LastName: "",
       Role: "Lead Manager",
@@ -71,7 +82,17 @@ const Team = () => {
       x: "https://x.com/?lang=en",
     },
     {
-      id: 6,
+      id: 7,
+      FirstName: "Rishitha",
+      LastName: "",
+      Role: "Lead Manager",
+      pic: "./src/assets/TeamMembers/rishitha.jpg",
+      insta: "https://www.instagram.com/",
+      fb: "https://www.facebook.com/",
+      x: "https://x.com/?lang=en",
+    },
+    {
+      id: 8,
       FirstName: "Rishitha",
       LastName: "",
       Role: "Lead Manager",
@@ -128,7 +149,11 @@ const Team = () => {
         {TeamMembers.map((member) => (
           <Grid
             item
-            sm={3.5}
+            sm={5.5}
+            xs={12}
+            lg={2.5}
+            md={2.5}
+            xl={2.5}
             sx={{
               backgroundColor: "white",
               borderRadius: 5,
