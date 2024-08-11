@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Container, Typography, Box, styled } from "@mui/material";
 import ContactSupportIcon from "@mui/icons-material/ContactSupport";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
@@ -79,7 +79,36 @@ const Star = styled(Typography)(({ theme }) => ({
   fontSize: "20px",
 }));
 
+const ScrollContainer = styled(Box)({
+  display: "flex",
+  overflowX: "hidden",
+  scrollBehavior: "smooth",
+  width: "100%",
+});
+
 const Testimonials = () => {
+  const scrollRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const handleScroll = (direction) => {
+    const container = scrollRef.current;
+    const scrollAmount = 360;
+
+    if (direction === "left") {
+      container.scrollLeft -= scrollAmount;
+    } else {
+      container.scrollLeft += scrollAmount;
+    }
+
+    setTimeout(() => {
+      setCanScrollLeft(container.scrollLeft > 0);
+      setCanScrollRight(
+        container.scrollLeft < container.scrollWidth - container.clientWidth
+      );
+    }, 100);
+  };
+
   return (
     <Container
       maxWidth="lg"
@@ -109,65 +138,77 @@ const Testimonials = () => {
         </div>
         <div className="flex items-end justify-end md:ml-auto rounded-lg gap-5 mx-auto md:mx-0 mt-3 md:mt-0">
           <ArrowBackIosNewIcon
-            className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#454545] p-5 sm:p-7 text-headColor hover:bg-headColor hover:text-[#454545] cursor-pointer"
-            sx={{ transition: ".4s ease" }}
+            onClick={() => handleScroll("left")}
+            className={`w-16 h-16 sm:w-20 sm:h-20 rounded-full p-5 sm:p-7 cursor-pointer ${
+              canScrollLeft
+                ? "bg-[#454545] text-headColor hover:bg-headColor hover:text-[#454545]"
+                : "bg-headColor text-[#454545] cursor-not-allowed"
+            }`}
+            sx={{ transition: ".5s ease-in-out" }}
           />
           <ArrowBackIosNewIcon
-            className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#454545] p-5 sm:p-7 text-headColor hover:bg-headColor hover:text-[#454545] cursor-pointer rotate-180"
-            sx={{ transition: ".4s ease" }}
+            onClick={() => handleScroll("right")}
+            className={`w-16 h-16 sm:w-20 sm:h-20 rounded-full p-5 sm:p-6 md:p-7 cursor-pointer rotate-180 ${
+              canScrollRight
+                ? "bg-[#454545] text-headColor hover:bg-headColor hover:text-[#454545]"
+                : "bg-headColor text-[#454545] cursor-not-allowed"
+            }`}
+            sx={{ transition: ".5s ease-in-out" }}
           />
         </div>
       </Box>
 
-      <Box className="w-full h-full grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-flow-row gap-x-4 gap-y-5 my-10 px-2 md:px-0 rounded-lg">
-        {testimonialsData.map((testimonialData, index) => (
-          <GridCard key={index} className="py-3 px-4 h-max">
-            <InnerCard className="py-4 px-5 rounded-lg">
-              <Box className="flex items-center">
-                <Box className="flex justify-start items-center">
-                  <GreenCircle />
-                  <OrangeTriangle />
-                </Box>
+      <ScrollContainer ref={scrollRef}>
+        <Box className="flex gap-4 py-4">
+          {testimonialsData.map((testimonialData, index) => (
+            <GridCard key={index} className="py-3 px-4 h-max w-[360px] ">
+              <InnerCard className="py-4 px-5 rounded-lg">
+                <Box className="flex items-center">
+                  <Box className="flex justify-start items-center">
+                    <GreenCircle />
+                    <OrangeTriangle />
+                  </Box>
 
-                <Stars className="justify-self-end ml-auto">
-                  <Star>★</Star>
-                  <Star>★</Star>
-                  <Star>★</Star>
-                  <Star>★</Star>
-                  <Star>★</Star>
-                </Stars>
-              </Box>
-              <Typography className="font-poppins text-backgroundColor text-[11px] leading-[18px] font-normal text-left mt-5">
-                {testimonialData.content}
-              </Typography>
-            </InnerCard>
-            <div
-              className="mt-4 mb-2"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                width: "calc(100% - 40px)",
-              }}
-            >
-              <Box className="flex justify-start">
-                <img
-                  className="w-10 h-10 rounded-full object-cover object-center"
-                  alt={`testimonial ${index}`}
-                  src={testimonialData.image}
-                />
-                <Box className="self-center pl-2">
-                  <Typography className="text-xs text-backgroundColor font-poppins font-medium">
-                    {testimonialData.name}
-                  </Typography>
-                  <Typography className="text-[11px] text-backgroundColor font-poppins font-normal">
-                    {testimonialData.role}
-                  </Typography>
+                  <Stars className="justify-self-end ml-auto">
+                    <Star>★</Star>
+                    <Star>★</Star>
+                    <Star>★</Star>
+                    <Star>★</Star>
+                    <Star>★</Star>
+                  </Stars>
                 </Box>
-              </Box>
-            </div>
-          </GridCard>
-        ))}
-      </Box>
+                <Typography className="font-poppins text-backgroundColor text-[11px] leading-[18px] font-normal text-left mt-5">
+                  {testimonialData.content}
+                </Typography>
+              </InnerCard>
+              <div
+                className="mt-4 mb-2"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  width: "calc(100% - 40px)",
+                }}
+              >
+                <Box className="flex justify-start">
+                  <img
+                    className="w-10 h-10 rounded-full object-cover object-center"
+                    alt={`testimonial ${index}`}
+                    src={testimonialData.image}
+                  />
+                  <Box className="self-center pl-2">
+                    <Typography className="text-xs text-backgroundColor font-poppins font-medium">
+                      {testimonialData.name}
+                    </Typography>
+                    <Typography className="text-[11px] text-backgroundColor font-poppins font-normal">
+                      {testimonialData.role}
+                    </Typography>
+                  </Box>
+                </Box>
+              </div>
+            </GridCard>
+          ))}
+        </Box>
+      </ScrollContainer>
     </Container>
   );
 };

@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 import logoImg from "../../assets/logo.png";
 import DrawerComp from "./DrawerComp";
 
-const pages = ["Home", "Services", "Projects", "Team", "About"];
+const pages = ["Services", "Projects", "About"];
 
 const CustomTabs = styled(Tabs)(({ theme }) => ({
   "& .css-1aquho2-MuiTabs-indicator": {

@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import { Menu } from "@mui/icons-material";
 
-const pages = ["Home", "Services", "Projects", "Team", "About"];
+const pages = ["Services", "Projects", "About"];
 
 const CustomizedDrawer = styled(Drawer)(({ theme }) => ({
   ".css-4t3x6l-MuiPaper-root-MuiDrawer-paper": {
