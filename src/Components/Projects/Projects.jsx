@@ -2,14 +2,15 @@ import React from "react";
 import { Container, Box, Card, Typography } from "@mui/material";
 
 const images = [
-  "./src/assets/Projects/Graphic.gif",
-  "./src/assets/Projects/motion.gif",
-  "./src/assets/Projects/Interior.gif",
-  "./src/assets/Projects/WEB.gif",
-  "./src/assets/Projects/Photography.gif",
-  "./src/assets/Projects/Digital.gif",
-  "./src/assets/Projects/2d.gif",
-  "./src/assets/Projects/3d.gif",
+  "./src/assets/Projects/Graphic.webm",
+  "./src/assets/Projects/Graphic Design.webm",
+  "./src/assets/Projects/Interior Design.webm",
+  "./src/assets/Projects/WEb.webm",
+  "./src/assets/Projects/Photography.webm",
+  
+  "./src/assets/Projects/Digital market.mp4",
+  "./src/assets/Projects/2D animation.webm",
+  "./src/assets/Projects/3D.webm",
 ];
 
 const Projects = () => {
@@ -28,10 +29,14 @@ const Projects = () => {
             key={index}
             className="w-full h-full rounded-lg flex items-center justify-center overflow-hidden"
           >
-            <img
+            <video
               src={image}
               alt={`Project ${index}`}
               className="w-full h-full object-cover rounded-lg"
+              playsInline
+              autoPlay
+              loop
+              muted
             />
           </Card>
         ))}

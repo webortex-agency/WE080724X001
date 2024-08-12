@@ -13,19 +13,21 @@ const Marquee = styled(Box)(({ theme }) => ({
 }));
 
 const images = [
-  "src/assets/clients/A-logo-01.png",
-  "src/assets/clients/AB-01-01.png",
-  "src/assets/clients/Analognxt-0012-01-01.png",
-  "src/assets/clients/beats_logo_wth_out_bg2.png",
-  "src/assets/clients/Elite-Power-logo-01.png",
-  "src/assets/clients/Final-for-proprietor.jpg",
-  "src/assets/clients/Healthy-01.png",
-  "src/assets/clients/Lavish-01.png",
-  "src/assets/clients/logo-final-001-01.png",
-  "src/assets/clients/Logo-TO.jpg",
-  "src/assets/clients/tendel-with-font-01.png",
-  "src/assets/clients/TRENDEL-Text.png",
-  "src/assets/clients/well-health-1.png",
+  "./src/assets/clients/logo1.svg",
+  "./src/assets/clients/Frame 427320620.svg",
+  "./src/assets/clients/Frame 427320619.svg",
+  "./src/assets/clients/Frame 427320621.svg",
+  "./src/assets/clients/Frame 427320623.svg",
+  "./src/assets/clients/Frame 427320624.svg",
+  "./src/assets/clients/Frame 427320625.svg",
+  "./src/assets/clients/Frame 427320626.svg",
+  "./src/assets/clients/Frame 427320627.svg",
+  "./src/assets/clients/Frame 427320628.svg",
+  "./src/assets/clients/Frame 427320629.svg",
+  "./src/assets/clients/Frame 427320630.svg",
+  "./src/assets/clients/Frame 427320631.svg",
+  
+  
 ];
 
 const ClientsCompo = () => {
