@@ -28,13 +28,13 @@
         align-items: center;
         transition: opacity 0.25s, visibility 1s;
         }
-        .spinner > img {
+        .spinner > video {
           max-width: 100%;
       
         
         max-height: 100%;
       
-        transform: scale(0.25);
+        transform: scale(0.4);
         }
         .spinnerfade {
           opacity: 0;
@@ -44,7 +44,11 @@
     </head>
     <body>
       <div class="spinner"  id="spinner">
-        <img src="src\assets\logo.gif" alt="Loading..." />
+        <video  playsInline
+        autoPlay
+        loop
+        muted
+         src="src\assets\MainLogo.webm" alt="Loading..." />
       </div>
       <div id="root"></div>
       <script type="module" src="/src/main.jsx"></script>

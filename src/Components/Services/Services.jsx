@@ -76,35 +76,35 @@ const ColoredButton = styled(Button)(({ theme }) => ({
 
 const ServicesData = [
   {
-    image: "src/assets/Services/graphicdesign.png",
+    image: "src/assets/Services/picture-dynamic-color.svg",
     title: "Graphic Designing",
     description:
       "We have extensive graphic design experience, and we provide high-quality, more accurate outcomes.",
     path: "/services/graphic-design",
   },
   {
-    image: "src/assets/Services/motiongraphics.png",
+    image: "src/assets/Services/image 17.svg",
     title: "Motion Graphics",
     description:
       "Our motion graphics bring your ideas to life with dynamic animations. ",
     path: "/services/motion-graphics",
   },
   {
-    image: "src/assets/Services/interiordesign.png",
+    image: "src/assets/Services/paint-kit-dynamic-color.svg",
     title: "Interior Design",
     description:
       "We create innovative and stylish interior spaces tailored to your needs.",
     path: "/services/interior-design",
   },
   {
-    image: "src/assets/Services/webdevelopment.png",
+    image: "src/assets/Services/webdev.svg",
     title: "Web Design",
     description:
       "Our web designs are user-friendly and visually stunning, enhancing your online presence.",
     path: "/services/web-design",
   },
   {
-    image: "src/assets/Services/photography.png",
+    image: "src/assets/Services/camera-dynamic-color.svg",
     title: "Photography",
     description:
       "We capture your moments with professional and creative photography.",
@@ -118,14 +118,14 @@ const ServicesData = [
     path: "/services/digital-marketing",
   },
   {
-    image: "src/assets/Services/cinematography.png",
+    image: "src/assets/Services/image 15.svg",
     title: "Cinematography",
     description:
       "We have extensive expertise editing videos, and we provide amazing insights into your thoughts.",
     path: "/services/cinematography",
   },
   {
-    image: "src/assets/Services/3dcinematography.png",
+    image: "src/assets/Services/3d-dynamic-color.svg",
     title: "3D Cinematography",
     description:
       "We produce immersive 3D cinematography that captivates and engages viewers.",
