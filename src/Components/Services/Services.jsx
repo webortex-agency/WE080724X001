@@ -76,6 +76,7 @@ const ColoredButton = styled(Button)(({ theme }) => ({
 
 const ServicesData = [
   {
+    id: "1",
     image: "src/assets/Services/picture-dynamic-color.svg",
     title: "Graphic Designing",
     description:
@@ -83,6 +84,7 @@ const ServicesData = [
     path: "/services/graphic-design",
   },
   {
+    id: "2",
     image: "src/assets/Services/image 17.svg",
     title: "Motion Graphics",
     description:
@@ -90,6 +92,7 @@ const ServicesData = [
     path: "/services/motion-graphics",
   },
   {
+    id: "3",
     image: "src/assets/Services/paint-kit-dynamic-color.svg",
     title: "Interior Design",
     description:
@@ -97,6 +100,7 @@ const ServicesData = [
     path: "/services/interior-design",
   },
   {
+    id: "4",
     image: "src/assets/Services/webdev.svg",
     title: "Web Design",
     description:
@@ -104,6 +108,7 @@ const ServicesData = [
     path: "/services/web-design",
   },
   {
+    id: "5",
     image: "src/assets/Services/camera-dynamic-color.svg",
     title: "Photography",
     description:
@@ -111,6 +116,7 @@ const ServicesData = [
     path: "/services/photography",
   },
   {
+    id: "6",
     image: "src/assets/Services/digitalmarketing.png",
     title: "Digital Marketing",
     description:
@@ -118,6 +124,7 @@ const ServicesData = [
     path: "/services/digital-marketing",
   },
   {
+    id: "7",
     image: "src/assets/Services/image 15.svg",
     title: "Cinematography",
     description:
@@ -125,6 +132,7 @@ const ServicesData = [
     path: "/services/cinematography",
   },
   {
+    id: "8",
     image: "src/assets/Services/3d-dynamic-color.svg",
     title: "3D Cinematography",
     description:
@@ -183,9 +191,9 @@ const Services = ({ cards = ServicesData }) => {
             />
           </ColoredButton>
         </Box>
-        <Container className="my-5 py-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-10 gap-y-[73px] text-headColor justify-self-center">
-          {cards.map((card, index) => (
-            <HoverCard key={index} className="justify-self-center">
+        <Container className="my-5 py-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-10 text-headColor justify-self-center">
+          {cards.map((card) => (
+            <HoverCard key={card.id} className="justify-self-center">
               <CardActionArea className="flex flex-col">
                 <CardMedia
                   component="img"
@@ -213,7 +221,7 @@ const Services = ({ cards = ServicesData }) => {
               <CardActions className="gap-0 mx-3 mb-4 align-baseline">
                 <CustomButton
                   size="small"
-                  className="font-poppins text-headColor text-[12px] self-center font-light"
+                  className="font-poppins text-headColor text-[12px] self-center font-light mt-0 md:mt-5 xl:mt-1"
                   sx={{ letterSpacing: "2px" }}
                   onClick={() => handleMoreClick(card.path)}
                 >

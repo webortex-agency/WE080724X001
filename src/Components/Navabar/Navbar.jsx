@@ -98,12 +98,13 @@ const Navbar = () => {
       <div className="mt-2 pt-2 md:flex md:justify-center">
         <div className={navbarClasses} style={{ zIndex: 999 }}>
           <Toolbar className="align-middle">
-            <Avatar
-              alt="64 FRAMEZ"
-              src={logoImg}
-              sx={{ height: "80px", width: "80px" }}
-              className="mr-24"
-            />
+            <Link to="/" className="mr-24">
+              <Avatar
+                alt="64 FRAMEZ"
+                src={logoImg}
+                sx={{ height: "80px", width: "80px" }}
+              />
+            </Link>
             {isMatch ? (
               <DrawerComp />
             ) : (

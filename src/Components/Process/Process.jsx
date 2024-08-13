@@ -81,7 +81,7 @@ export default function Process() {
             className="text-[15px] text-backgroundColor font-poppins text-center mt-4"
             sx={{ letterSpacing: "3px", textTransform: "uppercase" }}
           >
-            <span className="text-[#FEC90C] mx-1">//</span>
+            <span className="text-[#5956E8] mx-1">//</span>
             03 . Process
           </Typography>
           <Typography
