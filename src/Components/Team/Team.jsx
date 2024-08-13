@@ -1,19 +1,14 @@
 import React from "react";
+import { createTheme } from "@mui/material/styles";
 import {
   Box,
   Container,
   Grid,
-  Icon,
   IconButton,
   Link,
   Typography,
 } from "@mui/material";
-import HandshakeIcon from "@mui/icons-material/Handshake";
 import { Handshake } from "@mui/icons-material";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import XIcon from "@mui/icons-material/X";
-import Ashok from "../../assets/TeamMembers/aa.png";
 import Insta from "../../assets/Social/instagram.png";
 import fb from "../../assets/Social/facebook.png";
 import x from "../../assets/Social/twitter.png";
@@ -52,6 +47,16 @@ const Team = () => {
     },
     {
       id: 4,
+      FirstName: "Nandha",
+      LastName: "Kishore",
+      Role: "Lead Manager",
+      pic: "./src/assets/TeamMembers/profile.png",
+      insta: "https://www.instagram.com/",
+      fb: "https://www.facebook.com/",
+      x: "",
+    },
+    {
+      id: 5,
       FirstName: "Indu",
       LastName: "T",
       Role: "Lead Manager",
@@ -61,7 +66,7 @@ const Team = () => {
       x: "https://x.com/?lang=en",
     },
     {
-      id: 5,
+      id: 6,
       FirstName: "Prathyusha",
       LastName: "",
       Role: "Lead Manager",
@@ -71,7 +76,17 @@ const Team = () => {
       x: "https://x.com/?lang=en",
     },
     {
-      id: 6,
+      id: 7,
+      FirstName: "Rishitha",
+      LastName: "",
+      Role: "Lead Manager",
+      pic: "./src/assets/TeamMembers/rishitha.jpg",
+      insta: "https://www.instagram.com/",
+      fb: "https://www.facebook.com/",
+      x: "https://x.com/?lang=en",
+    },
+    {
+      id: 8,
       FirstName: "Rishitha",
       LastName: "",
       Role: "Lead Manager",
@@ -82,126 +97,80 @@ const Team = () => {
     },
   ];
   return (
-    // <Container>
-    <Box
-      sx={{
-        paddingBottom: 4, // padding: 16px
-        m: 0, // margin: 16px
-        backgroundColor: "#171717",
-      }}
-    >
-      <Grid container sx={{ justifyContent: "center" }}>
-        <IconButton
-          sx={{
-            background: "#665AEA",
-            color: "white",
-            marginTop: "2%",
-            "&:hover": {
-              backgroundColor: "#665AEA",
-            },
-          }}
-          size="large"
-        >
-          <Handshake sx={{ fontSize: 35 }} />
-        </IconButton>
+    <Container className="pt-16 pb-20">
+      <Grid container className="flex flex-col items-center">
+        <Handshake
+          sx={{ fontSize: 35 }}
+          className="bg-iconBgColor text-iconColor h-[70px] w-[70px] p-[14px] rounded-full "
+        />
+        <div className="my-5 text-center">
+          <Typography
+            className="text-[15px] text-[#D0D0D0] font-poppins"
+            sx={{ letterSpacing: "3px", textTransform: "uppercase" }}
+          >
+            <span className="text-[#5956E8] mx-1">//</span>
+            05 . Our Team
+          </Typography>
+          <Typography
+            variant="h4"
+            className="text-2xl sm:text-3xl md:text-xl lg:text-4xl text-headColor px-5 md:px-0 text-center  font-poppins font-normal mt-4"
+          >
+            Meet Our Team Experts
+          </Typography>
+        </div>
       </Grid>
-      <Grid container sx={{ justifyContent: "center" }}>
-        <Typography
-          sx={{
-            fontSize: 30,
-            fontFamily: "Nunito",
-            paddingTop: "2%",
-            color: "white",
-          }}
-        >
-          Meet Our Team Experts
-        </Typography>
-      </Grid>
-      <Grid
-        container
-        sx={{
-          justifyContent: "space-around",
-          paddingLeft: "10%",
-          paddingRight: "10%",
-        }}
-      >
-        {TeamMembers.map((member) => (
-          <Grid
-            item
-            sm={3.5}
-            sx={{
-              backgroundColor: "white",
-              borderRadius: 5,
-              padding: "25px",
-              textAlign: "center",
-              marginTop: 4,
-              "&:hover": {
-                background:
-                  "linear-gradient(to right, #E9F7FF, #FFDBD4,#FFF3CA)",
-              },
-            }}
-            key={member.id}
+
+      <Box className="gap-x-4 gap-y-5 grid grid-flow-row grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {TeamMembers.map((TeamMember) => (
+          <div
+            className="bg-headColor font-poppins p-6 text-center mt-1 cursor-pointer rounded-lg hover:bg-gradient-to-tr from-[#E9F7FF] via-[#FFDBD4] to-[#FFF3CA] transition-all duration-500 ease-in-out w-full"
+            key={TeamMember.id}
           >
             <img
-              src={member.pic}
-              alt="Ashok"
+              src={TeamMember.pic}
+              alt={`team-mem-${TeamMember.id}`}
               style={{
                 borderRadius: 10,
                 height: "200px",
                 width: "100%",
                 aspectRatio: "auto",
               }}
-            ></img>
-            <Grid
-              sx={{ width: "100%", display: "flex", justifyContent: "center" }}
-            >
-              <Grid
-                sx={{
-                  color: "#5956E8",
-                  border: "1.6px solid #5956E8",
-                  marginTop: 2,
-                  width: 60,
-                }}
-              ></Grid>
-            </Grid>
-            <Typography
-              sx={{ paddingTop: 2, fontWeight: "bolder", fontFamily: "Nunito" }}
-            >
-              {member.FirstName} {member.LastName}
-            </Typography>
-            <Typography
-              sx={{ fontSize: 15, fontFamily: "Noto Sans", color: "#555555" }}
-            >
-              {member.Role}
-            </Typography>
-            <Grid container sx={{ justifyContent: "center", marginTop: 1 }}>
-              {member.insta != "" ? (
+            />
+            <Box>
+              <Typography className="pt-2 font-bold font-poppins">
+                {TeamMember.FirstName} {TeamMember.LastName}
+              </Typography>
+              <Typography className="text-base font-poppins text-[#555555]">
+                {TeamMember.Role}
+              </Typography>
+            </Box>
+            <Box className="justify-self-center mt-1">
+              {TeamMember.insta != "" ? (
                 <IconButton>
-                  <Link href={member.insta}>
+                  <Link href={TeamMember.insta}>
                     <img src={Insta} alt="Instagram" width={25}></img>
                   </Link>
                 </IconButton>
               ) : null}
-              {member.fb != "" ? (
+              {TeamMember.fb != "" ? (
                 <IconButton>
-                  <Link href={member.fb}>
+                  <Link href={TeamMember.fb}>
                     <img src={fb} alt="Instagram" width={20}></img>
                   </Link>
                 </IconButton>
               ) : null}
-              {member.x != "" ? (
+              {TeamMember.x != "" ? (
                 <IconButton>
-                  <Link href={member.x}>
+                  <Link href={TeamMember.x}>
                     <img src={x} alt="Instagram" width={20}></img>
                   </Link>
                 </IconButton>
               ) : null}
-            </Grid>
-          </Grid>
+            </Box>
+          </div>
         ))}
-      </Grid>
-    </Box>
-    // </Container>
+      </Box>
+    </Container>
   );
 };
 

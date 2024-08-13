@@ -1,38 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>64 FRAMEZ</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      .spinner {
-        position: fixed;
-        inset: 0;
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>64 FRAMEZ</title>
+      <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        html,body {
+          height: 100%;
+          
+        }
+        .spinner {
+          position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         z-index: 9999;
         background-color: #171717;
-        display: grid;
-        place-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         transition: opacity 0.25s, visibility 1s;
-      }
-      .spinner > img {
-        transform: scale(0.15);
-      }
-      .spinnerfade {
-        opacity: 0;
-        visibility: hidden;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="spinner" id="spinner">
-      <img src="src\assets\logo.gif" alt="" />
-    </div>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>
+        }
+        .spinner > video {
+          max-width: 100%;
+      
+        
+        max-height: 100%;
+      
+        transform: scale(0.4);
+        }
+        .spinnerfade {
+          opacity: 0;
+          visibility: hidden;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="spinner"  id="spinner">
+        <video  playsInline
+        autoPlay
+        loop
+        muted
+         src="src\assets\MainLogo.webm" alt="Loading..." />
+      </div>
+      <div id="root"></div>
+      <script type="module" src="/src/main.jsx"></script>
+    </body>
+  </html>

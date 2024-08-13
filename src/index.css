@@ -17,13 +17,16 @@
 
 ::-webkit-scrollbar-track {
   background: #171717;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #f187ff49;
+  background: #3c3c45;
   border-radius: 4px;
+  transition: 0.5s ease-in-out;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #f187ff78;
+  background: #4c4c5a;
 }
