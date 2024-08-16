@@ -82,7 +82,7 @@ const Navbar = () => {
   const navbarClasses = `
     ${
       isScrolled
-        ? "fixed md:left-auto md:right-auto mx-4 px-2 md:px-0 md:mx-0 left-0 right-0 bg-[#292930] shadow-none rounded-full scroll-smooth"
+        ? "md:fixed md:left-auto md:right-auto md:px-0 md:mx-0 md:bg-[#292930] md:shadow-none md:rounded-full md:scroll-smooth"
         : "bg-transparent"
     }
     transition-all duration-200 ease
