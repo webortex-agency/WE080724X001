@@ -26,6 +26,7 @@ const Contact = () => {
   };
 
   return (
+
     <Container>
       <Grid container sx={{ display: 'flex', justifyContent: "center", marginBottom: 10 }}>
         <Grid item sx={{ display: 'flex', alignItems: "center", flexDirection: 'column', marginTop: 10 }}>
@@ -184,6 +185,9 @@ const Contact = () => {
           </Grid>
         </form>
       </Grid>
+
+
+
     </Container>
   );
 };
