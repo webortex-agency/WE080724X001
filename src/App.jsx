@@ -26,6 +26,7 @@ import ThreeDCinematographyService from "./Components/Services/ServicesCompo/Thr
 import WebDesignService from "./Components/Services/ServicesCompo/WebDesignService";
 import { Provider } from "./Components/Context/Context";
 
+
 const App = () => {
   const [loading, setLoading] = useState(true);
   const spinner = document.getElementById("spinner");
@@ -40,7 +41,7 @@ const App = () => {
     !loading && (
       <>
         <Provider>
-          <Router>
+          <Router basename="/WE080724X001/">
             <ScrollToTop />
             <Navbar />
             <Routes>
