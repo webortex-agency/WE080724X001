@@ -389,6 +389,8 @@ export class Provider extends Component {
         insta: "https://www.instagram.com/",
         fb: "https://www.facebook.com/",
         x: "https://x.com/?lang=en",
+        hueA: 340,
+        hueB: 10,
       },
       {
         id: 2,
@@ -399,6 +401,8 @@ export class Provider extends Component {
         insta: "https://www.instagram.com/",
         fb: "https://www.facebook.com/",
         x: "https://x.com/?lang=en",
+        hueA: 20,
+        hueB: 40,
       },
       {
         id: 3,
@@ -409,6 +413,8 @@ export class Provider extends Component {
         insta: "https://www.instagram.com/",
         fb: "https://www.facebook.com/",
         x: "",
+        hueA: 60,
+        hueB: 90,
       },
       {
         id: 4,
@@ -419,6 +425,8 @@ export class Provider extends Component {
         insta: "https://www.instagram.com/",
         fb: "https://www.facebook.com/",
         x: "",
+        hueA: 80,
+        hueB: 120,
       },
       {
         id: 5,
@@ -429,6 +437,8 @@ export class Provider extends Component {
         insta: "https://www.instagram.com/",
         fb: "https://www.facebook.com/",
         x: "https://x.com/?lang=en",
+        hueA: 100,
+        hueB: 140,
       },
 
       {
@@ -440,6 +450,8 @@ export class Provider extends Component {
         insta: "https://www.instagram.com/",
         fb: "",
         x: "https://x.com/?lang=en",
+        hueA: 2050,
+        hueB: 245,
       },
       {
         id: 7,
@@ -450,6 +462,8 @@ export class Provider extends Component {
         insta: "https://www.instagram.com/",
         fb: "https://www.facebook.com/",
         x: "https://x.com/?lang=en",
+        hueA: 260,
+        hueB: 290,
       },
       {
         id: 8,
@@ -460,6 +474,8 @@ export class Provider extends Component {
         insta: "https://www.instagram.com/",
         fb: "https://www.facebook.com/",
         x: "https://x.com/?lang=en",
+        hueA: 290,
+        hueB: 320,
       },
     ],
   };
