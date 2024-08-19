@@ -1,8 +1,9 @@
-import { useState } from 'react';
-import { Container,Button,Grid, TextField, Typography,Snackbar, Alert } from "@mui/material";
+import { Container, Button, Grid, TextField, Typography, Snackbar,Alert } from "@mui/material";
 import HandshakeIcon from '@mui/icons-material/Handshake';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
+import emailjs from '@emailjs/browser';
+import { useRef, useState } from 'react';
 
 const Contact = () => {
   const [fullName, setFullName] = useState('');
@@ -55,7 +56,28 @@ const Contact = () => {
   const handleCloseSnackbar = () => {
     setSnackbarOpen(false);
   };
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_p1dx12q', 'template_n2rio1e', form.current, 'Bc-7UM34x4W5ZfIp3')
+      .then(
+        (result) => {
+          console.log('SUCCESS!', result.text);
+          alert('Message Sent Successfully!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          alert('Failed to send the message, please try again.');
+        },
+      );
+  };
+
   return (
+
     <Container>
       <Grid container sx={{display:'flex',justifyContent:"center",marginBottom:10}}>
         <Grid item sx={{display:'flex',alignItems:"center",flexDirection:'column',marginTop:10}}>
@@ -76,11 +98,13 @@ const Contact = () => {
               <Typography sx={{textAlign:"center",color:"#DEDEDE",fontSize:{xs:"20px",sm:"25px",md:"30px",lg:"30px",xl:"30px"},fontFamily:"poppins"}}>Let’s build something awesome together</Typography>
         </Grid>
         <Grid container sx={{display:"flex",justifyContent:"space-between"}}>
+
                         <Grid xs={12}
                                 sm={12}
                                 md={7}
                                 lg={8}
                                 xl={8} item sx={{marginTop:10,marginBottom:10,backgroundColor:"#222222",width:"100%",borderRadius:3,display:"flex",alignItems:"center",flexDirection:"column"}}>
+                                  <form ref={form} onSubmit={sendEmail} style={{display:"flex",alignItems:"center",flexDirection:"column",width:"100%"}}>
                                 <Grid container sx={{margin:{xs:"30px 30px 30px",sm:"30px 60px 30px",md:"50px 60px 20px",lg:"50px 60px 20px",xl:"50px 60px 20px"},display:"flex",flexDirection:"row",justifyContent:"space-around"}}>
                                                   <Grid item xs={11}
                                                     sm={5}
@@ -158,7 +182,10 @@ const Contact = () => {
                                 <Grid item sx={{display:"flex",justifyContent:"center",marginBottom:4}}>
                                   <Button className="hover:bg-[#FFDC60]" variant='contained' type='submit' onClick={handleSubmit} sx={{backgroundColor:'#ffdd60ae',color:"black",height:"40px",width:"145px"}}>Send Message</Button>
                                 </Grid>
-                        </Grid>
+                                </form>
+                                </Grid>
+
+                        
         <Grid xs={12}
                 sm={12}
                 md={4}
@@ -177,7 +204,7 @@ const Contact = () => {
                   <br/>
                   <hr style={{color:'#ECECEC'}}/>
                   <Typography sx={{color:"white",fontSize:{xs:"23px",sm:"19px",md:"23px",lg:"23px",xl:"23px"},marginTop:'8px'}}><span style={{color:"#5956E8"}}><MailOutlineIcon sx={{fontSize:{xs:"33px",sm:"29px",md:"25px",lg:"33px",xl:"33px"}}}/></span> Email</Typography>
-                  <Typography sx={{color:'#C0BEBE',marginLeft:{xs:"40px",sm:"16px",md:"40px",lg:"40px",xl:"40px"},marginTop:{xs:"1px",sm:1,md:"1px",lg:"1px",xl:"1px"},paddingRight:"100px",fontSize:{sm:"15px",md:"18px",lg:"16px",xl:"16px"}}}>nextlevel@marketing.com</Typography></Grid>
+                  <Typography sx={{color:'#C0BEBE',marginLeft:{xs:"20px",sm:"16px",md:"40px",lg:"40px",xl:"40px"},marginTop:{xs:"1px",sm:1,md:"1px",lg:"1px",xl:"1px"},paddingRight:"100px",fontSize:{xs:"15px",sm:"15px",md:"18px",lg:"16px",xl:"16px"}}}>nextlevel@marketing.com</Typography></Grid>
               </Grid>
             <Grid xs={8}
               sm={5}
@@ -190,14 +217,14 @@ const Contact = () => {
               <br/>
               <hr style={{color:'#ECECEC'}}/>
               <Typography sx={{color:"white",fontSize:{xs:"23px",sm:"19px",md:"23px",lg:"23px",xl:"23px"},marginTop:'8px',fontWeight:"100px"}}><span style={{color:"#5956E8"}}><LocalPhoneOutlinedIcon sx={{fontSize:{xs:"33px",sm:"29px",md:"25px",lg:"33px",xl:"33px"}}}/></span> Phone</Typography>
-              <Typography sx={{color:'#C0BEBE',marginLeft:{xs:"40px",sm:"16px",md:"40px",lg:"40px",xl:"40px"},marginTop:{xs:"1px",sm:1,md:"1px",lg:"1px",xl:"1px"},fontSize:{sm:"15px",md:"18px",lg:"16px",xl:"16px"}}}>+91 8888884565</Typography>
+              <Typography sx={{color:'#C0BEBE',marginLeft:{xs:"20px",sm:"16px",md:"40px",lg:"40px",xl:"40px"},marginTop:{xs:"1px",sm:1,md:"1px",lg:"1px",xl:"1px"},fontSize:{xs:"15px",sm:"15px",md:"18px",lg:"16px",xl:"16px"}}}>+91 8888884565</Typography>
               </Grid>
               </Grid>
                 </Grid>
         </Grid>
-        
+        </Grid>
       </Grid>
-      </Grid>
+      
       <Snackbar
         open={snackbarOpen}
         autoHideDuration={4000} 
@@ -208,7 +235,6 @@ const Contact = () => {
           Message Sent Successfully!
         </Alert>
       </Snackbar>
-      
     </Container>
   );
 };
