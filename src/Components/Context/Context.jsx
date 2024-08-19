@@ -5,19 +5,19 @@ export class Provider extends Component {
   state = {
     navbarLinks: [
       {
-        id: "1",
+        id: 1,
         pageName: "Services",
         path: "#services",
         type: "section",
       },
       {
-        id: "2",
+        id: 2,
         pageName: "Projects",
         path: "#projects",
         type: "section",
       },
       {
-        id: "3",
+        id: 3,
         pageName: "About",
         path: "/about",
         type: "route",
@@ -26,78 +26,78 @@ export class Provider extends Component {
 
     scrollingComponents: [
       {
-        id: "1",
-        src: "./src/assets/ScrollingCompo/1.svg",
+        id: 1,
+        src: "src/assets/ScrollingCompo/1.svg",
       },
       {
-        id: "2",
+        id: 2,
         src: "src/assets/ScrollingCompo/2.svg",
       },
       {
-        id: "3",
+        id: 3,
         src: "src/assets/ScrollingCompo/3.svg",
       },
       {
-        id: "4",
+        id: 4,
         src: "src/assets/ScrollingCompo/4.svg",
       },
       {
-        id: "5",
+        id: 5,
         src: "src/assets/ScrollingCompo/5.svg",
       },
       {
-        id: "6",
+        id: 6,
         src: "src/assets/ScrollingCompo/6.svg",
       },
       {
-        id: "7",
+        id: 7,
         src: "src/assets/ScrollingCompo/7.svg",
       },
       {
-        id: "8",
+        id: 8,
         src: "src/assets/ScrollingCompo/8.svg",
       },
       {
-        id: "9",
+        id: 9,
         src: "src/assets/ScrollingCompo/9.svg",
       },
       {
-        id: "10",
+        id: 10,
         src: "src/assets/ScrollingCompo/10.svg",
       },
       {
-        id: "11",
+        id: 11,
         src: "src/assets/ScrollingCompo/11.svg",
       },
       {
-        id: "12",
+        id: 12,
         src: "src/assets/ScrollingCompo/12.svg",
       },
       {
-        id: "13",
+        id: 13,
         src: "src/assets/ScrollingCompo/13.svg",
       },
       {
-        id: "14",
+        id: 14,
         src: "src/assets/ScrollingCompo/14.svg",
       },
       {
-        id: "15",
+        id: 15,
         src: "src/assets/ScrollingCompo/15.svg",
       },
       {
-        id: "16",
+        id: 16,
         src: "src/assets/ScrollingCompo/16.svg",
       },
       {
-        id: "17",
+        id: 17,
         src: "src/assets/ScrollingCompo/17.svg",
       },
     ],
 
     servicesData: [
       {
-        id: "1",
+        id: 1,
         image: "src/assets/Services/picture-dynamic-color.svg",
         title: "Graphic Designing",
         description:
@@ -105,7 +105,7 @@ export class Provider extends Component {
         path: "/services/graphic-design",
       },
       {
-        id: "2",
+        id: 2,
         image: "src/assets/Services/image 17.svg",
         title: "Motion Graphics",
         description:
@@ -113,7 +113,7 @@ export class Provider extends Component {
         path: "/services/motion-graphics",
       },
       {
-        id: "3",
+        id: 3,
         image: "src/assets/Services/paint-kit-dynamic-color.svg",
         title: "Interior Design",
         description:
@@ -121,7 +121,7 @@ export class Provider extends Component {
         path: "/services/interior-design",
       },
       {
-        id: "4",
+        id: 4,
         image: "src/assets/Services/webdev.svg",
         title: "Web Design",
         description:
@@ -129,7 +129,7 @@ export class Provider extends Component {
         path: "/services/web-design",
       },
       {
-        id: "5",
+        id: 5,
         image: "src/assets/Services/camera-dynamic-color.svg",
         title: "Photography",
         description:
@@ -137,7 +137,7 @@ export class Provider extends Component {
         path: "/services/photography",
       },
       {
-        id: "6",
+        id: 6,
         image: "src/assets/Services/digitalmarketing.png",
         title: "Digital Marketing",
         description:
@@ -145,7 +145,7 @@ export class Provider extends Component {
         path: "/services/digital-marketing",
       },
       {
-        id: "7",
+        id: 7,
         image: "src/assets/Services/image 15.svg",
         title: "Cinematography",
         description:
@@ -153,7 +153,7 @@ export class Provider extends Component {
         path: "/services/cinematography",
       },
       {
-        id: "8",
+        id: 8,
         image: "src/assets/Services/3d-dynamic-color.svg",
         title: "3D Cinematography",
         description:
@@ -164,106 +164,189 @@ export class Provider extends Component {
 
     clientsComponent: [
       {
-        id: "1",
+        id: 1,
         src: "./src/assets/clients/logo1.svg",
       },
       {
-        id: "2",
+        id: 2,
         src: "./src/assets/clients/Frame 427320620.svg",
       },
       {
-        id: "3",
+        id: 3,
         src: "./src/assets/clients/Frame 427320619.svg",
       },
       {
-        id: "4",
+        id: 4,
         src: "./src/assets/clients/Frame 427320621.svg",
       },
       {
-        id: "5",
+        id: 5,
         src: "./src/assets/clients/Frame 427320623.svg",
       },
       {
-        id: "6",
+        id: 6,
         src: "./src/assets/clients/Frame 427320624.svg",
       },
       {
-        id: "7",
+        id: 7,
         src: "./src/assets/clients/Frame 427320625.svg",
       },
       {
-        id: "8",
+        id: 8,
         src: "./src/assets/clients/Frame 427320626.svg",
       },
       {
-        id: "9",
+        id: 9,
         src: "./src/assets/clients/Frame 427320627.svg",
       },
       {
-        id: "10",
+        id: 10,
         src: "./src/assets/clients/Frame 427320628.svg",
       },
       {
-        id: "11",
+        id: 11,
         src: "./src/assets/clients/Frame 427320629.svg",
       },
 
       {
-        id: "12",
+        id: 12,
         src: "./src/assets/clients/Frame 427320630.svg",
       },
       {
-        id: "13",
+        id: 13,
         src: "./src/assets/clients/Frame 427320631.svg",
       },
     ],
 
     projectsData: [
       {
-        id: "1",
+        id: 1,
         src: "./src/assets/Projects/Graphic.webm",
         path: "/projects/graphic",
       },
       {
-        id: "2",
+        id: 2,
         src: "./src/assets/Projects/Graphic Design.webm",
         path: "/projects/graphic-design",
       },
       {
-        id: "3",
+        id: 3,
         src: "./src/assets/Projects/Interior Design.webm",
         path: "/projects/interior-design",
       },
       {
-        id: "4",
+        id: 4,
         src: "./src/assets/Projects/WEb.webm",
         path: "/projects/web",
       },
       {
-        id: "5",
+        id: 5,
         src: "./src/assets/Projects/Photography.webm",
         path: "/projects/photography",
       },
       {
-        id: "6",
+        id: 6,
         src: "./src/assets/Projects/Digital market.mp4",
         path: "/projects/digital-market",
       },
       {
-        id: "7",
+        id: 7,
         src: "./src/assets/Projects/2D animation.webm",
         path: "/projects/2d",
       },
       {
-        id: "project-08",
+        id: 8,
         src: "./src/assets/Projects/3D.webm",
         path: "/projects/3d",
       },
     ],
 
+    graphicProjects: [
+      {
+        id: 1,
+        pic: "../src/assets/Projects/dummy.png",
+        btnText: "sample image",
+      },
+      {
+        id: 2,
+        pic: "../src/assets/Projects/dummy.png",
+        btnText: "sample image",
+      },
+      {
+        id: 3,
+        pic: "../src/assets/Projects/dummy.png",
+        btnText: "sample image",
+      },
+      {
+        id: 4,
+        pic: "../src/assets/Projects/dummy.png",
+        btnText: "sample image",
+      },
+      {
+        id: 5,
+        pic: "../src/assets/Projects/dummy.png",
+        btnText: "sample image",
+      },
+      {
+        id: 6,
+        pic: "../src/assets/Projects/dummy.png",
+        btnText: "sample image",
+      },
+      {
+        id: 7,
+        pic: "../src/assets/Projects/dummy.png",
+        btnText: "sample image",
+      },
+      {
+        id: 8,
+        pic: "../src/assets/Projects/dummy.png",
+        btnText: "sample image",
+      },
+      {
+        id: 9,
+        pic: "../src/assets/Projects/dummy.png",
+        btnText: "sample image",
+      },
+      {
+        id: 10,
+        pic: "../src/assets/Projects/dummy.png",
+        btnText: "sample image",
+      },
+      {
+        id: 11,
+        pic: "../src/assets/Projects/dummy.png",
+        btnText: "sample image",
+      },
+      {
+        id: 12,
+        pic: "../src/assets/Projects/dummy.png",
+        btnText: "sample image",
+      },
+      {
+        id: 13,
+        pic: "../src/assets/Projects/dummy.png",
+        btnText: "sample image",
+      },
+      {
+        id: 14,
+        pic: "../src/assets/Projects/dummy.png",
+        btnText: "sample image",
+      },
+      {
+        id: 15,
+        pic: "../src/assets/Projects/dummy.png",
+        btnText: "sample image",
+      },
+      {
+        id: 16,
+        pic: "../src/assets/Projects/dummy.png",
+        btnText: "sample image",
+      },
+    ],
+
     testimonialsData: [
       {
-        id: "1",
+        id: 1,
         content:
           "Lorem Ipsum has been the industry's standard from dummy text ever since the unknown printer to galley of type and make a type specimen book.",
         image: "src/assets/Testimonials/Image1.png",
@@ -271,7 +354,7 @@ export class Provider extends Component {
         role: "Marketing Lead at Google",
       },
       {
-        id: "2",
+        id: 2,
         content:
           "Lorem Ipsum has been the industry's standard from dummy text ever since the unknown printer to galley of type and make a type specimen book.",
         image: "src/assets/Testimonials/Image2.png",
@@ -279,7 +362,7 @@ export class Provider extends Component {
         role: "Designer",
       },
       {
-        id: "3",
+        id: 3,
         content:
           "Lorem Ipsum has been the industry's standard from dummy text ever since the unknown printer to galley of type and make a type specimen book.",
         image: "src/assets/Testimonials/Image2.png",
@@ -287,7 +370,7 @@ export class Provider extends Component {
         role: "Designer",
       },
       {
-        id: "4",
+        id: 4,
         content:
           "Lorem Ipsum has been the industry's standard from dummy text ever since the unknown printer to galley of type and make a type specimen book.",
         image: "src/assets/Testimonials/Image2.png",
@@ -301,7 +384,7 @@ export class Provider extends Component {
         id: 1,
         FirstName: "Angeri",
         LastName: "Pavan Reddy",
-        Role: "Founder",
+        Role: "Co-Founder",
         pic: "./src/assets/TeamMembers/pavan.jpg",
         insta: "https://www.instagram.com/",
         fb: "https://www.facebook.com/",
@@ -319,9 +402,9 @@ export class Provider extends Component {
       },
       {
         id: 3,
-        FirstName: "Nandha",
-        LastName: "Kishore",
-        Role: "Lead Manager",
+        FirstName: "Hitesh",
+        LastName: "Mehra",
+        Role: "Creative Director",
         pic: "./src/assets/TeamMembers/Prathyusha.jpg",
         insta: "https://www.instagram.com/",
         fb: "https://www.facebook.com/",
@@ -329,9 +412,9 @@ export class Provider extends Component {
       },
       {
         id: 4,
-        FirstName: "Nandha",
-        LastName: "Kishore",
-        Role: "Lead Manager",
+        FirstName: "Pruthvi",
+        LastName: "Raj",
+        Role: "Project Manager",
         pic: "./src/assets/TeamMembers/pavan.jpg",
         insta: "https://www.instagram.com/",
         fb: "https://www.facebook.com/",
@@ -341,37 +424,38 @@ export class Provider extends Component {
         id: 5,
         FirstName: "Indu",
         LastName: "T",
-        Role: "Lead Manager",
+        Role: "Creative Director",
         pic: "./src/assets/TeamMembers/indu.jpg",
         insta: "https://www.instagram.com/",
         fb: "https://www.facebook.com/",
         x: "https://x.com/?lang=en",
       },
+
       {
         id: 6,
-        FirstName: "Prathyusha",
-        LastName: "",
-        Role: "Lead Manager",
-        pic: "./src/assets/TeamMembers/Prathyusha.jpg",
-        insta: "https://www.instagram.com/",
-        fb: "https://www.facebook.com/",
-        x: "https://x.com/?lang=en",
-      },
-      {
-        id: 7,
         FirstName: "Rishitha",
         LastName: "",
-        Role: "Lead Manager",
+        Role: "Creative Director",
         pic: "./src/assets/TeamMembers/rishitha.jpg",
         insta: "https://www.instagram.com/",
         fb: "",
         x: "https://x.com/?lang=en",
       },
       {
+        id: 7,
+        FirstName: "Prathyusha",
+        LastName: "",
+        Role: "Creative Director",
+        pic: "./src/assets/TeamMembers/Prathyusha.jpg",
+        insta: "https://www.instagram.com/",
+        fb: "https://www.facebook.com/",
+        x: "https://x.com/?lang=en",
+      },
+      {
         id: 8,
         FirstName: "Rishitha",
         LastName: "",
-        Role: "Lead Manager",
+        Role: "Web Designer",
         pic: "./src/assets/TeamMembers/rishitha.jpg",
         insta: "https://www.instagram.com/",
         fb: "https://www.facebook.com/",
