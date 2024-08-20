@@ -137,16 +137,16 @@ const About = () => {
         >
           <div className="flex justify-center items-center h-full">
             <div className="text-center z-10">
-              <h2 className="font-poppins text-xl md:text-2xl lg:text-3xl font-light mb-8 text-white">
+              <h2 className="font-poppins text-xl md:text-2xl lg:text-3xl font-light mb-6 md:mb-7 lg:mb-8 text-white">
                 Hire Us Now
               </h2>
-              <p className="font-poppins text-2xl sm:text-3xl md:text-5xl lg:text-6xl mb-8 tracking-wide font-medium  text-white mt-4">
+              <p className="font-poppins text-2xl sm:text-3xl md:text-5xl lg:text-6xl mb-6 md:mb-7 lg:mb-8 tracking-wide font-medium leading-tight text-white mt-4">
                 We Are Always Ready To
                 <div className="font-poppins text-xl sm:text-2xl md:text-4xl lg:text-5xl tracking-wide font-medium leading-tight text-white mt-4">
                   Take A Perfect Choice
                 </div>
               </p>
-              <button className="bg-white text-backgroundColor px-12 py-3 mt-4 rounded-lg transform transition-all duration-500 ease-in-out hover:bg-navlinkActiveColor hover:text-headColor">
+              <button className="bg-white text-backgroundColor px-12 py-3 rounded-lg transform transition-all duration-500 ease-in-out hover:bg-navlinkActiveColor hover:text-headColor">
                 Get Started
               </button>
             </div>
