@@ -1,3 +1,4 @@
+import  { useState, useRef } from 'react';
 import {
   Box,
   Button,
@@ -8,12 +9,15 @@ import {
   TextField,
   ThemeProvider,
   Typography,
+  Snackbar,
+  Alert,
 } from "@mui/material";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import FilterNoneOutlinedIcon from "@mui/icons-material/FilterNoneOutlined";
 import CampaignOutlinedIcon from "@mui/icons-material/CampaignOutlined";
 import footerLogo from "../../assets/footerLogo.png";
+import emailjs from '@emailjs/browser';
 
 const PageLinks = [
   {
@@ -62,6 +66,54 @@ const SocialLinks = [
 ];
 
 const Footer = () => {
+  const [message, setMessage] = useState('');
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [email, setEmail] = useState('');
+  const [errors, setErrors] = useState({});
+  const form = useRef();
+  const validateEmail = (email) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  };
+  const validateForm = () => {
+    const newErrors = {};
+    
+    
+    
+    if (!email) {
+      newErrors.email = 'Email is required.';
+    } else if (!validateEmail(email)) {
+      newErrors.email = 'Please enter a valid email address.';
+    }
+    
+    setErrors(newErrors);
+    
+    return Object.keys(newErrors).length === 0;
+  };
+  
+  const sendEmail = (e) => {
+    e.preventDefault();
+    if (!validateForm()) {
+      return;
+    }
+
+    emailjs
+      .sendForm('service_6s2vfcv', 'template_kd0sbol', form.current, 'mWcuN68COh2Q3oyVd')
+      .then((result) => {
+        console.log('SUCCESS!', result.text);
+        setSnackbarOpen(true);
+        setEmail('');
+        setMessage('');
+      }, (error) => {
+        console.log('FAILED...', error.text);
+        alert('Failed to send the message, please try again.');
+      });
+  
+};
+  const handleCloseSnackbar = () => {
+    setSnackbarOpen(false);
+  };
+  
   return (
     <ThemeProvider
       theme={createTheme({
@@ -98,6 +150,7 @@ const Footer = () => {
                     alt="Contact Image"
                   />
                 </Box>
+                <form ref={form} onSubmit={sendEmail}>
                 <Grid
                   item
                   className="px-[5%] xs:px-[10%] md:px-[5%] lg:px-[10%]"
@@ -132,22 +185,58 @@ const Footer = () => {
                 >
                   <TextField
                     type="email"
-                    name="email"
+                    name="Email"
+                    InputProps={{
+                      style: { color: 'white' }, sx: {
+                        '& .MuiOutlinedInput-notchedOutline': {
+                          borderColor: 'white',
+                        },
+                        '&:hover .MuiOutlinedInput-notchedOutline': {
+                          borderColor: '#318CE7',
+                        },
+                        '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                          borderColor: '#1877F2',
+                        },
+                      },
+                    }}
                     className="bg-[#5B5B61] font-poppins rounded-lg"
                     label="Enter Your Email"
                     InputLabelProps={{
                       style: { color: "white", fontFamily: "Poppins" },
                     }}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    error={Boolean(errors.email)}
+                    helperText={errors.email}
                   />
                   <TextField
                     multiline
                     rows={4}
-                    name="comments"
+                    name="Message"
+                    InputProps={{
+                      style: { color: 'white' }, sx: {
+                        '& .MuiOutlinedInput-notchedOutline': {
+                          borderColor: 'white',
+                        },
+                        '&:hover .MuiOutlinedInput-notchedOutline': {
+                          borderColor: '#318CE7',
+                        },
+                        '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                          borderColor: '#1877F2',
+                        },
+                      },
+                    }}
                     className="bg-[#5B5B61] font-poppins rounded-lg"
                     label="Message"
                     InputLabelProps={{
                       style: { color: "white", fontFamily: "Poppins" },
+                      
                     }}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    error={Boolean(errors.message)}
+                    helperText={errors.message}
+                    
                   ></TextField>
                 </Grid>
                 <Grid
@@ -163,10 +252,12 @@ const Footer = () => {
                     variant="contained"
                     className="h-10 sm:h-12 font-poppins text-black bg-[#ffdd60ae] font-medium text-sm sm:text-base lg:text-lg hover:bg-[#FFDC60] rounded-lg"
                     sx={{ transition: ".4s ease" }}
+                    type="submit"
                   >
                     Send
                   </Button>
                 </Grid>
+                </form>
               </Box>
             </Grid>
             <Grid
@@ -319,6 +410,16 @@ const Footer = () => {
               </Box>
             </Grid>
           </Grid>
+          <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={4000}
+        onClose={handleCloseSnackbar}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      >
+        <Alert onClose={handleCloseSnackbar} severity="success" sx={{ width: '100%' }}>
+          Message Sent Successfully!
+        </Alert>
+      </Snackbar>
         </Container>
       </Box>
     </ThemeProvider>
