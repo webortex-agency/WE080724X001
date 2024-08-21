@@ -82,6 +82,10 @@ const Services = () => {
     navigate(path);
   };
 
+  const handleOurServicesClick = () => {
+    navigate("/contact");
+  };
+
   return (
     <Consumer>
       {(value) => {
@@ -122,6 +126,7 @@ const Services = () => {
                     textTransform: "capitalize",
                     transition: ".3s ease-in-out",
                   }}
+                  onClick={handleOurServicesClick}
                 >
                   Our Services
                   <KeyboardArrowRightTwoToneIcon

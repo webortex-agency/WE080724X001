@@ -82,13 +82,15 @@ const Navbar = () => {
   const navbarClasses = `
     ${
       isScrolled
-
         ? "md:fixed md:left-auto md:right-auto md:px-0 md:mx-0 md:bg-[#292930] shadow-none md:rounded-full scroll-smooth"
-
         : "bg-transparent"
     }
-    transition-all duration-400 ease-in-out
+    transition-all duration-300 ease-in-out
   `;
+
+  const handleLetsTalkClick = () => {
+    navigate("/contact");
+  };
 
   return (
     <Consumer>
@@ -111,7 +113,6 @@ const Navbar = () => {
                   ) : (
                     <>
                       <CustomTabs
-                     
                         value={value}
                         onChange={(e, value) => setValue(value)}
                         className="ml-0 md:ml-auto h-12 mx-0 md:mx-5 lg:mx-4"
@@ -130,15 +131,15 @@ const Navbar = () => {
                           />
                         ))}
                       </CustomTabs>
-                      <Link to="/contact">
-                        <Button
-                          variant="contained"
-                          className="text-buttonTextColor bg-buttonBgColor py-1 px-4 sm:py-2 sm:px-6 md:py-3 md:px-6 hover:bg-navlinkActiveColor hover:text-headColor rounded-lg font-semibold h-10 mx-auto md:mx-0 text-sm md:text-xs lg:text-sm text-nowrap"
-                          sx={{ transition: ".3s ease-in-out" }}
-                        >
-                          Let's Talk
-                        </Button>
-                      </Link>
+
+                      <Button
+                        variant="contained"
+                        className="text-buttonTextColor bg-buttonBgColor py-1 px-4 sm:py-2 sm:px-6 md:py-3 md:px-6 hover:bg-navlinkActiveColor hover:text-headColor rounded-lg font-semibold h-10 mx-auto md:mx-0 text-sm md:text-xs lg:text-sm text-nowrap"
+                        sx={{ transition: ".3s ease-in-out" }}
+                        onClick={handleLetsTalkClick}
+                      >
+                        Let's Talk
+                      </Button>
                     </>
                   )}
                 </Toolbar>

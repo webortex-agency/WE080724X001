@@ -96,6 +96,10 @@ const DrawerComp = () => {
     }
   };
 
+  const handleLetsTalkClick = () => {
+    navigate("/contact");
+  };
+
   return (
     <Consumer>
       {(value) => {
@@ -134,6 +138,7 @@ const DrawerComp = () => {
                     variant="contained"
                     className="font-semibold text-nowrap"
                     sx={{ borderRadius: "5px" }}
+                    onClick={handleLetsTalkClick}
                   >
                     Let's Talk
                   </ColoredButton>

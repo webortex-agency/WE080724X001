@@ -10,6 +10,7 @@ import {
 import coverImg from "../../assets/logo.gif";
 import ScrollingCompo from "../ScrollingCompo/ScrollingCompo";
 import EastIcon from "@mui/icons-material/East";
+import { useNavigate } from "react-router-dom";
 
 const CustomButton = styled(Button)(({ theme }) => ({
   display: "flex",
@@ -37,6 +38,16 @@ const CustomButton = styled(Button)(({ theme }) => ({
 }));
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
+  const handleLetsTalkClick = () => {
+    navigate("/contact");
+  };
+
+  const handleGetStartedClick = () => {
+    navigate("/contact");
+  };
+
   return (
     <div className=" m-0 p-0" id="home">
       <Box className="flex justify-center">
@@ -64,7 +75,8 @@ const HomePage = () => {
                   <Button
                     variant="contained"
                     className="text-buttonTextColor bg-buttonBgColor py-1 px-4 sm:py-2 sm:px-6 md:py-3 md:px-8  hover:bg-navlinkActiveColor hover:text-headColor rounded-lg font-semibold h-12 mx-auto md:mx-0 text-sm md:text-xs lg:text-sm"
-                    sx={{ transition: ".3s ease-in-out" }}
+                    sx={{ transition: ".4s ease-in-out" }}
+                    onClick={handleLetsTalkClick}
                   >
                     Let's Talk
                   </Button>
@@ -72,6 +84,7 @@ const HomePage = () => {
                   <CustomButton
                     variant="text"
                     className="font-poppins text-iconColor self-center py-1  sm:py-2  md:py-3 hover:text-headColor hover:bg-transparent font-semibold h-12 mx-auto md:mx-0 text-sm md:text-xs lg:text-sm"
+                    onClick={handleGetStartedClick}
                   >
                     <span id="buttonText">Get Started</span>
                     <EastIcon
