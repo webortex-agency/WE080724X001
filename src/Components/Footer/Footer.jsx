@@ -250,7 +250,7 @@ const Footer = () => {
                   <Button
                     fullWidth
                     variant="contained"
-                    className="h-10 sm:h-12 font-poppins text-black bg-[#ffdd60ae] font-medium text-sm sm:text-base lg:text-lg hover:bg-[#FFDC60] rounded-lg"
+                    className="h-10 sm:h-12 font-poppins text-backgroundColor bg-[#ffdd60ae] font-medium text-sm sm:text-base lg:text-lg hover:bg-[#FFDC60] rounded-lg"
                     sx={{ transition: ".4s ease" }}
                     type="submit"
                   >
