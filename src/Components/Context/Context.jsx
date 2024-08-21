@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+
+import image2 from "/src/assets/ScrollingCompo/2.svg";
 const Context = React.createContext();
 
 export class Provider extends Component {
@@ -27,19 +29,19 @@ export class Provider extends Component {
     scrollingComponents: [
       {
         id: 1,
-        src: "src/assets/ScrollingCompo/1.svg",
+        src: "./assets/1.svg",
       },
       {
         id: 2,
-        src: "src/assets/ScrollingCompo/2.svg",
+        src: {image2},
       },
       {
         id: 3,
-        src: "src/assets/ScrollingCompo/3.svg",
+        src: "./src/assets/ScrollingCompo/3.svg",
       },
       {
         id: 4,
-        src: "src/assets/ScrollingCompo/4.svg",
+        src: "../src/assets/ScrollingCompo/4.svg",
       },
       {
         id: 5,
