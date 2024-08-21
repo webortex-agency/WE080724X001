@@ -82,10 +82,12 @@ const Navbar = () => {
   const navbarClasses = `
     ${
       isScrolled
-        ? "fixed md:left-auto md:right-auto mx-4 px-2 md:px-0 md:mx-0 left-0 right-0 bg-[#292930] shadow-none rounded-full scroll-smooth"
+
+        ? "md:fixed md:left-auto md:right-auto md:px-0 md:mx-0 md:bg-[#292930] shadow-none md:rounded-full scroll-smooth"
+
         : "bg-transparent"
     }
-    transition-all duration-200 ease
+    transition-all duration-400 ease-in-out
   `;
 
   return (
@@ -94,7 +96,7 @@ const Navbar = () => {
         const { navbarLinks } = value;
         return (
           <Container maxWidth="lg" className="md:flex md:justify-center">
-            <div className="mt-2 pt-2 md:flex md:justify-center">
+            <div className="mt-3 pt-2 md:flex md:justify-center">
               <div className={navbarClasses} style={{ zIndex: 999 }}>
                 <Toolbar className="align-middle">
                   <Link to="/" className="mr-24">
@@ -109,7 +111,7 @@ const Navbar = () => {
                   ) : (
                     <>
                       <CustomTabs
-                        textColor="inherit"
+                     
                         value={value}
                         onChange={(e, value) => setValue(value)}
                         className="ml-0 md:ml-auto h-12 mx-0 md:mx-5 lg:mx-4"

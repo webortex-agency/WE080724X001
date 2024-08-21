@@ -1,4 +1,7 @@
+ ContactUs/Tharun
 import { Container, Button, Grid, TextField, Typography, Snackbar, Alert } from "@mui/material";
+import { useState } from 'react';
+import { Container,Button,Grid, TextField, Typography,Snackbar, Alert } from "@mui/material"; 
 import HandshakeIcon from '@mui/icons-material/Handshake';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
@@ -217,6 +220,7 @@ const Contact = () => {
           Message Sent Successfully!
         </Alert>
       </Snackbar>
+
     </Container>
   );
 };
