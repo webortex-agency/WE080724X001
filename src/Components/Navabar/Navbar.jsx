@@ -104,7 +104,10 @@ const Navbar = () => {
       {(value) => {
         const { navbarLinks } = value;
         return (
-          <Container maxWidth="lg" className="md:flex md:justify-center">
+          <Container
+            maxWidth="lg"
+            className="md:flex md:justify-center relative z-30 md:z-999"
+          >
             <div className="mt-3 pt-2 md:flex md:justify-center">
               <div className={navbarClasses} style={{ zIndex: 999 }}>
                 <Toolbar className="align-middle">

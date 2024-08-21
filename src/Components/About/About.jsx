@@ -3,8 +3,23 @@ import WEB1 from "../../assets/About/img1.png";
 import WEB2 from "../../assets/About/img2.svg";
 import WEB3 from "../../assets/About/img3.png";
 import { Container } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
+
+  const handleViewServicesClick = () => {
+    navigate("/contact");
+  };
+
+  const handleContactUsClick = () => {
+    navigate("/contact");
+  };
+
+  const handleGetStartedClick = () => {
+    navigate("/contact");
+  };
+
   return (
     <div className="">
       <div
@@ -40,7 +55,7 @@ const About = () => {
             <h2 className="font-poppins text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-white text-center md:text-left">
               Why Choose 64 Framez?
             </h2>
-            <p className="font-poppins text-sm md:text-base lg:text-lg font-light leading-snug text-white mt-5 text-center md:text-left px-10 md:px-0">
+            <div className="font-poppins text-sm md:text-base lg:text-lg font-light leading-snug text-white mt-5 text-center md:text-left px-10 md:px-0">
               <div className="mb-4">
                 Passion for Excellence: We are passionate about what we do, and
                 it shows in our work. Every project is an opportunity to push
@@ -51,13 +66,19 @@ const About = () => {
                 Our solutions are customized to meet your specific needs and
                 objectives, ensuring a perfect fit for your brand.
               </div>
-            </p>
+            </div>
 
             <div className="mt-6 flex flex-col md:flex-row md:justify-start justify-center">
-              <button className="bg-[#2D2D2D] mx-auto md:mx-0 text-white md:mr-6 text-xs sm:text-sm lg:text-base px-8 py-3 rounded-lg transform transition-all duration-500 ease-in-out hover:bg-headColor hover:text-backgroundColor">
+              <button
+                className="bg-[#2D2D2D] mx-auto md:mx-0 text-white md:mr-6 text-xs sm:text-sm lg:text-base px-8 py-3 rounded-lg transform transition-all duration-500 ease-in-out hover:bg-headColor hover:text-backgroundColor"
+                onClick={handleViewServicesClick}
+              >
                 View Services
               </button>
-              <button className="bg-navlinkActiveColor text-headColor hover:bg-headColor hover:text-backgroundColor mt-4 md:mt-0 mx-auto md:mx-0 text-xs sm:text-sm lg:text-base px-8 py-3 rounded-lg transform transition-all duration-500 ease-in-out">
+              <button
+                className="bg-navlinkActiveColor text-headColor hover:bg-headColor hover:text-backgroundColor mt-4 md:mt-0 mx-auto md:mx-0 text-xs sm:text-sm lg:text-base px-8 py-3 rounded-lg transform transition-all duration-500 ease-in-out"
+                onClick={handleContactUsClick}
+              >
                 Contact Us
               </button>
             </div>
@@ -70,7 +91,7 @@ const About = () => {
             <h2 className="font-poppins text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-white text-center">
               Why Us?
             </h2>
-            <p className="font-poppins text-sm md:text-base lg:text-lg font-light leading-snug text-white mt-5 text-center md:text-left px-10 md:px-0">
+            <div className="font-poppins text-sm md:text-base lg:text-lg font-light leading-snug text-white mt-5 text-center md:text-left px-10 md:px-0">
               <div className="mb-4">
                 Collaborative Approach: We believe in working closely with our
                 clients, valuing their input, and fostering a collaborative
@@ -82,7 +103,7 @@ const About = () => {
                 techniques to stay ahead of the curve and deliver cutting-edge
                 designs.
               </div>
-            </p>
+            </div>
           </div>
           <div className="w-2/3 md:w-1/2 lg:w-2/5 p-3 sm:p-2 lg:p-0 self-center order-0 md:order-1">
             <img
@@ -140,13 +161,16 @@ const About = () => {
               <h2 className="font-poppins text-xl md:text-2xl lg:text-3xl font-light mb-6 md:mb-7 lg:mb-8 text-white">
                 Hire Us Now
               </h2>
-              <p className="font-poppins text-2xl sm:text-3xl md:text-5xl lg:text-6xl mb-6 md:mb-7 lg:mb-8 tracking-wide font-medium leading-tight text-white mt-4">
+              <div className="font-poppins text-2xl sm:text-3xl md:text-5xl lg:text-6xl mb-6 md:mb-7 lg:mb-8 tracking-wide font-medium leading-tight text-white mt-4">
                 We Are Always Ready To
                 <div className="font-poppins text-xl sm:text-2xl md:text-4xl lg:text-5xl tracking-wide font-medium leading-tight text-white mt-4">
                   Take A Perfect Choice
                 </div>
-              </p>
-              <button className="bg-white text-backgroundColor px-12 py-3 rounded-lg transform transition-all duration-500 ease-in-out hover:bg-navlinkActiveColor hover:text-headColor">
+              </div>
+              <button
+                className="bg-white text-backgroundColor px-12 py-3 rounded-lg transform transition-all duration-500 ease-in-out hover:bg-navlinkActiveColor hover:text-headColor"
+                onClick={handleGetStartedClick}
+              >
                 Get Started
               </button>
             </div>
