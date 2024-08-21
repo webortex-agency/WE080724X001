@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import image from "/src/assets/ScrollingCompo/1.svg";
+
 import image2 from "/src/assets/ScrollingCompo/2.svg";
 const Context = React.createContext();
 
@@ -29,7 +29,7 @@ export class Provider extends Component {
     scrollingComponents: [
       {
         id: 1,
-        src: {image},
+        src: "./assets/1.svg",
       },
       {
         id: 2,
