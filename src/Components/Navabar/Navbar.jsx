@@ -92,6 +92,13 @@ const Navbar = () => {
     navigate("/contact");
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <Consumer>
       {(value) => {
@@ -106,6 +113,7 @@ const Navbar = () => {
                       alt="64 FRAMEZ"
                       src={logoImg}
                       sx={{ height: "80px", width: "80px" }}
+                      onClick={scrollToTop}
                     />
                   </Link>
                   {isMatch ? (
