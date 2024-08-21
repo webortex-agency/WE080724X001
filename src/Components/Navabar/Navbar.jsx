@@ -134,7 +134,7 @@ const Navbar = () => {
                             label={
                               <span
                                 onClick={() => handleNavigation(navbarLink)}
-                                className="text-navlinkColor font-poppins text-xs lg:text-sm mx-0 cursor-pointer"
+                                className="text-textColor font-poppins text-xs lg:text-sm mx-0 cursor-pointer hover:text-headColor transition-all duration-300 ease-in-out"
                               >
                                 {navbarLink.pageName}
                               </span>
