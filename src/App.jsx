@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import "@fontsource/poppins";
 import Navbar from "./Components/Navabar/Navbar";
 import Footer from "./Components/Footer/Footer";
