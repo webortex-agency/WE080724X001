@@ -92,12 +92,22 @@ const Navbar = () => {
     navigate("/contact");
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <Consumer>
       {(value) => {
         const { navbarLinks } = value;
         return (
-          <Container maxWidth="lg" className="md:flex md:justify-center">
+          <Container
+            maxWidth="lg"
+            className="md:flex md:justify-center relative z-30 md:z-999"
+          >
             <div className="mt-3 pt-2 md:flex md:justify-center">
               <div className={navbarClasses} style={{ zIndex: 999 }}>
                 <Toolbar className="align-middle">
@@ -106,6 +116,7 @@ const Navbar = () => {
                       alt="64 FRAMEZ"
                       src={logoImg}
                       sx={{ height: "80px", width: "80px" }}
+                      onClick={scrollToTop}
                     />
                   </Link>
                   {isMatch ? (
@@ -123,7 +134,7 @@ const Navbar = () => {
                             label={
                               <span
                                 onClick={() => handleNavigation(navbarLink)}
-                                className="text-navlinkColor font-poppins text-xs lg:text-sm mx-0 cursor-pointer"
+                                className="text-textColor font-poppins text-xs lg:text-sm mx-0 cursor-pointer hover:text-headColor transition-all duration-300 ease-in-out"
                               >
                                 {navbarLink.pageName}
                               </span>
