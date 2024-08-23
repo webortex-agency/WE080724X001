@@ -19,7 +19,7 @@ import { useNavigate } from "react-router-dom";
 import { Consumer } from "../Context/Context";
 
 
-servicesData: [
+const servicesData = [
   {
     id: 1,
     image: "src/assets/Services/picture-dynamic-color.svg",
