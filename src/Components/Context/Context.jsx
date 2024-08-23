@@ -99,7 +99,7 @@ export class Provider extends Component {
     servicesData: [
       {
         id: 1,
-        image: "src/assets/picture-dynamic-color.svg",
+        image: "/Assets/Services/picture-dynamic-color.svg",
         title: "Graphic Designing",
         description:
           "We have extensive graphic design experience, and we provide high-quality, more accurate outcomes.",
