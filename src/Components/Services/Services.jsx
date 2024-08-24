@@ -16,7 +16,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import KeyboardArrowRightTwoToneIcon from "@mui/icons-material/KeyboardArrowRightTwoTone";
 import CallMadeIcon from "@mui/icons-material/CallMade";
 import { useNavigate } from "react-router-dom";
-import { Consumer } from "../Context/Context";
+import serviceImg1 from "../../assets/Services/picture-dynamic-color.svg";
 
 const HoverCard = styled(Card)(({ theme }) => ({
   backgroundColor: "#292930",
@@ -78,18 +78,15 @@ const ColoredButton = styled(Button)(({ theme }) => ({
 const Services = () => {
   const navigate = useNavigate();
 
-  const handleMoreClick = (path) => {
-    navigate(path);
+  const handleMoreClick = () => {
+    navigate("/services/graphic-design");
   };
 
   const handleOurServicesClick = () => {
     navigate("/contact");
   };
 
-  return (
-    <Consumer>
-      {(value) => {
-        const { servicesData } = value;
+
         return (
           <div className="w-full relative z-10" id="services">
             <Box className="w-full mt-20 md:mt-0 h-[350px] md:h-[250px] blur-[100px] absolute z-[-99] opacity-60 rounded-full bg-gradient-to-r from-[#171717] via-[#f087ff5b] to-[#171717] "></Box>
@@ -106,7 +103,7 @@ const Services = () => {
                       className="text-[15px] text-[#D0D0D0] font-poppins"
                       sx={{ letterSpacing: "3px", textTransform: "uppercase" }}
                     >
-                      <span className="text-[#FEC90C] mx-1">//</span>
+                      <span className="text-[#FEC90C] mx-1"> // </span>
                       01 . Services
                     </Typography>
                     <Typography
@@ -136,16 +133,16 @@ const Services = () => {
                 </ColoredButton>
               </Box>
               <Container className="my-5 py-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-10 text-headColor justify-self-center">
-                {servicesData.map((serviceData) => (
+                
                   <HoverCard
-                    key={serviceData.id}
+                   
                     className="justify-self-center"
                   >
                     <CardActionArea className="flex flex-col">
                       <CardMedia
                         component="img"
-                        image={serviceData.image}
-                        alt={serviceData.title}
+                        image={serviceImg1}
+                        alt="ServicesImg1"
                         className="cardImg mt-3 mx-5 w-[210px] h-[210px] justify-self-center"
                       />
                       <CardContent className="mt-0 mx-1 gap-[14px] relative h-[145px]">
@@ -155,13 +152,13 @@ const Services = () => {
                           component="div"
                           className="text-headColor font-poppins font-normal text-[18px]"
                         >
-                          {serviceData.title}
+                          Graphic Designing
                         </Typography>
                         <Typography
                           variant="body2"
                           className="font-poppins font-light text-[14px] text-[#D0D0D0]"
                         >
-                          {serviceData.description}
+                          We have extensive graphic design experience, and we provide high-quality, more accurate outcomes.
                         </Typography>
                       </CardContent>
                     </CardActionArea>
@@ -177,14 +174,12 @@ const Services = () => {
                       </CustomButton>
                     </CardActions>
                   </HoverCard>
-                ))}
+              
               </Container>
             </Container>
           </div>
         );
-      }}
-    </Consumer>
-  );
+ 
 };
 
 export default Services;
