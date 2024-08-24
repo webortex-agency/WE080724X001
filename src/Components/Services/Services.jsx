@@ -23,7 +23,7 @@ import serviceImg4 from "../../assets/Services/Webdev.svg";
 import serviceImg5 from "../../assets/Services/camera-dynamic-color.svg";
 import serviceImg6 from "../../assets/Services/digitalmarketing.png";
 import serviceImg7 from "../../assets/Services/image 15.svg";
-import serviceImg8 from "../../assets/Services/camera-dynamic-color.svg";
+import serviceImg8 from "../../assets/Services/3d-dynamic-color.svg";
 
 const HoverCard = styled(Card)(({ theme }) => ({
   backgroundColor: "#292930",
@@ -121,6 +121,8 @@ const Services = () => {
   const handleOurServicesClick = () => {
     navigate("/contact");
   };
+
+
 
 
         return (
@@ -231,14 +233,13 @@ const Services = () => {
                           component="div"
                           className="text-headColor font-poppins font-normal text-[18px]"
                         >
-                          Graphic Designing
+                          Motion Graphics
                         </Typography>
                         <Typography
                           variant="body2"
                           className="font-poppins font-light text-[14px] text-[#D0D0D0]"
                         >
-                          We have extensive graphic design experience, and we provide high-quality, more accurate outcomes.
-                        </Typography>
+Our motion graphics bring your ideas to life with dynamic animations.                        </Typography>
                       </CardContent>
                     </CardActionArea>
                     <CardActions className="gap-0 mx-3 mb-4 align-baseline">
@@ -273,13 +274,13 @@ const Services = () => {
                           component="div"
                           className="text-headColor font-poppins font-normal text-[18px]"
                         >
-                          Graphic Designing
+                          Interior Design
                         </Typography>
                         <Typography
                           variant="body2"
                           className="font-poppins font-light text-[14px] text-[#D0D0D0]"
                         >
-                          We have extensive graphic design experience, and we provide high-quality, more accurate outcomes.
+                         We create innovative and stylish interior spaces tailored to your needs.
                         </Typography>
                       </CardContent>
                     </CardActionArea>
@@ -315,13 +316,13 @@ const Services = () => {
                           component="div"
                           className="text-headColor font-poppins font-normal text-[18px]"
                         >
-                          Graphic Designing
+                          Web Design
                         </Typography>
                         <Typography
                           variant="body2"
                           className="font-poppins font-light text-[14px] text-[#D0D0D0]"
                         >
-                          We have extensive graphic design experience, and we provide high-quality, more accurate outcomes.
+                          Our web designs are user-friendly and visually stunning, enhancing your online presence.
                         </Typography>
                       </CardContent>
                     </CardActionArea>
@@ -357,14 +358,12 @@ const Services = () => {
                           component="div"
                           className="text-headColor font-poppins font-normal text-[18px]"
                         >
-                          Graphic Designing
-                        </Typography>
+Photography                        </Typography>
                         <Typography
                           variant="body2"
                           className="font-poppins font-light text-[14px] text-[#D0D0D0]"
                         >
-                          We have extensive graphic design experience, and we provide high-quality, more accurate outcomes.
-                        </Typography>
+We capture your moments with professional and creative photography.                        </Typography>
                       </CardContent>
                     </CardActionArea>
                     <CardActions className="gap-0 mx-3 mb-4 align-baseline">
@@ -399,13 +398,13 @@ const Services = () => {
                           component="div"
                           className="text-headColor font-poppins font-normal text-[18px]"
                         >
-                          Graphic Designing
+                          Digital Marketing
                         </Typography>
                         <Typography
                           variant="body2"
                           className="font-poppins font-light text-[14px] text-[#D0D0D0]"
                         >
-                          We have extensive graphic design experience, and we provide high-quality, more accurate outcomes.
+                          Our main goal is to provide 100% results and maintain social media with high precision.
                         </Typography>
                       </CardContent>
                     </CardActionArea>
@@ -442,13 +441,13 @@ className="justify-self-center"
       component="div"
       className="text-headColor font-poppins font-normal text-[18px]"
     >
-      Graphic Designing
+      Cinematography
     </Typography>
     <Typography
       variant="body2"
       className="font-poppins font-light text-[14px] text-[#D0D0D0]"
     >
-      We have extensive graphic design experience, and we provide high-quality, more accurate outcomes.
+      We have extensive expertise editing videos, and we provide amazing insights into your thoughts.
     </Typography>
   </CardContent>
 </CardActionArea>
@@ -485,13 +484,13 @@ className="justify-self-center"
       component="div"
       className="text-headColor font-poppins font-normal text-[18px]"
     >
-      Graphic Designing
+      3D Cinematography
     </Typography>
     <Typography
       variant="body2"
       className="font-poppins font-light text-[14px] text-[#D0D0D0]"
     >
-      We have extensive graphic design experience, and we provide high-quality, more accurate outcomes.
+      We produce immersive 3D cinematography that captivates and engages viewers.
     </Typography>
   </CardContent>
 </CardActionArea>
