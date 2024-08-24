@@ -17,6 +17,13 @@ import KeyboardArrowRightTwoToneIcon from "@mui/icons-material/KeyboardArrowRigh
 import CallMadeIcon from "@mui/icons-material/CallMade";
 import { useNavigate } from "react-router-dom";
 import serviceImg1 from "../../assets/Services/picture-dynamic-color.svg";
+import serviceImg2 from "../../assets/Services/image 17.svg";
+import serviceImg3 from "../../assets/Services/paint-kit-dynamic-color.svg";
+import serviceImg4 from "../../assets/Services/Webdev.svg";
+import serviceImg5 from "../../assets/Services/camera-dynamic-color.svg";
+import serviceImg6 from "../../assets/Services/digitalmarketing.png";
+import serviceImg7 from "../../assets/Services/image 15.svg";
+import serviceImg8 from "../../assets/Services/camera-dynamic-color.svg";
 
 const HoverCard = styled(Card)(({ theme }) => ({
   backgroundColor: "#292930",
@@ -81,6 +88,35 @@ const Services = () => {
   const handleMoreClick01 = () => {
     navigate("/services/graphic-design");
   };
+  
+  const handleMoreClick02 = () => {
+    navigate("/services/motion-graphics");
+  };
+
+  const handleMoreClick03 = () => {
+    navigate("/services/interior-design");
+  };
+
+  const handleMoreClick04 = () => {
+    navigate("/services/web-design");
+  };
+
+  const handleMoreClick05 = () => {
+    navigate("/services/photography");
+  };
+
+  const handleMoreClick06 = () => {
+    navigate("/services/digital-marketing");
+  };
+
+  const handleMoreClick07 = () => {
+    navigate("/services/cinematography");
+  };
+
+  const handleMoreClick08 = () => {
+    navigate("/services/3d-cinematography");
+  };
+
 
   const handleOurServicesClick = () => {
     navigate("/contact");
@@ -176,6 +212,302 @@ const Services = () => {
                     </CardActions>
                   </HoverCard>
                   {/* / Card 01 */}
+                {/* Card 02 */}
+                  <HoverCard
+
+                    className="justify-self-center"
+                  >
+                    <CardActionArea className="flex flex-col">
+                      <CardMedia
+                        component="img"
+                        image={serviceImg2}
+                        alt="ServicesImg1"
+                        className="cardImg mt-3 mx-5 w-[210px] h-[210px] justify-self-center"
+                      />
+                      <CardContent className="mt-0 mx-1 gap-[14px] relative h-[145px]">
+                        <Typography
+                          gutterBottom
+                          variant="h5"
+                          component="div"
+                          className="text-headColor font-poppins font-normal text-[18px]"
+                        >
+                          Graphic Designing
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          className="font-poppins font-light text-[14px] text-[#D0D0D0]"
+                        >
+                          We have extensive graphic design experience, and we provide high-quality, more accurate outcomes.
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions className="gap-0 mx-3 mb-4 align-baseline">
+                      <CustomButton
+                        size="small"
+                        className="font-poppins text-headColor text-[12px] self-center font-light mt-0 md:mt-5 xl:mt-1"
+                        sx={{ letterSpacing: "2px" }}
+                        onClick={handleMoreClick02}
+                      >
+                        <span className="hoverButtonText">More</span>
+                        <CallMadeIcon className="text-[#848895] w-5 h-5 mx-2 self-center" />
+                      </CustomButton>
+                    </CardActions>
+                  </HoverCard>
+                  {/* / Card 02 */}
+                {/* Card 03 */}
+                  <HoverCard
+
+                    className="justify-self-center"
+                  >
+                    <CardActionArea className="flex flex-col">
+                      <CardMedia
+                        component="img"
+                        image={serviceImg3}
+                        alt="ServicesImg1"
+                        className="cardImg mt-3 mx-5 w-[210px] h-[210px] justify-self-center"
+                      />
+                      <CardContent className="mt-0 mx-1 gap-[14px] relative h-[145px]">
+                        <Typography
+                          gutterBottom
+                          variant="h5"
+                          component="div"
+                          className="text-headColor font-poppins font-normal text-[18px]"
+                        >
+                          Graphic Designing
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          className="font-poppins font-light text-[14px] text-[#D0D0D0]"
+                        >
+                          We have extensive graphic design experience, and we provide high-quality, more accurate outcomes.
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions className="gap-0 mx-3 mb-4 align-baseline">
+                      <CustomButton
+                        size="small"
+                        className="font-poppins text-headColor text-[12px] self-center font-light mt-0 md:mt-5 xl:mt-1"
+                        sx={{ letterSpacing: "2px" }}
+                        onClick={handleMoreClick03}
+                      >
+                        <span className="hoverButtonText">More</span>
+                        <CallMadeIcon className="text-[#848895] w-5 h-5 mx-2 self-center" />
+                      </CustomButton>
+                    </CardActions>
+                  </HoverCard>
+                  {/* / Card 03 */}
+                {/* Card 04 */}
+                  <HoverCard
+
+                    className="justify-self-center"
+                  >
+                    <CardActionArea className="flex flex-col">
+                      <CardMedia
+                        component="img"
+                        image={serviceImg4}
+                        alt="ServicesImg1"
+                        className="cardImg mt-3 mx-5 w-[210px] h-[210px] justify-self-center"
+                      />
+                      <CardContent className="mt-0 mx-1 gap-[14px] relative h-[145px]">
+                        <Typography
+                          gutterBottom
+                          variant="h5"
+                          component="div"
+                          className="text-headColor font-poppins font-normal text-[18px]"
+                        >
+                          Graphic Designing
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          className="font-poppins font-light text-[14px] text-[#D0D0D0]"
+                        >
+                          We have extensive graphic design experience, and we provide high-quality, more accurate outcomes.
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions className="gap-0 mx-3 mb-4 align-baseline">
+                      <CustomButton
+                        size="small"
+                        className="font-poppins text-headColor text-[12px] self-center font-light mt-0 md:mt-5 xl:mt-1"
+                        sx={{ letterSpacing: "2px" }}
+                        onClick={handleMoreClick04}
+                      >
+                        <span className="hoverButtonText">More</span>
+                        <CallMadeIcon className="text-[#848895] w-5 h-5 mx-2 self-center" />
+                      </CustomButton>
+                    </CardActions>
+                  </HoverCard>
+                  {/* / Card 04 */}
+                {/* Card 05 */}
+                  <HoverCard
+
+                    className="justify-self-center"
+                  >
+                    <CardActionArea className="flex flex-col">
+                      <CardMedia
+                        component="img"
+                        image={serviceImg5}
+                        alt="ServicesImg1"
+                        className="cardImg mt-3 mx-5 w-[210px] h-[210px] justify-self-center"
+                      />
+                      <CardContent className="mt-0 mx-1 gap-[14px] relative h-[145px]">
+                        <Typography
+                          gutterBottom
+                          variant="h5"
+                          component="div"
+                          className="text-headColor font-poppins font-normal text-[18px]"
+                        >
+                          Graphic Designing
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          className="font-poppins font-light text-[14px] text-[#D0D0D0]"
+                        >
+                          We have extensive graphic design experience, and we provide high-quality, more accurate outcomes.
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions className="gap-0 mx-3 mb-4 align-baseline">
+                      <CustomButton
+                        size="small"
+                        className="font-poppins text-headColor text-[12px] self-center font-light mt-0 md:mt-5 xl:mt-1"
+                        sx={{ letterSpacing: "2px" }}
+                        onClick={handleMoreClick05}
+                      >
+                        <span className="hoverButtonText">More</span>
+                        <CallMadeIcon className="text-[#848895] w-5 h-5 mx-2 self-center" />
+                      </CustomButton>
+                    </CardActions>
+                  </HoverCard>
+                  {/* / Card 05 */}
+                {/* Card 06 */}
+                  <HoverCard
+
+                    className="justify-self-center"
+                  >
+                    <CardActionArea className="flex flex-col">
+                      <CardMedia
+                        component="img"
+                        image={serviceImg6}
+                        alt="ServicesImg1"
+                        className="cardImg mt-3 mx-5 w-[210px] h-[210px] justify-self-center"
+                      />
+                      <CardContent className="mt-0 mx-1 gap-[14px] relative h-[145px]">
+                        <Typography
+                          gutterBottom
+                          variant="h5"
+                          component="div"
+                          className="text-headColor font-poppins font-normal text-[18px]"
+                        >
+                          Graphic Designing
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          className="font-poppins font-light text-[14px] text-[#D0D0D0]"
+                        >
+                          We have extensive graphic design experience, and we provide high-quality, more accurate outcomes.
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions className="gap-0 mx-3 mb-4 align-baseline">
+                      <CustomButton
+                        size="small"
+                        className="font-poppins text-headColor text-[12px] self-center font-light mt-0 md:mt-5 xl:mt-1"
+                        sx={{ letterSpacing: "2px" }}
+                        onClick={handleMoreClick06}
+                      >
+                        <span className="hoverButtonText">More</span>
+                        <CallMadeIcon className="text-[#848895] w-5 h-5 mx-2 self-center" />
+                      </CustomButton>
+                    </CardActions>
+                  </HoverCard>
+                  {/* / Card 06 */}
+
+                   {/* Card 06 */}
+                   <HoverCard
+
+className="justify-self-center"
+>
+<CardActionArea className="flex flex-col">
+  <CardMedia
+    component="img"
+    image={serviceImg7}
+    alt="ServicesImg1"
+    className="cardImg mt-3 mx-5 w-[210px] h-[210px] justify-self-center"
+  />
+  <CardContent className="mt-0 mx-1 gap-[14px] relative h-[145px]">
+    <Typography
+      gutterBottom
+      variant="h5"
+      component="div"
+      className="text-headColor font-poppins font-normal text-[18px]"
+    >
+      Graphic Designing
+    </Typography>
+    <Typography
+      variant="body2"
+      className="font-poppins font-light text-[14px] text-[#D0D0D0]"
+    >
+      We have extensive graphic design experience, and we provide high-quality, more accurate outcomes.
+    </Typography>
+  </CardContent>
+</CardActionArea>
+<CardActions className="gap-0 mx-3 mb-4 align-baseline">
+  <CustomButton
+    size="small"
+    className="font-poppins text-headColor text-[12px] self-center font-light mt-0 md:mt-5 xl:mt-1"
+    sx={{ letterSpacing: "2px" }}
+    onClick={handleMoreClick07}
+  >
+    <span className="hoverButtonText">More</span>
+    <CallMadeIcon className="text-[#848895] w-5 h-5 mx-2 self-center" />
+  </CustomButton>
+</CardActions>
+</HoverCard>
+{/* / Card 06 */}
+
+ {/* Card 06 */}
+ <HoverCard
+
+className="justify-self-center"
+>
+<CardActionArea className="flex flex-col">
+  <CardMedia
+    component="img"
+    image={serviceImg8}
+    alt="ServicesImg1"
+    className="cardImg mt-3 mx-5 w-[210px] h-[210px] justify-self-center"
+  />
+  <CardContent className="mt-0 mx-1 gap-[14px] relative h-[145px]">
+    <Typography
+      gutterBottom
+      variant="h5"
+      component="div"
+      className="text-headColor font-poppins font-normal text-[18px]"
+    >
+      Graphic Designing
+    </Typography>
+    <Typography
+      variant="body2"
+      className="font-poppins font-light text-[14px] text-[#D0D0D0]"
+    >
+      We have extensive graphic design experience, and we provide high-quality, more accurate outcomes.
+    </Typography>
+  </CardContent>
+</CardActionArea>
+<CardActions className="gap-0 mx-3 mb-4 align-baseline">
+  <CustomButton
+    size="small"
+    className="font-poppins text-headColor text-[12px] self-center font-light mt-0 md:mt-5 xl:mt-1"
+    sx={{ letterSpacing: "2px" }}
+    onClick={handleMoreClick08}
+  >
+    <span className="hoverButtonText">More</span>
+    <CallMadeIcon className="text-[#848895] w-5 h-5 mx-2 self-center" />
+  </CustomButton>
+</CardActions>
+</HoverCard>
+{/* / Card 06 */}
 
               </Container>
             </Container>
