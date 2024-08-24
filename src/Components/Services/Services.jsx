@@ -78,7 +78,7 @@ const ColoredButton = styled(Button)(({ theme }) => ({
 const Services = () => {
   const navigate = useNavigate();
 
-  const handleMoreClick = () => {
+  const handleMoreClick01 = () => {
     navigate("/services/graphic-design");
   };
 
@@ -95,7 +95,7 @@ const Services = () => {
               <Box className="flex flex-col md:flex-row my-3 py-2 md-my-2 md:py-1">
                 <div className="gap-4 md:inline-flex md:justify-start text-center md:text-left">
                   <SettingsIcon
-                    className="bg-iconBgColor text-iconColor h-[70px] w-[70px] p-[14px] rounded-full 
+                    className="bg-iconBgColor text-iconColor h-[70px] w-[70px] p-[14px] rounded-full
                   "
                   />
                   <div className="my-5 md:my-0">
@@ -133,9 +133,10 @@ const Services = () => {
                 </ColoredButton>
               </Box>
               <Container className="my-5 py-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-10 text-headColor justify-self-center">
-                
+
+                {/* Card 01 */}
                   <HoverCard
-                   
+
                     className="justify-self-center"
                   >
                     <CardActionArea className="flex flex-col">
@@ -167,19 +168,20 @@ const Services = () => {
                         size="small"
                         className="font-poppins text-headColor text-[12px] self-center font-light mt-0 md:mt-5 xl:mt-1"
                         sx={{ letterSpacing: "2px" }}
-                        onClick={() => handleMoreClick(serviceData.path)}
+                        onClick={handleMoreClick01}
                       >
                         <span className="hoverButtonText">More</span>
                         <CallMadeIcon className="text-[#848895] w-5 h-5 mx-2 self-center" />
                       </CustomButton>
                     </CardActions>
                   </HoverCard>
-              
+                  {/* / Card 01 */}
+
               </Container>
             </Container>
           </div>
         );
- 
+
 };
 
 export default Services;
