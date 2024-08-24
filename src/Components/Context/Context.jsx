@@ -28,7 +28,7 @@ export class Provider extends Component {
     scrollingComponents: [
       {
         id: 1,
-        src: "src/assets/ScrollingCompo/1.svg",
+        src: "./src/assets/ScrollingCompo/1.svg",
       },
       {
         id: 2,
