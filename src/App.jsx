@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import "@fontsource/poppins";
 import Navbar from "./Components/Navabar/Navbar";
 import Footer from "./Components/Footer/Footer";
@@ -9,8 +9,8 @@ import About from "./Components/About/About";
 import Contact from "./Components/Contact/Contact";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 import DigitalMarket from "./Components/Projects/ProjectCompo/DigitalMarket";
-import Graphic from "./Components/Projects/ProjectCompo/Graphic";
 import GraphicDesign from "./Components/Projects/ProjectCompo/GraphicDesign";
+import MotionGraphics from "./Components/Projects/ProjectCompo/MotionGraphics";
 import InteriorDesign from "./Components/Projects/ProjectCompo/InteriorDesign";
 import Photography from "./Components/Projects/ProjectCompo/Photography";
 import ThreeD from "./Components/Projects/ProjectCompo/ThreeD";
@@ -25,7 +25,6 @@ import PhotographyService from "./Components/Services/ServicesCompo/PhotographyS
 import ThreeDCinematographyService from "./Components/Services/ServicesCompo/ThreeDCinematographyService";
 import WebDesignService from "./Components/Services/ServicesCompo/WebDesignService";
 import { Provider } from "./Components/Context/Context";
-
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -51,14 +50,18 @@ const App = () => {
 
               <Route
                 exact
-                path="/projects/digital-market"
+                path="/projects/digital-marketing"
                 element={<DigitalMarket />}
               />
-              <Route exact path="/projects/graphic" element={<Graphic />} />
               <Route
                 exact
                 path="/projects/graphic-design"
                 element={<GraphicDesign />}
+              />
+              <Route
+                exact
+                path="/projects/motion-graphics"
+                element={<MotionGraphics />}
               />
               <Route
                 exact

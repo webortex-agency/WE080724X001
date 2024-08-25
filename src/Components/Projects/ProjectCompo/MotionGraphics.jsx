@@ -7,14 +7,13 @@ import {
   Slide,
   Backdrop,
 } from "@mui/material";
-import { Consumer } from "../../Context/Context";
 import dummyImg from "../../../assets/Projects/dummy.png";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-const DigitalMarket = () => {
+const GraphicDesign = () => {
   const [open, setOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
 
@@ -31,7 +30,7 @@ const DigitalMarket = () => {
     <Container className="flex justify-center md:justify-start align-middle mb-5">
       <Box className="my-10 py-10">
         <Typography className="text-headColor font-poppins text-3xl font-medium my-5 text-center md:text-left">
-          Digital Marketing Projects
+          Motion Graphics Projects
         </Typography>
         <Box className="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-8 gap-x-5 pt-4">
           <Box
@@ -257,4 +256,4 @@ const DigitalMarket = () => {
   );
 };
 
-export default DigitalMarket;
+export default GraphicDesign;
