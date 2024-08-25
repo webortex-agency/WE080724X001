@@ -411,7 +411,7 @@ const Team = () => {
                   
                 >
                   <img
-                    src={TeamImg7}
+                    src={TeamImg8}
                     alt="Team Member 01"
                     className="rounded-t-lg"
                     style={{
