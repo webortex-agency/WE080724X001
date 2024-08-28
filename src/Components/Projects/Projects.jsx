@@ -19,146 +19,132 @@ const Projects = () => {
     };
   };
 
- 
-        return (
-          <Container
-            maxWidth="lg"
-            className="w-full h-auto gap-14 flex flex-col p-5 bg-[#171717] box-border mt-10 mb-16"
-            id="projects"
-          >
-            <Typography className="text-2xl sm:text-4xl md:text-3xl lg:text-5xl text-headColor font-poppins font-semibold">
-              Projects
-            </Typography>
-            <Box className="grid grid-flow-row grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-8 gap-x-5">
-              
-                <Card
-                  key= "Graphic Design"
-                  className="w-full h-full rounded-lg flex items-center justify-center overflow-hidden cursor-pointer"
-                  onClick={handleProjectsClick("/GrpahicDesign")}
-                >
-                  <video
-                    src={pro1}
-                    alt='Graphic Design'
-                    className="w-full h-full object-cover rounded-lg"
-                    playsInline
-                    autoPlay
-                    loop
-                    muted
-                  />
-                </Card>
-                <Card
-                  key= "Motion Graphics"
-                  className="w-full h-full rounded-lg flex items-center justify-center overflow-hidden cursor-pointer"
-                  onClick={handleProjectsClick("/MotionGraphics")}
-                >
-                  <video
-                    src={pro2}
-                    alt='Motion Graphics'
-                    className="w-full h-full object-cover rounded-lg"
-                    playsInline
-                    autoPlay
-                    loop
-                    muted
-                  />
-                </Card>
-                <Card
-                  key= "Interior Design"
-                  className="w-full h-full rounded-lg flex items-center justify-center overflow-hidden cursor-pointer"
-                  onClick={handleProjectsClick("/InteriorDesign")}
-                >
-                  <video
-                    src={pro3}
-                    alt='Interior Design'
-                    className="w-full h-full object-cover rounded-lg"
-                    playsInline
-                    autoPlay
-                    loop
-                    muted
-                  />
-                </Card>
-                <Card
-                  key= "Web Development"
-                  className="w-full h-full rounded-lg flex items-center justify-center overflow-hidden cursor-pointer"
-                  onClick={handleProjectsClick("/WebDevelopment")}
-                >
-                  <video
-                    src={pro4}
-                    alt='Web Development'
-                    className="w-full h-full object-cover rounded-lg"
-                    playsInline
-                    autoPlay
-                    loop
-                    muted
-                  />
-                </Card>
-                <Card
-                  key= "Cinemaography"
-                  className="w-full h-full rounded-lg flex items-center justify-center overflow-hidden cursor-pointer"
-                  onClick={handleProjectsClick("/Cinemaography")}
-                >
-                  <video
-                    src={pro5}
-                    alt='Cinemaography'
-                    className="w-full h-full object-cover rounded-lg"
-                    playsInline
-                    autoPlay
-                    loop
-                    muted
-                  />
-                </Card>
-                <Card
-                  key= "Digital Marketing"
-                  className="w-full h-full rounded-lg flex items-center justify-center overflow-hidden cursor-pointer"
-                  onClick={handleProjectsClick("/DigitalMarketing")}
-                >
-                  <video
-                    src={pro6}
-                    alt='Digital Marketing'
-                    className="w-full h-full object-cover rounded-lg"
-                    playsInline
-                    autoPlay
-                    loop
-                    muted
-                  />
-                </Card>
-                <Card
-                  key= "2D Animation"
-                  className="w-full h-full rounded-lg flex items-center justify-center overflow-hidden cursor-pointer"
-                  onClick={handleProjectsClick("/2D Animation")}
-                >
-                  <video
-                    src={pro7}
-                    alt='2D Animation'
-                    className="w-full h-full object-cover rounded-lg"
-                    playsInline
-                    autoPlay
-                    loop
-                    muted
-                  />
-                </Card>
-                <Card
-                  key= "3D Animation"
-                  className="w-full h-full rounded-lg flex items-center justify-center overflow-hidden cursor-pointer"
-                  onClick={handleProjectsClick("/3DAnimation")}
-                >
-                  <video
-                    src={pro8}
-                    alt='3D Animation'
-                    className="w-full h-full object-cover rounded-lg"
-                    playsInline
-                    autoPlay
-                    loop
-                    muted
-                  />
-                </Card>
-              )
-            </Box>
-          </Container>
-        );
-      };
-      
-  
-      
-
+  return (
+    <Container
+      maxWidth="lg"
+      className="w-full h-auto gap-14 flex flex-col p-5 bg-[#171717] box-border mt-10 mb-16"
+      id="projects"
+    >
+      <Typography className="text-2xl sm:text-4xl md:text-3xl lg:text-5xl text-headColor font-poppins font-semibold">
+        Projects
+      </Typography>
+      <Box className="grid grid-flow-row grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-8 gap-x-5">
+        <Card
+          className="w-full h-full rounded-lg flex items-center justify-center overflow-hidden cursor-pointer"
+          onClick={handleProjectsClick("projects/graphic-design")}
+        >
+          <video
+            src={pro1}
+            alt="Graphic Design"
+            className="w-full h-full object-cover rounded-lg"
+            playsInline
+            autoPlay
+            loop
+            muted
+          />
+        </Card>
+        <Card
+          className="w-full h-full rounded-lg flex items-center justify-center overflow-hidden cursor-pointer"
+          onClick={handleProjectsClick("projects/motion-graphics")}
+        >
+          <video
+            src={pro2}
+            alt="Motion Graphics"
+            className="w-full h-full object-cover rounded-lg"
+            playsInline
+            autoPlay
+            loop
+            muted
+          />
+        </Card>
+        <Card
+          className="w-full h-full rounded-lg flex items-center justify-center overflow-hidden cursor-pointer"
+          onClick={handleProjectsClick("projects/interior-design")}
+        >
+          <video
+            src={pro3}
+            alt="Interior Design"
+            className="w-full h-full object-cover rounded-lg"
+            playsInline
+            autoPlay
+            loop
+            muted
+          />
+        </Card>
+        <Card
+          className="w-full h-full rounded-lg flex items-center justify-center overflow-hidden cursor-pointer"
+          onClick={handleProjectsClick("projects/web")}
+        >
+          <video
+            src={pro4}
+            alt="Web Development"
+            className="w-full h-full object-cover rounded-lg"
+            playsInline
+            autoPlay
+            loop
+            muted
+          />
+        </Card>
+        <Card
+          className="w-full h-full rounded-lg flex items-center justify-center overflow-hidden cursor-pointer"
+          onClick={handleProjectsClick("projects/photography")}
+        >
+          <video
+            src={pro5}
+            alt="Photography"
+            className="w-full h-full object-cover rounded-lg"
+            playsInline
+            autoPlay
+            loop
+            muted
+          />
+        </Card>
+        <Card
+          className="w-full h-full rounded-lg flex items-center justify-center overflow-hidden cursor-pointer"
+          onClick={handleProjectsClick("projects/digital-marketing")}
+        >
+          <video
+            src={pro6}
+            alt="Digital Marketing"
+            className="w-full h-full object-cover rounded-lg"
+            playsInline
+            autoPlay
+            loop
+            muted
+          />
+        </Card>
+        <Card
+          className="w-full h-full rounded-lg flex items-center justify-center overflow-hidden cursor-pointer"
+          onClick={handleProjectsClick("projects/2d")}
+        >
+          <video
+            src={pro7}
+            alt="2D Animation"
+            className="w-full h-full object-cover rounded-lg"
+            playsInline
+            autoPlay
+            loop
+            muted
+          />
+        </Card>
+        <Card
+          className="w-full h-full rounded-lg flex items-center justify-center overflow-hidden cursor-pointer"
+          onClick={handleProjectsClick("projects/3d")}
+        >
+          <video
+            src={pro8}
+            alt="3D Animation"
+            className="w-full h-full object-cover rounded-lg"
+            playsInline
+            autoPlay
+            loop
+            muted
+          />
+        </Card>
+        )
+      </Box>
+    </Container>
+  );
+};
 
 export default Projects;
