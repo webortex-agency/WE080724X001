@@ -40,13 +40,13 @@ const App = () => {
     !loading && (
       <>
         <Provider>
-          <Router basename="/WE080724X001/">
+          <Router >
             <ScrollToTop />
             <Navbar />
             <Routes>
-              <Route exact path="/" element={<LandingPage />} />
+              <Route exact path="/WE080724X001/" element={<LandingPage />} />
               <Route exact path="/about" element={<About />} />
-              <Route exact path="/contact" basename="/WE080724X001/contact" element={<Contact />} />
+              <Route exact path="/contact"  element={<Contact />} />
 
               <Route
                 exact
