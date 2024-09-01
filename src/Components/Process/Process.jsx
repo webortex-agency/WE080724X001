@@ -16,6 +16,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
+
 export default function Process() {
   const controls1 = useAnimation();
   const controls2_1 = useAnimation();
@@ -81,7 +82,7 @@ export default function Process() {
             className="text-[15px] text-backgroundColor font-poppins text-center mt-4"
             sx={{ letterSpacing: "3px", textTransform: "uppercase" }}
           >
-            <span className="text-[#5956E8] mx-1">//</span>
+            <span className="text-[#5956E8] mx-1">&#47;&#47;</span>
             03 . Process
           </Typography>
           <Typography
@@ -99,7 +100,8 @@ export default function Process() {
             display: "flex",
             justifyContent: "flex-end",
             alignItems: "center",
-            fontFamily: "Poppins, regular", // Apply Poppins font
+            fontFamily: "Poppins, regular",
+            marginTop:isMobile?"10px":"0px", // Apply Poppins font
           }}
           color="text.secondary"
         >
@@ -108,8 +110,9 @@ export default function Process() {
               src={process1}
               alt="Process Step 1"
               className="mb-28"
-              style={{
-                width: isMobile ? "80%" : "50%", // Increased size for mobile
+              sx={{
+                width:"100%",
+                height:"100%"// Increased size for mobile
               }}
               initial="hidden"
               animate={controls1}
@@ -152,7 +155,7 @@ export default function Process() {
             </Typography>
             <Typography
               sx={{
-                fontSize: isMobile ? "15px" : "18px",
+               fontSize:{xs:"13px",sm:"15px",md:"18px",lg:"18px",xl:"18px"},
                 fontFamily: "Poppins, regular",
               }}
             >
@@ -179,8 +182,9 @@ export default function Process() {
                 src={process2_1}
                 alt="Process Step 2.1"
                 className="mb-28"
-                style={{
-                  width: isMobile ? "80%" : "70%", // Increased size for mobile
+                sx={{
+                  width:"100%",
+                  height:"100%" // Increased size for mobile
                 }}
                 initial="hidden"
                 animate={controls2_1}
@@ -196,9 +200,7 @@ export default function Process() {
                 src={process2_2}
                 alt="Process Step 2.2"
                 className="mb-28"
-                style={{
-                  width: isMobile ? "80%" : "70%", // Increased size for mobile
-                }}
+               
                 initial="hidden"
                 animate={controls2_2}
                 variants={textVariants}
@@ -213,9 +215,7 @@ export default function Process() {
                 src={process2_3}
                 alt="Process Step 2.3"
                 className="mb-28"
-                style={{
-                  width: isMobile ? "80%" : "70%", // Increased size for mobile
-                }}
+                
                 initial="hidden"
                 animate={controls2_3}
                 variants={textVariants}
@@ -258,7 +258,7 @@ export default function Process() {
             </Typography>
             <Typography
               sx={{
-                fontSize: isMobile ? "15px" : "18px",
+                fontSize:{xs:"13px",sm:"15px",md:"18px",lg:"18px",xl:"18px"},
                 fontFamily: "Poppins, regular",
               }}
             >
@@ -276,18 +276,18 @@ export default function Process() {
             display: "flex",
             justifyContent: "flex-end",
             alignItems: "flex-start",
-            marginTop: isMobile ? "20px" : "-100px", // Add margin on top for mobile
+            marginTop: isMobile ? "-10px" : "-40px", // Add margin on top for mobile
             fontFamily: "Poppins, regular", // Apply Poppins font
           }}
           color="text.secondary"
         >
-          <div ref={ref3} className="flex justify-end items-start w-full pr-0">
+          <div ref={ref3} className="flex justify-end items-start w-full pr-0" >
             <motion.img
               src={process3}
               alt="Process Step 3"
-              style={{
-                width: isMobile ? "80%" : "50%", // Increased size for mobile
-                marginTop: isMobile ? "0px" : "30px",
+              sx={{
+                width:"100%",
+                height:"100%"
               }}
               initial="hidden"
               animate={controls3}
@@ -327,7 +327,7 @@ export default function Process() {
             </Typography>
             <Typography
               sx={{
-                fontSize: isMobile ? "15px" : "18px",
+                fontSize:{xs:"13px",sm:"15px",md:"18px",lg:"18px",xl:"18px"},
                 fontFamily: "Poppins, regular",
               }}
             >
