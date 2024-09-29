@@ -6,11 +6,11 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import Typography from "@mui/material/Typography";
-import process1 from "../../assets/Process/process1.svg";
+import process1 from "../../assets/Process/Creative.png";
 import process2_1 from "../../assets/Process/process2_1.svg";
 import process2_2 from "../../assets/Process/process2_2.svg";
 import process2_3 from "../../assets/Process/process2_3.svg";
-import process3 from "../../assets/Process/process3.svg";
+import process3 from "../../assets/Process/support.png";
 import ladder from "../../assets/Process/ladder.png";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -148,7 +148,7 @@ export default function Process() {
                 fontFamily: "Poppins, regular", // Apply Poppins font
               }}
             >
-              Marketing Plan
+              Creative Process and Strategy
             </Typography>
             <Typography
               sx={{
@@ -157,8 +157,8 @@ export default function Process() {
               }}
             >
               {isMobile
-                ? "We offer a marketing plan that aligns with your goals."
-                : "We are here to assist with a marketing plan that will provide incredible and outstanding results in line with your goal."}
+                ? "From discovery to planning, we bring your vision to life."
+                : "We transform your vision into reality through discovery, conceptualization, and detailed planning."}
             </Typography>
           </motion.div>
         </TimelineContent>
@@ -254,7 +254,7 @@ export default function Process() {
                 fontFamily: "Poppins, regular", // Apply Poppins font
               }}
             >
-              Marketing Plan
+              Design, Development, and Feedback
             </Typography>
             <Typography
               sx={{
@@ -263,8 +263,8 @@ export default function Process() {
               }}
             >
               {isMobile
-                ? "We provide audience targeting strategies."
-                : "We provide audience targeting strategies to ensure your marketing reaches the ideal audience and delivers optimal results."}
+                ? "Crafting and refining your project with continuous improvement."
+                : "We create and refine your project through design, development, and ongoing feedback."}
             </Typography>
           </motion.div>
         </TimelineContent>
@@ -323,7 +323,7 @@ export default function Process() {
                 fontFamily: "Poppins, regular", // Apply Poppins font
               }}
             >
-              Analytics
+              Finalization and Support
             </Typography>
             <Typography
               sx={{
@@ -332,8 +332,8 @@ export default function Process() {
               }}
             >
               {isMobile
-                ? "Track performance and optimize strategies."
-                : "We provide comprehensive analytics to track performance and optimize strategies for the best results."}
+                ? "Seamless project completion with ongoing support."
+                : "We finalize your project with feedback and offer continuous customer support."}
             </Typography>
           </motion.div>
         </TimelineContent>

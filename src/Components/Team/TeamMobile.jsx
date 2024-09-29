@@ -7,9 +7,13 @@ import x from "../../assets/Social/twitter.png";
 import { Handshake } from "@mui/icons-material";
 import teamMember1 from "../../assets/TeamMembers/pavan.jpg";
 import teamMember2 from "../../assets/TeamMembers/vinay.jpg";
+import teamMember3 from "../../assets/TeamMembers/vinay.jpg";
+import teamMember4 from "../../assets/TeamMembers/pruthvi raj.jpg";
 import teamMember5 from "../../assets/TeamMembers/indu.jpg";
 import teamMember6 from "../../assets/TeamMembers/rishitha.jpg";
 import teamMember7 from "../../assets/TeamMembers/Prathyusha.jpg";
+import teamMember8 from "../../assets/TeamMembers/gnana.jpg";
+
 
 const cardVariants = {
   offscreen: {
@@ -198,7 +202,7 @@ const TeamMobile = () => {
         <motion.div className="card" variants={cardVariants}>
           <div className="bg-headColor font-poppins p-6 text-center mt-1 cursor-pointer rounded-3xl hover:bg-gradient-to-tr from-[#E9F7FF] via-[#FFDBD4] to-[#FFF3CA] transition-all duration-500 ease-in-out w-full">
             <img
-              src={teamMember7}
+              src={teamMember3}
               alt="team-mem-3"
               className="rounded-t-lg"
               style={{
@@ -263,7 +267,7 @@ const TeamMobile = () => {
         <motion.div className="card" variants={cardVariants}>
           <div className="bg-headColor font-poppins p-6 text-center mt-1 cursor-pointer rounded-3xl hover:bg-gradient-to-tr from-[#E9F7FF] via-[#FFDBD4] to-[#FFF3CA] transition-all duration-500 ease-in-out w-full">
             <img
-              src={teamMember1}
+              src={teamMember4}
               alt="team-mem-4"
               className="rounded-t-lg"
               style={{
@@ -523,7 +527,7 @@ const TeamMobile = () => {
         <motion.div className="card" variants={cardVariants}>
           <div className="bg-headColor font-poppins p-6 text-center mt-1 cursor-pointer rounded-3xl hover:bg-gradient-to-tr from-[#E9F7FF] via-[#FFDBD4] to-[#FFF3CA] transition-all duration-500 ease-in-out w-full">
             <img
-              src={teamMember6}
+              src={teamMember8}
               alt="team-mem-8"
               className="rounded-t-lg"
               style={{
@@ -544,10 +548,10 @@ const TeamMobile = () => {
             ></Grid>
             <Box>
               <Typography className="pt-2 font-bold font-poppins">
-                Rishitha
+                S Gnana Sekhar
               </Typography>
               <Typography className="text-base font-poppins text-[#555555]">
-                Web Designer
+                Web Developer
               </Typography>
             </Box>
             <Box sx={{ display: "flex", justifyContent: "center", padding: 2 }}>

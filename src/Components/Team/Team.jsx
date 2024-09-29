@@ -14,11 +14,11 @@ import x from "../../assets/Social/twitter.png";
 import TeamImg1 from "../../assets/TeamMembers/pavan.jpg";
 import TeamImg2 from "../../assets/TeamMembers/vinay.jpg";
 import TeamImg3 from "../../assets/TeamMembers/pavan.jpg";  
-import TeamImg4 from "../../assets/TeamMembers/rishitha.jpg";
+import TeamImg4 from "../../assets/TeamMembers/pruthvi raj.jpg";
 import TeamImg5 from "../../assets/TeamMembers/indu.jpg";
 import TeamImg6 from "../../assets/TeamMembers/rishitha.jpg";
 import TeamImg7 from "../../assets/TeamMembers/Prathyusha.jpg";
-import TeamImg8 from "../../assets/TeamMembers/indu.jpg";
+import TeamImg8 from "../../assets/TeamMembers/gnana.jpg";
 
 const Team = () => {
  
@@ -211,7 +211,7 @@ const Team = () => {
                     alt="Team Member 01"
                     className="rounded-t-lg"
                     style={{
-                      height: "220px",
+                      height: "235px",
                       width: "100%",
                       objectFit: "cover",
                     }}
@@ -360,7 +360,7 @@ const Team = () => {
                   
                 >
                   <img
-                    src={TeamImg6}
+                    src={TeamImg7}
                     alt="Team Member 01"
                     className="rounded-t-lg"
                     style={{
@@ -425,7 +425,7 @@ const Team = () => {
 
                   <Box>
                     <Typography className="pt-2 font-semibold font-poppins text-lg">
-                     Sample Name
+                    S Gnana Sekhar
                     </Typography>
                     <Typography className="text-sm font-poppins text-[#555555] font-normal">
                       Web Developer
