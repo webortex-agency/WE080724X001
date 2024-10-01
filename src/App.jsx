@@ -41,7 +41,7 @@ const App = () => {
     !loading && (
       <>
         <Provider>
-          <Router basename="/WE080724X001/">
+          <Router>
             <ScrollToTop />
             <Navbar />
             <Routes>
