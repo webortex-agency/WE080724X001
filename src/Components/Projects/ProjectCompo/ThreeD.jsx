@@ -9,6 +9,9 @@ import {
 } from "@mui/material";
 import { Consumer } from "../../Context/Context";
 
+const video1Url =
+  "https://drive.google.com/file/d/1engmCgcH_FDyTspDGZUwNk86hTwY4F06/preview";
+
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -66,11 +69,12 @@ const ThreeD = () => {
               maxWidth={false}
               PaperProps={{
                 style: {
-                  objectFit: "contain",
-                  borderRadius: "18px",
+                  backgroundColor: "transparent",
+                  boxShadow: "none",
+                  overflow: "hidden",
                 },
               }}
-              className="h-max w-max"
+              className="h-screen w-screen flex items-center justify-center"
               BackdropComponent={Backdrop}
               BackdropProps={{
                 timeout: 500,
@@ -79,8 +83,19 @@ const ThreeD = () => {
                 },
               }}
             >
-              <Box className="flex items-center justify-center relative ">
-                <img src={selectedImage} alt="Project Image" />
+              <Box className="flex items-center justify-center">
+                <div className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/2 aspect-video">
+                  <iframe
+                    src={video1Url}
+                    // width="100%"
+                    // height="100%"
+                    playsInline
+                    autoPlay
+                    loop
+                    muted
+                    className="border-0 rounded-[18px]"
+                  ></iframe>
+                </div>
               </Box>
             </Dialog>
           </Container>
