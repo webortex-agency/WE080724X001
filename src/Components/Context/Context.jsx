@@ -228,7 +228,7 @@ export class Provider extends Component {
       {
         id: 2,
         src: "./src/assets/Projects/Graphic Design.webm",
-        path: "/projects/graphic-design",
+        path: "/projects/motion-graphics",
       },
       {
         id: 3,

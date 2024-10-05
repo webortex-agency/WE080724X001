@@ -10,7 +10,7 @@ import Contact from "./Components/Contact/Contact";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 import DigitalMarket from "./Components/Projects/ProjectCompo/DigitalMarket";
 import Graphic from "./Components/Projects/ProjectCompo/Graphic";
-import GraphicDesign from "./Components/Projects/ProjectCompo/GraphicDesign";
+import MotionGraphics from "./Components/Projects/ProjectCompo/MotionGraphics";
 import InteriorDesign from "./Components/Projects/ProjectCompo/InteriorDesign";
 import Photography from "./Components/Projects/ProjectCompo/Photography";
 import ThreeD from "./Components/Projects/ProjectCompo/ThreeD";
@@ -57,8 +57,8 @@ const App = () => {
               <Route exact path="/projects/graphic" element={<Graphic />} />
               <Route
                 exact
-                path="/projects/graphic-design"
-                element={<GraphicDesign />}
+                path="/projects/motion-graphics"
+                element={<MotionGraphics />}
               />
               <Route
                 exact

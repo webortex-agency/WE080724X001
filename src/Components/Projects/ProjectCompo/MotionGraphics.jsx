@@ -64,7 +64,7 @@ const useVideoDimensions = () => {
   return dimensions;
 };
 
-const Graphic = () => {
+const MotionGraphics = () => {
   const [open, setOpen] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState("");
   const dimensions = useVideoDimensions();
@@ -79,18 +79,18 @@ const Graphic = () => {
     setSelectedVideo("");
   };
 
-  const graphicProjects = [
+  const motionGraphicsProjects = [
     {
       id: 1,
       videoId:
-        "https://drive.google.com/file/d/1KUVQ5KyQ6Fxc_cGsbUj8y7mm5k5DZFNF/preview",
+        "https://drive.google.com/file/d/1engmCgcH_FDyTspDGZUwNk86hTwY4F06/preview",
       thumbnail: "/path/to/thumbnail1.jpg",
       btnText: "Project 1",
     },
     {
       id: 2,
       videoId:
-        "https://drive.google.com/file/d/1Oyc2Z9Nk2Z3D20Ooc1oKV5vp7qCu4D6i/preview",
+        "https://drive.google.com/file/d/1RAws9TmO_1TbQpZcC7_mVy61cdGdJSX_/preview",
       thumbnail:
         "preview",
       btnText: "Project 2",
@@ -99,121 +99,72 @@ const Graphic = () => {
     {
       id: 3,
       videoId:
-        "https://drive.google.com/file/d/1wJL77D6vxzTXfbFkKiOZva2ODlx988ga/preview",
+        "https://drive.google.com/file/d/1OrEWU-dMQrzTc9s3Y3Dre9Nq__G4Ngdj/preview",
       thumbnail: "/path/to/thumbnail1.jpg",
       btnText: "Project 3",
     },
     {
       id: 4,
       videoId:
-        "https://drive.google.com/file/d/16PzDmyL1YG0w7oEurB7DsC6UhrrCgXb-/preview",
+        "https://drive.google.com/file/d/1-U9YYAnqeRuW-yi1c1Xpesw2p7wpFmE6/preview",
       thumbnail: "/path/to/thumbnail1.jpg",
       btnText: "Project 4",
     },
     {
       id: 5,
       videoId:
-        "https://drive.google.com/file/d/16Mpc4pvCKk11r1kiny3FVcwM5bfy1LY1/preview",
+        "https://drive.google.com/file/d/1styiCMb3m9fY7bhQlgWcSbTC8a9SgqXD/preview",
       thumbnail: "/path/to/thumbnail1.jpg",
       btnText: "Project 5",
     },
     {
       id: 6,
       videoId:
-        "https://drive.google.com/file/d/1G_m41F3Xvu2xhD0fkpWwGhShpBo2yd3i/preview",
+        "https://drive.google.com/file/d/1eAYFeJ6lHEF9rpRS75RLtIJXH_xmo15z/preview",
       thumbnail: "/path/to/thumbnail1.jpg",
       btnText: "Project 6",
     },
     {
       id: 7,
       videoId:
-        "https://drive.google.com/file/d/1y285p3wqGTintCbTE3FZd9agd_cldL_Q/preview",
+        "https://drive.google.com/file/d/1AvcYPJUQM20SgHszAio10EwqZ1iXxqru/preview",
       thumbnail: "/path/to/thumbnail1.jpg",
       btnText: "Project 7",
     },
     {
       id: 8,
       videoId:
-        "https://drive.google.com/file/d/15dYOYB0pkIPHJgSChzusBAO-c_vO7Yj2/preview",
+        "https://drive.google.com/file/d/1wuoHEQj61d0xomiv0m38Fr6OEeMB5WZj/preview",
       thumbnail: "/path/to/thumbnail1.jpg",
       btnText: "Project 8",
     },
     {
       id: 9,
       videoId:
-        "https://drive.google.com/file/d/1AWPe9fMGAHMDLRXFGjfwvaN1ugqs__3w/preview",
+        "https://drive.google.com/file/d/1OuWlWV5JzwQGn6jDS6TTmBtDPUKHf316/preview",
       thumbnail: "/path/to/thumbnail1.jpg",
       btnText: "Project 9",
     },
     {
       id: 10,
       videoId:
-        "https://drive.google.com/file/d/1df2lzvudSrzor5aI62e6nOGshRkSI9to/preview",
+        "https://drive.google.com/file/d/1tOxGsz88Kwp62bNeeoi7dT4hfd_CqAn8/preview",
       thumbnail: "/path/to/thumbnail1.jpg",
       btnText: "Project 10",
     },
     {
       id: 11,
       videoId:
-        "https://drive.google.com/file/d/11mK4iFjwAzZevefNEDECW4bPLaDCODbh/preview",
+        "https://drive.google.com/file/d/1-bG2sQYReQOxY3pG78XdODIKHFT3u20z/preview",
       thumbnail: "/path/to/thumbnail1.jpg",
       btnText: "Project 11",
     },
     {
       id: 12,
       videoId:
-        "https://drive.google.com/file/d/1pRKBChS2onMhMCISu_DWT7IhDg63g27V/preview",
+        "https://drive.google.com/file/d/10qs0TDtM33w6LVXVGpyAYi7YqDu3WVwe/preview",
       thumbnail: "/path/to/thumbnail1.jpg",
       btnText: "Project 12",
-    },
-    {
-      id: 13,
-      videoId:
-        "https://drive.google.com/file/d/1Ng5NvC8Lg49q7V06CjNUyaYMhADDmEhP/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
-      btnText: "Project 13",
-    },
-    {
-      id: 14,
-      videoId:
-        "https://drive.google.com/file/d/1Ng5NvC8Lg49q7V06CjNUyaYMhADDmEhP/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
-      btnText: "Project 14",
-    },
-    {
-      id: 15,
-      videoId:
-        "https://drive.google.com/file/d/1gVaf9FjzAY1O822GOuIW4qDYiUdtBQOJ/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
-      btnText: "Project 15",
-    },
-    {
-      id: 16,
-      videoId:
-        "https://drive.google.com/file/d/1hNceopqDpcwxUw2h6giRT6SkBfvW6hT-/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
-      btnText: "Project 16",
-    },
-    {
-      id: 17,
-      videoId:
-        "https://drive.google.com/file/d/1KLUzScbZdRw-iJy5Kwd-1wnXIXN2NDJQ/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
-      btnText: "Project 17",
-    },
-    {
-      id: 18,
-      videoId:
-        "https://drive.google.com/file/d/1SjKAzY-UQh401USoAAB4xZWNDdB-E3Vm/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
-      btnText: "Project 18",
-    },
-    {
-      id: 19,
-      videoId:
-        "https://drive.google.com/file/d/1p6Ig-IQce1bhvZq5sunfSvG9l-7u6OgY/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
-      btnText: "Project 19",
     },
   ];
 
@@ -221,20 +172,20 @@ const Graphic = () => {
     <Container className="flex justify-center md:justify-start align-middle mb-5">
       <Box className="my-10 py-10">
         <Typography className="text-headColor font-poppins text-3xl font-medium my-5 text-center md:text-left">
-          Graphic Design Projects
+          Motion Graphics Projects
         </Typography>
         <Box className="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-8 gap-x-5 pt-4">
-          {graphicProjects.map((graphicProject) => (
+          {motionGraphicsProjects.map((motionGraphicsProject) => (
             <Box
-              key={graphicProject.id}
+              key={motionGraphicsProject.id}
               className="group relative w-full h-64 rounded-[18px] overflow-hidden cursor-pointer font-poppins shadow-lg transition-transform duration-300 hover:scale-105"
-              onClick={() => handleClickOpen(graphicProject.videoId)}
+              onClick={() => handleClickOpen(motionGraphicsProject.videoId)}
             >
               <video
                 className="w-full h-full object-cover"
-                poster={graphicProject.thumbnail}
+                poster={motionGraphicsProject.thumbnail}
               >
-                <source src={graphicProject.videoId} type="video/mp4" />
+                <source src={motionGraphicsProject.videoId} type="video/mp4" />
               </video>
 
               <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
@@ -243,7 +194,7 @@ const Graphic = () => {
 
               <div className="absolute bg-[#d9d9d978] backdrop-blur-sm px-6 py-2 left-[-15px] bottom-5 rounded-[18px]">
                 <span className="relative top-0 text-textColor font-poppins uppercase text-base">
-                  {graphicProject.btnText}
+                  {motionGraphicsProject.btnText}
                 </span>
               </div>
             </Box>
@@ -298,4 +249,4 @@ const Graphic = () => {
   );
 };
 
-export default Graphic;
+export default MotionGraphics;
