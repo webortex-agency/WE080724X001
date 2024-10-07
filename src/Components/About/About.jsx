@@ -34,7 +34,7 @@ const About = () => {
             <p className="font-poppins text-base md:text-base font-medium text-[#a5a3a3] text-center">
               Home /{" "}
               <span className="">
-                <a href="/WE080724X001/about">About</a>
+                <a href="/about">About</a>
               </span>
             </p>
           </div>

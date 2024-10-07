@@ -8,8 +8,8 @@ import NotFound from "./Components/NotFound/NotFound";
 import About from "./Components/About/About";
 import Contact from "./Components/Contact/Contact";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
-import DigitalMarket from "./Components/Projects/ProjectCompo/DigitalMarket";
-import GraphicDesign from "./Components/Projects/ProjectCompo/GraphicDesign";
+import VideoEditing from "./Components/Projects/ProjectCompo/VideoEditing";
+import Graphic from "./Components/Projects/ProjectCompo/Graphic";
 import MotionGraphics from "./Components/Projects/ProjectCompo/MotionGraphics";
 import InteriorDesign from "./Components/Projects/ProjectCompo/InteriorDesign";
 import Photography from "./Components/Projects/ProjectCompo/Photography";
@@ -40,23 +40,23 @@ const App = () => {
     !loading && (
       <>
         <Provider>
-          <Router >
+          <Router>
             <ScrollToTop />
             <Navbar />
             <Routes>
-              <Route exact path="/WE080724X001/" element={<LandingPage />} />
+              <Route exact path="/" element={<LandingPage />} />
               <Route exact path="/about" element={<About />} />
-              <Route exact path="/contact"  element={<Contact />} />
+              <Route exact path="/contact" element={<Contact />} />
 
               <Route
                 exact
-                path="/projects/digital-marketing"
-                element={<DigitalMarket />}
+                path="/projects/video-editing"
+                element={<VideoEditing />}
               />
               <Route
                 exact
                 path="/projects/graphic-design"
-                element={<GraphicDesign />}
+                element={<Graphic />}
               />
               <Route
                 exact

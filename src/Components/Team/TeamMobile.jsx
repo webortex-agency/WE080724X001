@@ -7,13 +7,12 @@ import x from "../../assets/Social/twitter.png";
 import { Handshake } from "@mui/icons-material";
 import teamMember1 from "../../assets/TeamMembers/pavan.jpg";
 import teamMember2 from "../../assets/TeamMembers/vinay.jpg";
-import teamMember3 from "../../assets/TeamMembers/vinay.jpg";
+import teamMember3 from "../../assets/TeamMembers/hitesh.jpg";
 import teamMember4 from "../../assets/TeamMembers/pruthvi raj.jpg";
 import teamMember5 from "../../assets/TeamMembers/indu.jpg";
 import teamMember6 from "../../assets/TeamMembers/rishitha.jpg";
 import teamMember7 from "../../assets/TeamMembers/Prathyusha.jpg";
 import teamMember8 from "../../assets/TeamMembers/gnana.jpg";
-
 
 const cardVariants = {
   offscreen: {
@@ -206,7 +205,7 @@ const TeamMobile = () => {
               alt="team-mem-3"
               className="rounded-t-lg"
               style={{
-                height: "220px",
+                height: "270px",
                 width: "100%",
                 objectFit: "cover",
               }}
@@ -271,7 +270,7 @@ const TeamMobile = () => {
               alt="team-mem-4"
               className="rounded-t-lg"
               style={{
-                height: "220px",
+                height: "264px",
                 width: "100%",
                 objectFit: "cover",
               }}
@@ -466,7 +465,7 @@ const TeamMobile = () => {
               alt="team-mem-7"
               className="rounded-t-lg"
               style={{
-                height: "220px",
+                height: "260px",
                 width: "100%",
                 objectFit: "cover",
               }}
@@ -531,7 +530,7 @@ const TeamMobile = () => {
               alt="team-mem-8"
               className="rounded-t-lg"
               style={{
-                height: "220px",
+                height: "230px",
                 width: "100%",
                 objectFit: "cover",
               }}
