@@ -13,7 +13,11 @@ import fb from "../../assets/Social/facebook.png";
 import x from "../../assets/Social/twitter.png";
 import TeamImg1 from "../../assets/TeamMembers/pavan.jpg";
 import TeamImg2 from "../../assets/TeamMembers/vinay.jpg";
+<<<<<<< HEAD
 import TeamImg3 from "../../assets/TeamMembers/hitesh.jpg";  
+=======
+import TeamImg3 from "../../assets/TeamMembers/pavan.jpg";  
+>>>>>>> main
 import TeamImg4 from "../../assets/TeamMembers/pruthvi raj.jpg";
 import TeamImg5 from "../../assets/TeamMembers/indu.jpg";
 import TeamImg6 from "../../assets/TeamMembers/rishitha.jpg";
@@ -160,7 +164,11 @@ const Team = () => {
                     alt="Team Member 01"
                     className="rounded-t-lg"
                     style={{
+<<<<<<< HEAD
                       height: "235px",
+=======
+                      height: "220px",
+>>>>>>> main
                       width: "100%",
                       objectFit: "cover",
                     }}

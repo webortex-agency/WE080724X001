@@ -24,6 +24,7 @@ export class Provider extends Component {
         type: "route",
       },
     ],
+<<<<<<< HEAD
 
     scrollingComponents: [
       {
@@ -396,6 +397,8 @@ export class Provider extends Component {
         hueB: 320,
       },
     ],
+=======
+>>>>>>> main
   };
 
   render() {
