@@ -247,8 +247,8 @@ export class Provider extends Component {
       },
       {
         id: 6,
-        src: "./src/assets/Projects/Digital market.mp4",
-        path: "/projects/digital-market",
+        src: "./src/assets/Projects/VideoEditing.webm",
+        path: "/projects/video-editing",
       },
       {
         id: 7,

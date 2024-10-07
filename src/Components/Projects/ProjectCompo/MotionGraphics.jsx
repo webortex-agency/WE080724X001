@@ -83,88 +83,80 @@ const MotionGraphics = () => {
     {
       id: 1,
       videoId:
-        "https://drive.google.com/file/d/1engmCgcH_FDyTspDGZUwNk86hTwY4F06/preview",
+        "https://drive.google.com/file/d/165166HAKDF6JAYdSFdbYqmiQ4n0c1ETR/preview",
       thumbnail: "/path/to/thumbnail1.jpg",
       btnText: "Project 1",
     },
     {
       id: 2,
       videoId:
-        "https://drive.google.com/file/d/1RAws9TmO_1TbQpZcC7_mVy61cdGdJSX_/preview",
-      thumbnail:
-        "preview",
+        "https://drive.google.com/file/d/1qpNPFOZopv-8jGZUSzkdY5SMSb-3NGHa/preview",
+      thumbnail: "preview",
       btnText: "Project 2",
     },
 
     {
       id: 3,
       videoId:
-        "https://drive.google.com/file/d/1OrEWU-dMQrzTc9s3Y3Dre9Nq__G4Ngdj/preview",
+        "https://drive.google.com/file/d/12MXk04twN2BcWXfo6ZEvoL6TRIqP-m8Q/preview",
       thumbnail: "/path/to/thumbnail1.jpg",
       btnText: "Project 3",
     },
     {
       id: 4,
       videoId:
-        "https://drive.google.com/file/d/1-U9YYAnqeRuW-yi1c1Xpesw2p7wpFmE6/preview",
+        "https://drive.google.com/file/d/1wp6vm8fthj1DeMtS_VKt8In9iygvql1U/preview",
       thumbnail: "/path/to/thumbnail1.jpg",
       btnText: "Project 4",
     },
     {
       id: 5,
       videoId:
-        "https://drive.google.com/file/d/1styiCMb3m9fY7bhQlgWcSbTC8a9SgqXD/preview",
+        "https://drive.google.com/file/d/1oZu8n5mZyNv3Svx7yvrAtKTDKjgidKMy/preview",
       thumbnail: "/path/to/thumbnail1.jpg",
       btnText: "Project 5",
     },
     {
       id: 6,
       videoId:
-        "https://drive.google.com/file/d/1eAYFeJ6lHEF9rpRS75RLtIJXH_xmo15z/preview",
+        "https://drive.google.com/file/d/1u_KjUEkOgr2cjiXip4mVrO-Z9r_tacah/preview",
       thumbnail: "/path/to/thumbnail1.jpg",
       btnText: "Project 6",
     },
     {
       id: 7,
       videoId:
-        "https://drive.google.com/file/d/1AvcYPJUQM20SgHszAio10EwqZ1iXxqru/preview",
+        "https://drive.google.com/file/d/1ozwR0X1vSQiNiGsAjnKZjZ7_JVDiojUS/preview",
       thumbnail: "/path/to/thumbnail1.jpg",
       btnText: "Project 7",
     },
     {
       id: 8,
       videoId:
-        "https://drive.google.com/file/d/1wuoHEQj61d0xomiv0m38Fr6OEeMB5WZj/preview",
+        "https://drive.google.com/file/d/1hYyo4UoLe4Y-BAj36ptJwyGnEv-gG2aj/preview",
       thumbnail: "/path/to/thumbnail1.jpg",
       btnText: "Project 8",
     },
     {
       id: 9,
       videoId:
-        "https://drive.google.com/file/d/1OuWlWV5JzwQGn6jDS6TTmBtDPUKHf316/preview",
+        "https://drive.google.com/file/d/1_FqoZG3vG0CNvLFFrERS4WxEgQSjezMd/preview",
       thumbnail: "/path/to/thumbnail1.jpg",
       btnText: "Project 9",
     },
     {
       id: 10,
       videoId:
-        "https://drive.google.com/file/d/1tOxGsz88Kwp62bNeeoi7dT4hfd_CqAn8/preview",
+        "https://drive.google.com/file/d/1FATXjxXbuqnO19SHo_2KJdTWJoKOiTR-/preview",
       thumbnail: "/path/to/thumbnail1.jpg",
       btnText: "Project 10",
     },
     {
       id: 11,
       videoId:
-        "https://drive.google.com/file/d/1-bG2sQYReQOxY3pG78XdODIKHFT3u20z/preview",
+        "https://drive.google.com/file/d/1Q0OwjvVelE1A1qjIcDnq-WNOgSDLJBst/preview",
       thumbnail: "/path/to/thumbnail1.jpg",
       btnText: "Project 11",
-    },
-    {
-      id: 12,
-      videoId:
-        "https://drive.google.com/file/d/10qs0TDtM33w6LVXVGpyAYi7YqDu3WVwe/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
-      btnText: "Project 12",
     },
   ];
 

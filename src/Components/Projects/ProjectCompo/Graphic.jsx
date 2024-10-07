@@ -10,6 +10,26 @@ import {
 } from "@mui/material";
 import { Play, X } from "lucide-react";
 
+import Project01 from "../../../assets/Projects/GraphicProjects/01.jpg";
+import Project02 from "../../../assets/Projects/GraphicProjects/02.jpg";
+import Project03 from "../../../assets/Projects/GraphicProjects/03.jpg";
+import Project04 from "../../../assets/Projects/GraphicProjects/04.jpg";
+import Project05 from "../../../assets/Projects/GraphicProjects/05.jpg";
+import Project06 from "../../../assets/Projects/GraphicProjects/06.jpg";
+import Project07 from "../../../assets/Projects/GraphicProjects/07.jpg";
+import Project08 from "../../../assets/Projects/GraphicProjects/08.jpg";
+import Project09 from "../../../assets/Projects/GraphicProjects/09.jpg";
+import Project10 from "../../../assets/Projects/GraphicProjects/10.jpg";
+import Project11 from "../../../assets/Projects/GraphicProjects/11.jpg";
+import Project12 from "../../../assets/Projects/GraphicProjects/12.jpg";
+import Project13 from "../../../assets/Projects/GraphicProjects/13.jpg";
+import Project14 from "../../../assets/Projects/GraphicProjects/14.jpg";
+import Project15 from "../../../assets/Projects/GraphicProjects/15.jpg";
+import Project16 from "../../../assets/Projects/GraphicProjects/16.jpg";
+import Project17 from "../../../assets/Projects/GraphicProjects/17.jpg";
+import Project18 from "../../../assets/Projects/GraphicProjects/18.jpg";
+import Project19 from "../../../assets/Projects/GraphicProjects/19.jpg";
+
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -84,15 +104,14 @@ const Graphic = () => {
       id: 1,
       videoId:
         "https://drive.google.com/file/d/1KUVQ5KyQ6Fxc_cGsbUj8y7mm5k5DZFNF/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project01,
       btnText: "Project 1",
     },
     {
       id: 2,
       videoId:
         "https://drive.google.com/file/d/1Oyc2Z9Nk2Z3D20Ooc1oKV5vp7qCu4D6i/preview",
-      thumbnail:
-        "preview",
+      thumbnail: Project02,
       btnText: "Project 2",
     },
 
@@ -100,119 +119,119 @@ const Graphic = () => {
       id: 3,
       videoId:
         "https://drive.google.com/file/d/1wJL77D6vxzTXfbFkKiOZva2ODlx988ga/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project03,
       btnText: "Project 3",
     },
     {
       id: 4,
       videoId:
         "https://drive.google.com/file/d/16PzDmyL1YG0w7oEurB7DsC6UhrrCgXb-/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project04,
       btnText: "Project 4",
     },
     {
       id: 5,
       videoId:
         "https://drive.google.com/file/d/16Mpc4pvCKk11r1kiny3FVcwM5bfy1LY1/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project05,
       btnText: "Project 5",
     },
     {
       id: 6,
       videoId:
         "https://drive.google.com/file/d/1G_m41F3Xvu2xhD0fkpWwGhShpBo2yd3i/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project06,
       btnText: "Project 6",
     },
     {
       id: 7,
       videoId:
         "https://drive.google.com/file/d/1y285p3wqGTintCbTE3FZd9agd_cldL_Q/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project07,
       btnText: "Project 7",
     },
     {
       id: 8,
       videoId:
         "https://drive.google.com/file/d/15dYOYB0pkIPHJgSChzusBAO-c_vO7Yj2/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project08,
       btnText: "Project 8",
     },
     {
       id: 9,
       videoId:
         "https://drive.google.com/file/d/1AWPe9fMGAHMDLRXFGjfwvaN1ugqs__3w/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project09,
       btnText: "Project 9",
     },
     {
       id: 10,
       videoId:
         "https://drive.google.com/file/d/1df2lzvudSrzor5aI62e6nOGshRkSI9to/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project10,
       btnText: "Project 10",
     },
     {
       id: 11,
       videoId:
         "https://drive.google.com/file/d/11mK4iFjwAzZevefNEDECW4bPLaDCODbh/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project11,
       btnText: "Project 11",
     },
     {
       id: 12,
       videoId:
         "https://drive.google.com/file/d/1pRKBChS2onMhMCISu_DWT7IhDg63g27V/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project12,
       btnText: "Project 12",
     },
     {
       id: 13,
       videoId:
         "https://drive.google.com/file/d/1Ng5NvC8Lg49q7V06CjNUyaYMhADDmEhP/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project13,
       btnText: "Project 13",
     },
     {
       id: 14,
       videoId:
         "https://drive.google.com/file/d/1Ng5NvC8Lg49q7V06CjNUyaYMhADDmEhP/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project14,
       btnText: "Project 14",
     },
     {
       id: 15,
       videoId:
         "https://drive.google.com/file/d/1gVaf9FjzAY1O822GOuIW4qDYiUdtBQOJ/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project15,
       btnText: "Project 15",
     },
     {
       id: 16,
       videoId:
         "https://drive.google.com/file/d/1hNceopqDpcwxUw2h6giRT6SkBfvW6hT-/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project16,
       btnText: "Project 16",
     },
     {
       id: 17,
       videoId:
         "https://drive.google.com/file/d/1KLUzScbZdRw-iJy5Kwd-1wnXIXN2NDJQ/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project17,
       btnText: "Project 17",
     },
     {
       id: 18,
       videoId:
         "https://drive.google.com/file/d/1SjKAzY-UQh401USoAAB4xZWNDdB-E3Vm/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project18,
       btnText: "Project 18",
     },
     {
       id: 19,
       videoId:
         "https://drive.google.com/file/d/1p6Ig-IQce1bhvZq5sunfSvG9l-7u6OgY/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project19,
       btnText: "Project 19",
     },
   ];

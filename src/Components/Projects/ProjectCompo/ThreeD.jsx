@@ -9,6 +9,7 @@ import {
   IconButton,
 } from "@mui/material";
 import { Play, X } from "lucide-react";
+import Project01 from "../../../assets/Projects/3DProjects/3dProject1.png";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -83,88 +84,9 @@ const ThreeD = () => {
     {
       id: 1,
       videoId:
-        "https://drive.google.com/file/d/1engmCgcH_FDyTspDGZUwNk86hTwY4F06/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+        "https://drive.google.com/file/d/19iAmxOR3rjrxpOfj4FfKUHvTxuqore9T/preview",
+      thumbnail: Project01,
       btnText: "Project 1",
-    },
-    {
-      id: 2,
-      videoId:
-        "https://drive.google.com/file/d/1engmCgcH_FDyTspDGZUwNk86hTwY4F06/preview",
-      thumbnail:
-        "https://drive.google.com/file/d/1engmCgcH_FDyTspDGZUwNk86hTwY4F06/preview",
-      btnText: "Project 2",
-    },
-
-    {
-      id: 3,
-      videoId:
-        "https://drive.google.com/file/d/1engmCgcH_FDyTspDGZUwNk86hTwY4F06/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
-      btnText: "Project 3",
-    },
-    {
-      id: 4,
-      videoId:
-        "https://drive.google.com/file/d/1engmCgcH_FDyTspDGZUwNk86hTwY4F06/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
-      btnText: "Project 4",
-    },
-    {
-      id: 5,
-      videoId:
-        "https://drive.google.com/file/d/1engmCgcH_FDyTspDGZUwNk86hTwY4F06/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
-      btnText: "Project 5",
-    },
-    {
-      id: 6,
-      videoId:
-        "https://drive.google.com/file/d/1engmCgcH_FDyTspDGZUwNk86hTwY4F06/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
-      btnText: "Project 6",
-    },
-    {
-      id: 7,
-      videoId:
-        "https://drive.google.com/file/d/1engmCgcH_FDyTspDGZUwNk86hTwY4F06/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
-      btnText: "Project 7",
-    },
-    {
-      id: 8,
-      videoId:
-        "https://drive.google.com/file/d/1engmCgcH_FDyTspDGZUwNk86hTwY4F06/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
-      btnText: "Project 8",
-    },
-    {
-      id: 9,
-      videoId:
-        "https://drive.google.com/file/d/1engmCgcH_FDyTspDGZUwNk86hTwY4F06/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
-      btnText: "Project 9",
-    },
-    {
-      id: 10,
-      videoId:
-        "https://drive.google.com/file/d/1engmCgcH_FDyTspDGZUwNk86hTwY4F06/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
-      btnText: "Project 10",
-    },
-    {
-      id: 11,
-      videoId:
-        "https://drive.google.com/file/d/1engmCgcH_FDyTspDGZUwNk86hTwY4F06/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
-      btnText: "Project 11",
-    },
-    {
-      id: 12,
-      videoId:
-        "https://drive.google.com/file/d/1engmCgcH_FDyTspDGZUwNk86hTwY4F06/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
-      btnText: "Project 12",
     },
   ];
 
@@ -193,7 +115,7 @@ const ThreeD = () => {
               </div>
 
               <div className="absolute bg-[#d9d9d978] backdrop-blur-sm px-6 py-2 left-[-15px] bottom-5 rounded-[18px]">
-                <span className="relative top-0 text-textColor font-poppins uppercase text-lg">
+                <span className="relative top-0 text-textColor font-poppins uppercase text-base">
                   {graphicProject.btnText}
                 </span>
               </div>
