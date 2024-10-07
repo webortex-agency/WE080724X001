@@ -8,12 +8,8 @@ import {
   Backdrop,
   IconButton,
 } from "@mui/material";
-<<<<<<< HEAD
 import { Play, X } from "lucide-react";
 import Project01 from "../../../assets/Projects/3DProjects/3dProject1.png";
-=======
-import dummyImg from "../../../assets/Projects/dummy.png";
->>>>>>> main
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -84,7 +80,6 @@ const ThreeD = () => {
     setSelectedVideo("");
   };
 
-<<<<<<< HEAD
   const graphicProjects = [
     {
       id: 1,
@@ -126,206 +121,6 @@ const ThreeD = () => {
               </div>
             </Box>
           ))}
-=======
-  return (
-    <Container className="flex justify-center md:justify-start align-middle mb-5">
-      <Box className="my-10 py-10">
-        <Typography className="text-headColor font-poppins text-3xl font-medium my-5 text-center md:text-left">
-          3D Projects
-        </Typography>
-        <Box className="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-8 gap-x-5 pt-4">
-          <Box
-            className="w-full h-full rounded-[18px] flex items-center justify-center overflow-hidden cursor-pointer font-poppins relative"
-            onClick={() => handleClickOpen(dummyImg)}
-          >
-            <img component="image" src={dummyImg} alt="dummy-img-01" />
-            <div className="absolute bg-[#d9d9d978] px-9 py-2 left-[-15px] bottom-5 rounded-[18px]">
-              <span className="relative top-0 text-textColor font-poppins uppercase text-lg">
-                sample image
-              </span>
-            </div>
-          </Box>
-
-          <Box
-            className="w-full h-full rounded-[18px] flex items-center justify-center overflow-hidden cursor-pointer font-poppins relative"
-            onClick={() => handleClickOpen(dummyImg)}
-          >
-            <img component="image" src={dummyImg} alt="dummy-img-01" />
-            <div className="absolute bg-[#d9d9d978] px-9 py-2 left-[-15px] bottom-5 rounded-[18px]">
-              <span className="relative top-0 text-textColor font-poppins uppercase text-lg">
-                sample image
-              </span>
-            </div>
-          </Box>
-
-          <Box
-            className="w-full h-full rounded-[18px] flex items-center justify-center overflow-hidden cursor-pointer font-poppins relative"
-            onClick={() => handleClickOpen(dummyImg)}
-          >
-            <img component="image" src={dummyImg} alt="dummy-img-01" />
-            <div className="absolute bg-[#d9d9d978] px-9 py-2 left-[-15px] bottom-5 rounded-[18px]">
-              <span className="relative top-0 text-textColor font-poppins uppercase text-lg">
-                sample image
-              </span>
-            </div>
-          </Box>
-
-          <Box
-            className="w-full h-full rounded-[18px] flex items-center justify-center overflow-hidden cursor-pointer font-poppins relative"
-            onClick={() => handleClickOpen(dummyImg)}
-          >
-            <img component="image" src={dummyImg} alt="dummy-img-01" />
-            <div className="absolute bg-[#d9d9d978] px-9 py-2 left-[-15px] bottom-5 rounded-[18px]">
-              <span className="relative top-0 text-textColor font-poppins uppercase text-lg">
-                sample image
-              </span>
-            </div>
-          </Box>
-
-          <Box
-            className="w-full h-full rounded-[18px] flex items-center justify-center overflow-hidden cursor-pointer font-poppins relative"
-            onClick={() => handleClickOpen(dummyImg)}
-          >
-            <img component="image" src={dummyImg} alt="dummy-img-01" />
-            <div className="absolute bg-[#d9d9d978] px-9 py-2 left-[-15px] bottom-5 rounded-[18px]">
-              <span className="relative top-0 text-textColor font-poppins uppercase text-lg">
-                sample image
-              </span>
-            </div>
-          </Box>
-
-          <Box
-            className="w-full h-full rounded-[18px] flex items-center justify-center overflow-hidden cursor-pointer font-poppins relative"
-            onClick={() => handleClickOpen(dummyImg)}
-          >
-            <img component="image" src={dummyImg} alt="dummy-img-01" />
-            <div className="absolute bg-[#d9d9d978] px-9 py-2 left-[-15px] bottom-5 rounded-[18px]">
-              <span className="relative top-0 text-textColor font-poppins uppercase text-lg">
-                sample image
-              </span>
-            </div>
-          </Box>
-
-          <Box
-            className="w-full h-full rounded-[18px] flex items-center justify-center overflow-hidden cursor-pointer font-poppins relative"
-            onClick={() => handleClickOpen(dummyImg)}
-          >
-            <img component="image" src={dummyImg} alt="dummy-img-01" />
-            <div className="absolute bg-[#d9d9d978] px-9 py-2 left-[-15px] bottom-5 rounded-[18px]">
-              <span className="relative top-0 text-textColor font-poppins uppercase text-lg">
-                sample image
-              </span>
-            </div>
-          </Box>
-
-          <Box
-            className="w-full h-full rounded-[18px] flex items-center justify-center overflow-hidden cursor-pointer font-poppins relative"
-            onClick={() => handleClickOpen(dummyImg)}
-          >
-            <img component="image" src={dummyImg} alt="dummy-img-01" />
-            <div className="absolute bg-[#d9d9d978] px-9 py-2 left-[-15px] bottom-5 rounded-[18px]">
-              <span className="relative top-0 text-textColor font-poppins uppercase text-lg">
-                sample image
-              </span>
-            </div>
-          </Box>
-
-          <Box
-            className="w-full h-full rounded-[18px] flex items-center justify-center overflow-hidden cursor-pointer font-poppins relative"
-            onClick={() => handleClickOpen(dummyImg)}
-          >
-            <img component="image" src={dummyImg} alt="dummy-img-01" />
-            <div className="absolute bg-[#d9d9d978] px-9 py-2 left-[-15px] bottom-5 rounded-[18px]">
-              <span className="relative top-0 text-textColor font-poppins uppercase text-lg">
-                sample image
-              </span>
-            </div>
-          </Box>
-
-          <Box
-            className="w-full h-full rounded-[18px] flex items-center justify-center overflow-hidden cursor-pointer font-poppins relative"
-            onClick={() => handleClickOpen(dummyImg)}
-          >
-            <img component="image" src={dummyImg} alt="dummy-img-01" />
-            <div className="absolute bg-[#d9d9d978] px-9 py-2 left-[-15px] bottom-5 rounded-[18px]">
-              <span className="relative top-0 text-textColor font-poppins uppercase text-lg">
-                sample image
-              </span>
-            </div>
-          </Box>
-
-          <Box
-            className="w-full h-full rounded-[18px] flex items-center justify-center overflow-hidden cursor-pointer font-poppins relative"
-            onClick={() => handleClickOpen(dummyImg)}
-          >
-            <img component="image" src={dummyImg} alt="dummy-img-01" />
-            <div className="absolute bg-[#d9d9d978] px-9 py-2 left-[-15px] bottom-5 rounded-[18px]">
-              <span className="relative top-0 text-textColor font-poppins uppercase text-lg">
-                sample image
-              </span>
-            </div>
-          </Box>
-
-          <Box
-            className="w-full h-full rounded-[18px] flex items-center justify-center overflow-hidden cursor-pointer font-poppins relative"
-            onClick={() => handleClickOpen(dummyImg)}
-          >
-            <img component="image" src={dummyImg} alt="dummy-img-01" />
-            <div className="absolute bg-[#d9d9d978] px-9 py-2 left-[-15px] bottom-5 rounded-[18px]">
-              <span className="relative top-0 text-textColor font-poppins uppercase text-lg">
-                sample image
-              </span>
-            </div>
-          </Box>
-
-          <Box
-            className="w-full h-full rounded-[18px] flex items-center justify-center overflow-hidden cursor-pointer font-poppins relative"
-            onClick={() => handleClickOpen(dummyImg)}
-          >
-            <img component="image" src={dummyImg} alt="dummy-img-01" />
-            <div className="absolute bg-[#d9d9d978] px-9 py-2 left-[-15px] bottom-5 rounded-[18px]">
-              <span className="relative top-0 text-textColor font-poppins uppercase text-lg">
-                sample image
-              </span>
-            </div>
-          </Box>
-
-          <Box
-            className="w-full h-full rounded-[18px] flex items-center justify-center overflow-hidden cursor-pointer font-poppins relative"
-            onClick={() => handleClickOpen(dummyImg)}
-          >
-            <img component="image" src={dummyImg} alt="dummy-img-01" />
-            <div className="absolute bg-[#d9d9d978] px-9 py-2 left-[-15px] bottom-5 rounded-[18px]">
-              <span className="relative top-0 text-textColor font-poppins uppercase text-lg">
-                sample image
-              </span>
-            </div>
-          </Box>
-
-          <Box
-            className="w-full h-full rounded-[18px] flex items-center justify-center overflow-hidden cursor-pointer font-poppins relative"
-            onClick={() => handleClickOpen(dummyImg)}
-          >
-            <img component="image" src={dummyImg} alt="dummy-img-01" />
-            <div className="absolute bg-[#d9d9d978] px-9 py-2 left-[-15px] bottom-5 rounded-[18px]">
-              <span className="relative top-0 text-textColor font-poppins uppercase text-lg">
-                sample image
-              </span>
-            </div>
-          </Box>
-
-          <Box
-            className="w-full h-full rounded-[18px] flex items-center justify-center overflow-hidden cursor-pointer font-poppins relative"
-            onClick={() => handleClickOpen(dummyImg)}
-          >
-            <img component="image" src={dummyImg} alt="dummy-img-01" />
-            <div className="absolute bg-[#d9d9d978] px-9 py-2 left-[-15px] bottom-5 rounded-[18px]">
-              <span className="relative top-0 text-textColor font-poppins uppercase text-lg">
-                sample image
-              </span>
-            </div>
-          </Box>
->>>>>>> main
         </Box>
       </Box>
 
@@ -337,25 +132,16 @@ const ThreeD = () => {
         maxWidth={false}
         PaperProps={{
           style: {
-<<<<<<< HEAD
             backgroundColor: "transparent",
             boxShadow: "none",
             overflow: "hidden",
           },
         }}
         className="h-screen w-screen flex items-center justify-center"
-=======
-            objectFit: "contain",
-            borderRadius: "18px",
-          },
-        }}
-        className="h-max w-max"
->>>>>>> main
         BackdropComponent={Backdrop}
         BackdropProps={{
           timeout: 500,
           style: {
-<<<<<<< HEAD
             backgroundColor: "rgba(0, 0, 0, 0.9)",
           },
         }}
@@ -379,14 +165,6 @@ const ThreeD = () => {
               ></iframe>
             )}
           </div>
-=======
-            backgroundColor: "rgba(0, 0, 0, 0.7)",
-          },
-        }}
-      >
-        <Box className="flex items-center justify-center relative ">
-          <img src={selectedImage} alt="Project Image" />
->>>>>>> main
         </Box>
       </Dialog>
     </Container>

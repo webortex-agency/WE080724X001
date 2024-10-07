@@ -6,7 +6,7 @@ import pro2 from "../../assets/Projects/Graphic Design.webm";
 import pro3 from "../../assets/Projects/Interior Design.webm";
 import pro4 from "../../assets/Projects/WEb.webm";
 import pro5 from "../../assets/Projects/Photography.webm";
-import pro6 from "../../assets/Projects/Digital market.webm";
+import pro6 from "../../assets/Projects/VideoEditing.webm";
 import pro7 from "../../assets/Projects/2D animation.webm";
 import pro8 from "../../assets/Projects/3D.webm";
 
@@ -101,11 +101,11 @@ const Projects = () => {
         </Card>
         <Card
           className="w-full h-full rounded-lg flex items-center justify-center overflow-hidden cursor-pointer"
-          onClick={handleProjectsClick("projects/digital-marketing")}
+          onClick={handleProjectsClick("projects/video-editing")}
         >
           <video
             src={pro6}
-            alt="Digital Marketing"
+            alt="Video Editing"
             className="w-full h-full object-cover rounded-lg"
             playsInline
             autoPlay
