@@ -111,7 +111,7 @@ const ThreeD = () => {
               </video>
 
               <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
-                <Play className="text-white w-16 h-16 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+                {/* <Play className="text-white w-16 h-16 opacity-70 group-hover:opacity-100 transition-opacity duration-300" /> */}
               </div>
 
               <div className="absolute bg-[#d9d9d978] backdrop-blur-sm px-6 py-2 left-[-15px] bottom-5 rounded-[18px]">

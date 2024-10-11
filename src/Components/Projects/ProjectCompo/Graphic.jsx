@@ -146,91 +146,91 @@ const Graphic = () => {
     {
       id: 7,
       videoId:
-        "https://drive.google.com/file/d/1y285p3wqGTintCbTE3FZd9agd_cldL_Q/preview",
+        "https://drive.google.com/file/d/1p6Ig-IQce1bhvZq5sunfSvG9l-7u6OgY/preview",
       thumbnail: Project07,
       btnText: "Project 7",
     },
     {
       id: 8,
-      videoId:
-        "https://drive.google.com/file/d/15dYOYB0pkIPHJgSChzusBAO-c_vO7Yj2/preview",
+      videoId: 
+      "https://drive.google.com/file/d/1SjKAzY-UQh401USoAAB4xZWNDdB-E3Vm/preview",
       thumbnail: Project08,
       btnText: "Project 8",
     },
     {
       id: 9,
       videoId:
-        "https://drive.google.com/file/d/1AWPe9fMGAHMDLRXFGjfwvaN1ugqs__3w/preview",
+      "https://drive.google.com/file/d/1KLUzScbZdRw-iJy5Kwd-1wnXIXN2NDJQ/preview",
       thumbnail: Project09,
       btnText: "Project 9",
     },
     {
       id: 10,
       videoId:
-        "https://drive.google.com/file/d/1df2lzvudSrzor5aI62e6nOGshRkSI9to/preview",
+      "https://drive.google.com/file/d/1hNceopqDpcwxUw2h6giRT6SkBfvW6hT-/preview",
       thumbnail: Project10,
       btnText: "Project 10",
     },
     {
       id: 11,
       videoId:
-        "https://drive.google.com/file/d/11mK4iFjwAzZevefNEDECW4bPLaDCODbh/preview",
+      "https://drive.google.com/file/d/1gVaf9FjzAY1O822GOuIW4qDYiUdtBQOJ/preview",
       thumbnail: Project11,
       btnText: "Project 11",
     },
     {
       id: 12,
       videoId:
-        "https://drive.google.com/file/d/1pRKBChS2onMhMCISu_DWT7IhDg63g27V/preview",
+      "https://drive.google.com/file/d/1Ng5NvC8Lg49q7V06CjNUyaYMhADDmEhP/preview",
       thumbnail: Project12,
       btnText: "Project 12",
     },
     {
       id: 13,
       videoId:
-        "https://drive.google.com/file/d/1Ng5NvC8Lg49q7V06CjNUyaYMhADDmEhP/preview",
+      "https://drive.google.com/file/d/1pRKBChS2onMhMCISu_DWT7IhDg63g27V/preview",
       thumbnail: Project13,
       btnText: "Project 13",
     },
     {
       id: 14,
-      videoId:
-        "https://drive.google.com/file/d/1Ng5NvC8Lg49q7V06CjNUyaYMhADDmEhP/preview",
+      videoId: 
+      "https://drive.google.com/file/d/11mK4iFjwAzZevefNEDECW4bPLaDCODbh/preview",
       thumbnail: Project14,
       btnText: "Project 14",
     },
     {
       id: 15,
-      videoId:
-        "https://drive.google.com/file/d/1gVaf9FjzAY1O822GOuIW4qDYiUdtBQOJ/preview",
+      videoId: 
+      "https://drive.google.com/file/d/1BjCqI668th09HTAQmogZ7rjQUEMdLanS/preview",
       thumbnail: Project15,
       btnText: "Project 15",
     },
     {
       id: 16,
       videoId:
-        "https://drive.google.com/file/d/1hNceopqDpcwxUw2h6giRT6SkBfvW6hT-/preview",
+      "https://drive.google.com/file/d/1df2lzvudSrzor5aI62e6nOGshRkSI9to/preview",
       thumbnail: Project16,
       btnText: "Project 16",
     },
     {
       id: 17,
-      videoId:
-        "https://drive.google.com/file/d/1KLUzScbZdRw-iJy5Kwd-1wnXIXN2NDJQ/preview",
+      videoId: 
+      "https://drive.google.com/file/d/1AWPe9fMGAHMDLRXFGjfwvaN1ugqs__3w/preview",
       thumbnail: Project17,
       btnText: "Project 17",
     },
     {
       id: 18,
-      videoId:
-        "https://drive.google.com/file/d/1SjKAzY-UQh401USoAAB4xZWNDdB-E3Vm/preview",
+      videoId: 
+      "https://drive.google.com/file/d/15dYOYB0pkIPHJgSChzusBAO-c_vO7Yj2/preview",
       thumbnail: Project18,
       btnText: "Project 18",
     },
     {
       id: 19,
       videoId:
-        "https://drive.google.com/file/d/1p6Ig-IQce1bhvZq5sunfSvG9l-7u6OgY/preview",
+        "https://drive.google.com/file/d/1y285p3wqGTintCbTE3FZd9agd_cldL_Q/preview",
       thumbnail: Project19,
       btnText: "Project 19",
     },
@@ -257,7 +257,7 @@ const Graphic = () => {
               </video>
 
               <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
-                <Play className="text-white w-16 h-16 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+                {/* <Play className="text-white w-16 h-16 opacity-70 group-hover:opacity-100 transition-opacity duration-300" /> */}
               </div>
 
               <div className="absolute bg-[#d9d9d978] backdrop-blur-sm px-6 py-2 left-[-15px] bottom-5 rounded-[18px]">
