@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "@fontsource/poppins";
 import Navbar from "./Components/Navabar/Navbar";
 import Footer from "./Components/Footer/Footer";
@@ -26,6 +26,8 @@ import ThreeDCinematographyService from "./Components/Services/ServicesCompo/Thr
 import WebDesignService from "./Components/Services/ServicesCompo/WebDesignService";
 import { Provider } from "./Components/Context/Context";
 
+import LaunchButton from "./Components/LaunchButton/LaunchButton";
+
 const App = () => {
   const [loading, setLoading] = useState(true);
   const spinner = document.getElementById("spinner");
@@ -34,6 +36,24 @@ const App = () => {
       spinner.style.display = "none";
       setLoading(false);
     }, 2000);
+  }
+
+  const [isLaunched, setIsLaunched] = useState(false);
+
+  useEffect(() => {
+    const hasLaunched = localStorage.getItem("hasLaunched");
+    if (hasLaunched) {
+      setIsLaunched(true);
+    }
+  }, []);
+
+  const handleLaunch = () => {
+    setIsLaunched(true);
+    localStorage.setItem("hasLaunched", "true");
+  };
+
+  if (!isLaunched) {
+    return <LaunchButton onLaunch={handleLaunch} />;
   }
 
   return (

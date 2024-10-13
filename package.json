@@ -21,6 +21,7 @@
     "emailjs": "^4.0.3",
     "framer-motion": "^11.3.19",
     "lucide-react": "^0.447.0",
+    "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-intersection-observer": "^9.13.0",

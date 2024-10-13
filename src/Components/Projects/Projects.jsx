@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Box, Card, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import pro1 from "../../assets/Projects/Graphic.webm";

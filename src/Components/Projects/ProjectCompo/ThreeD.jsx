@@ -8,7 +8,7 @@ import {
   Backdrop,
   IconButton,
 } from "@mui/material";
-import { Play, X } from "lucide-react";
+import { X } from "lucide-react";
 import Project01 from "../../../assets/Projects/3DProjects/3dProject1.png";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
