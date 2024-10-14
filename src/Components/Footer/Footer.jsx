@@ -332,12 +332,13 @@ const Footer = () => {
                     className="font-poppins text-sm sm:text-base md:text-sm lg:text-base"
                     style={{ color: "white" }}
                   >
-                    Sample city, Tirupati, Andhra Pradesh, India.
+                    Bangalore, Karnataka, India - 560041
                   </Typography>
                   <Link
                     variant="body1"
                     className="font-poppins text-sm sm:text-base md:text-sm lg:text-base"
-                    href="#"
+                    href="https://maps.app.goo.gl/LNgTarU7UFFiW2Tz9"
+                    target="_blank"
                     style={{ color: "#FFDC60" }}
                   >
                     location
