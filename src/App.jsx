@@ -38,24 +38,6 @@ const App = () => {
     }, 2000);
   }
 
-  const [isLaunched, setIsLaunched] = useState(false);
-
-  useEffect(() => {
-    const hasLaunched = localStorage.getItem("hasLaunched");
-    if (hasLaunched) {
-      setIsLaunched(true);
-    }
-  }, []);
-
-  const handleLaunch = () => {
-    setIsLaunched(true);
-    localStorage.setItem("hasLaunched", "true");
-  };
-
-  if (!isLaunched) {
-    return <LaunchWrapper onLaunch={handleLaunch} />;
-  }
-
   return (
     <LaunchWrapper>
       !loading && (
