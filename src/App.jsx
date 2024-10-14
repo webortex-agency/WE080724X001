@@ -26,7 +26,7 @@ import ThreeDCinematographyService from "./Components/Services/ServicesCompo/Thr
 import WebDesignService from "./Components/Services/ServicesCompo/WebDesignService";
 import { Provider } from "./Components/Context/Context";
 
-import LaunchButton from "./Components/LaunchButton/LaunchButton";
+import LaunchWrapper from "./Components/LaunchWrapper/LaunchWrapper";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -53,11 +53,12 @@ const App = () => {
   };
 
   if (!isLaunched) {
-    return <LaunchButton onLaunch={handleLaunch} />;
+    return <LaunchWrapper onLaunch={handleLaunch} />;
   }
 
   return (
-    !loading && (
+    <LaunchWrapper>
+      !loading && (
       <>
         <Provider>
           <Router>
@@ -144,7 +145,8 @@ const App = () => {
           </Router>
         </Provider>
       </>
-    )
+      )
+    </LaunchWrapper>
   );
 };
 
