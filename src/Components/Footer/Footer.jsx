@@ -1,4 +1,4 @@
-import  { useState, useRef } from 'react';
+import { useState, useRef } from "react";
 import {
   Box,
   Button,
@@ -17,7 +17,7 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import FilterNoneOutlinedIcon from "@mui/icons-material/FilterNoneOutlined";
 import CampaignOutlinedIcon from "@mui/icons-material/CampaignOutlined";
 import footerLogo from "../../assets/footerLogo.png";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 const PageLinks = [
   {
@@ -66,9 +66,9 @@ const SocialLinks = [
 ];
 
 const Footer = () => {
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
   const [snackbarOpen, setSnackbarOpen] = useState(false);
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [errors, setErrors] = useState({});
   const form = useRef();
   const validateEmail = (email) => {
@@ -77,20 +77,18 @@ const Footer = () => {
   };
   const validateForm = () => {
     const newErrors = {};
-    
-    
-    
+
     if (!email) {
-      newErrors.email = 'Email is required.';
+      newErrors.email = "Email is required.";
     } else if (!validateEmail(email)) {
-      newErrors.email = 'Please enter a valid email address.';
+      newErrors.email = "Please enter a valid email address.";
     }
-    
+
     setErrors(newErrors);
-    
+
     return Object.keys(newErrors).length === 0;
   };
-  
+
   const sendEmail = (e) => {
     e.preventDefault();
     if (!validateForm()) {
@@ -98,22 +96,29 @@ const Footer = () => {
     }
 
     emailjs
-      .sendForm('service_6s2vfcv', 'template_kd0sbol', form.current, 'mWcuN68COh2Q3oyVd')
-      .then((result) => {
-        console.log('SUCCESS!', result.text);
-        setSnackbarOpen(true);
-        setEmail('');
-        setMessage('');
-      }, (error) => {
-        console.log('FAILED...', error.text);
-        alert('Failed to send the message, please try again.');
-      });
-  
-};
+      .sendForm(
+        "service_6s2vfcv",
+        "template_kd0sbol",
+        form.current,
+        "mWcuN68COh2Q3oyVd"
+      )
+      .then(
+        (result) => {
+          console.log("SUCCESS!", result.text);
+          setSnackbarOpen(true);
+          setEmail("");
+          setMessage("");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          alert("Failed to send the message, please try again.");
+        }
+      );
+  };
   const handleCloseSnackbar = () => {
     setSnackbarOpen(false);
   };
-  
+
   return (
     <ThemeProvider
       theme={createTheme({
@@ -151,112 +156,112 @@ const Footer = () => {
                   />
                 </Box>
                 <form ref={form} onSubmit={sendEmail}>
-                <Grid
-                  item
-                  className="px-[5%] xs:px-[10%] md:px-[5%] lg:px-[10%]"
-                  style={{
-                    width: "100%",
-                  }}
-                >
-                  <Typography
-                    variant="h6"
-                    className="font-poppins text-headColor text-base sm:text-xl lg:text-2xl font-semibold"
+                  <Grid
+                    item
+                    className="px-[5%] xs:px-[10%] md:px-[5%] lg:px-[10%]"
+                    style={{
+                      width: "100%",
+                    }}
                   >
-                    Contact us
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    className="text-[#d0d0d0] pt-2 font-poppins text-sm sm:text-base md:text-sm lg:text-base"
+                    <Typography
+                      variant="h6"
+                      className="font-poppins text-headColor text-base sm:text-xl lg:text-2xl font-semibold"
+                    >
+                      Contact us
+                    </Typography>
+                    <Typography
+                      variant="body1"
+                      className="text-[#d0d0d0] pt-2 font-poppins text-sm sm:text-base md:text-sm lg:text-base"
+                    >
+                      Industry&apos;s standard from dummy and make a type book.
+                    </Typography>
+                  </Grid>
+                  <Grid
+                    item
+                    className="px-[5%] xs:px-[10%] md:px-[5%] lg:px-[10%]"
+                    style={{
+                      display: "flex",
+                      paddingTop: "6%",
+                      paddingBottom: "5%",
+                      flexDirection: "column",
+                      width: "100%",
+                      gap: 15,
+                    }}
                   >
-                    Industry&apos;s standard from dummy and make a type book.
-                  </Typography>
-                </Grid>
-                <Grid
-                  item
-                  className="px-[5%] xs:px-[10%] md:px-[5%] lg:px-[10%]"
-                  style={{
-                    display: "flex",
-                    paddingTop: "6%",
-                    paddingBottom: "5%",
-                    flexDirection: "column",
-                    width: "100%",
-                    gap: 15,
-                  }}
-                >
-                  <TextField
-                    type="email"
-                    name="Email"
-                    InputProps={{
-                      style: { color: 'white' }, sx: {
-                        '& .MuiOutlinedInput-notchedOutline': {
-                          borderColor: 'white',
+                    <TextField
+                      type="email"
+                      name="Email"
+                      InputProps={{
+                        style: { color: "white" },
+                        sx: {
+                          "& .MuiOutlinedInput-notchedOutline": {
+                            borderColor: "white",
+                          },
+                          "&:hover .MuiOutlinedInput-notchedOutline": {
+                            borderColor: "#318CE7",
+                          },
+                          "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                            borderColor: "#1877F2",
+                          },
                         },
-                        '&:hover .MuiOutlinedInput-notchedOutline': {
-                          borderColor: '#318CE7',
+                      }}
+                      className="bg-[#5B5B61] font-poppins rounded-lg"
+                      label="Enter Your Email"
+                      InputLabelProps={{
+                        style: { color: "white", fontFamily: "Poppins" },
+                      }}
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      error={Boolean(errors.email)}
+                      helperText={errors.email}
+                    />
+                    <TextField
+                      multiline
+                      rows={4}
+                      name="Message"
+                      InputProps={{
+                        style: { color: "white" },
+                        sx: {
+                          "& .MuiOutlinedInput-notchedOutline": {
+                            borderColor: "white",
+                          },
+                          "&:hover .MuiOutlinedInput-notchedOutline": {
+                            borderColor: "#318CE7",
+                          },
+                          "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                            borderColor: "#1877F2",
+                          },
                         },
-                        '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                          borderColor: '#1877F2',
-                        },
-                      },
+                      }}
+                      className="bg-[#5B5B61] font-poppins rounded-lg"
+                      label="Message"
+                      InputLabelProps={{
+                        style: { color: "white", fontFamily: "Poppins" },
+                      }}
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      error={Boolean(errors.message)}
+                      helperText={errors.message}
+                    ></TextField>
+                  </Grid>
+                  <Grid
+                    item
+                    className="px-[5%] xs:px-[10%] md:px-[5%] lg:px-[10%]"
+                    style={{
+                      width: "100%",
+                      paddingBottom: "10%",
                     }}
-                    className="bg-[#5B5B61] font-poppins rounded-lg"
-                    label="Enter Your Email"
-                    InputLabelProps={{
-                      style: { color: "white", fontFamily: "Poppins" },
-                    }}
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    error={Boolean(errors.email)}
-                    helperText={errors.email}
-                  />
-                  <TextField
-                    multiline
-                    rows={4}
-                    name="Message"
-                    InputProps={{
-                      style: { color: 'white' }, sx: {
-                        '& .MuiOutlinedInput-notchedOutline': {
-                          borderColor: 'white',
-                        },
-                        '&:hover .MuiOutlinedInput-notchedOutline': {
-                          borderColor: '#318CE7',
-                        },
-                        '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                          borderColor: '#1877F2',
-                        },
-                      },
-                    }}
-                    className="bg-[#5B5B61] font-poppins rounded-lg"
-                    label="Message"
-                    InputLabelProps={{
-                      style: { color: "white", fontFamily: "Poppins" },
-                      
-                    }}
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    error={Boolean(errors.message)}
-                    helperText={errors.message}
-                    
-                  ></TextField>
-                </Grid>
-                <Grid
-                  item
-                  className="px-[5%] xs:px-[10%] md:px-[5%] lg:px-[10%]"
-                  style={{
-                    width: "100%",
-                    paddingBottom: "10%",
-                  }}
-                >
-                  <Button
-                    fullWidth
-                    variant="contained"
-                    className="h-10 sm:h-12 font-poppins text-backgroundColor bg-[#ffdd60ae] font-medium text-sm sm:text-base lg:text-lg hover:bg-[#FFDC60] rounded-lg"
-                    sx={{ transition: ".4s ease" }}
-                    type="submit"
                   >
-                    Send
-                  </Button>
-                </Grid>
+                    <Button
+                      fullWidth
+                      variant="contained"
+                      className="h-10 sm:h-12 font-poppins text-backgroundColor bg-[#ffdd60ae] font-medium text-sm sm:text-base lg:text-lg hover:bg-[#FFDC60] rounded-lg"
+                      sx={{ transition: ".4s ease" }}
+                      type="submit"
+                    >
+                      Send
+                    </Button>
+                  </Grid>
                 </form>
               </Box>
             </Grid>
@@ -295,7 +300,7 @@ const Footer = () => {
                       borderRadius: 2,
                     }}
                   >
-                    +91 8688281821
+                    +91 79754 54350
                   </Typography>
 
                   <Link
@@ -411,15 +416,19 @@ const Footer = () => {
             </Grid>
           </Grid>
           <Snackbar
-        open={snackbarOpen}
-        autoHideDuration={4000}
-        onClose={handleCloseSnackbar}
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
-      >
-        <Alert onClose={handleCloseSnackbar} severity="success" sx={{ width: '100%' }}>
-          Message Sent Successfully!
-        </Alert>
-      </Snackbar>
+            open={snackbarOpen}
+            autoHideDuration={4000}
+            onClose={handleCloseSnackbar}
+            anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+          >
+            <Alert
+              onClose={handleCloseSnackbar}
+              severity="success"
+              sx={{ width: "100%" }}
+            >
+              Message Sent Successfully!
+            </Alert>
+          </Snackbar>
         </Container>
       </Box>
     </ThemeProvider>
