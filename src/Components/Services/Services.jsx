@@ -18,7 +18,7 @@ import { useNavigate } from "react-router-dom";
 import serviceImg1 from "../../assets/Services/picture-dynamic-color.svg";
 import serviceImg2 from "../../assets/Services/image 17.svg";
 import serviceImg3 from "../../assets/Services/paint-kit-dynamic-color.svg";
-import serviceImg4 from "../../assets/Services/Webdev.svg";
+import serviceImg4 from "../../assets/Webdev.svg";
 import serviceImg5 from "../../assets/Services/camera-dynamic-color.svg";
 import serviceImg6 from "../../assets/Services/digitalmarketing.png";
 import serviceImg7 from "../../assets/Services/image 15.svg";
