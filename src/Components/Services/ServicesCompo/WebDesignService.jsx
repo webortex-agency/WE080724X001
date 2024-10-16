@@ -1,6 +1,6 @@
 import React from "react";
 import img1 from "../../../assets/About/img1.png";
-import img2 from "../../../assets/webdev.svg";
+import img2 from "../../../assets/Webdev.svg";
 import { Container } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
