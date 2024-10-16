@@ -23,23 +23,23 @@ import emailjs from "@emailjs/browser";
 const PageLinks = [
   {
     name: "Home",
-    source: "#",
+    source: "/",
   },
   {
     name: "Services",
-    source: "#",
+    source: "#services",
   },
   {
     name: "Projects",
-    source: "#",
+    source: "#projects",
   },
   {
     name: "Team",
-    source: "#",
+    source: "#team",
   },
   {
     name: "About",
-    source: "",
+    source: "#",
   },
 ];
 
