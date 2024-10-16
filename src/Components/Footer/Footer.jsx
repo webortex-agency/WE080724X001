@@ -45,10 +45,6 @@ const PageLinks = [
 
 const SocialLinks = [
   {
-    name: "Facebook",
-    source: "#",
-  },
-  {
     name: "Instagram",
     source:
       "https://www.instagram.com/64.framez/profilecard/?igsh=bXNuNzBuYzFianky",
