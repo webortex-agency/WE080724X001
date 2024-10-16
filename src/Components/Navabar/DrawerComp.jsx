@@ -18,7 +18,7 @@ const CustomizedDrawer = styled(Drawer)(({ theme }) => ({
   ".css-4t3x6l-MuiPaper-root-MuiDrawer-paper": {
     backgroundColor: "#171717;",
     width: "80%",
-    height: "40%",
+    height: "45%",
   },
   ".css-h4y409-MuiList-root": {
     display: "flex",
