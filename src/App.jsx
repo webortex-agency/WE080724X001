@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "@fontsource/poppins";
 import Navbar from "./Components/Navabar/Navbar";
 import Footer from "./Components/Footer/Footer";
@@ -26,8 +26,6 @@ import ThreeDCinematographyService from "./Components/Services/ServicesCompo/Thr
 import WebDesignService from "./Components/Services/ServicesCompo/WebDesignService";
 import { Provider } from "./Components/Context/Context";
 
-import LaunchWrapper from "./Components/LaunchWrapper/LaunchWrapper";
-
 const App = () => {
   const [loading, setLoading] = useState(true);
   const spinner = document.getElementById("spinner");
@@ -39,7 +37,7 @@ const App = () => {
   }
 
   return (
-    <LaunchWrapper>
+    !loading && (
       <>
         <Provider>
           <Router>
@@ -126,8 +124,7 @@ const App = () => {
           </Router>
         </Provider>
       </>
-      )
-    </LaunchWrapper>
+    )
   );
 };
 
