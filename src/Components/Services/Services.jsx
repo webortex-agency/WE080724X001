@@ -138,7 +138,7 @@ const Services = () => {
               ></Typography>
               <Typography
                 variant="h4"
-                className="text-2xl sm:text-3xl md:text-xl lg:text-4xl text-headColor px-5 md:px-0 text-center md:text-left w-auto md:w-[450px] lg:w-[620px] font-poppins font-normal mt-4"
+                className="text-2xl sm:text-3xl md:text-xl lg:text-4xl text-headColor px-5 md:px-0 text-center md:text-left w-auto md:w-[450px] lg:w-[620px] font-poppins font-normal"
               >
                 High-impact services to take your business to the next level
               </Typography>

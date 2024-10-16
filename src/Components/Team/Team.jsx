@@ -31,7 +31,7 @@ const Team = () => {
         <div className="my-5 text-center">
           <Typography
             variant="h4"
-            className="text-2xl sm:text-3xl md:text-xl lg:text-4xl text-headColor px-5 md:px-0 text-center  font-poppins font-normal mt-4"
+            className="text-2xl sm:text-3xl md:text-xl lg:text-4xl text-headColor px-5 md:px-0 text-center  font-poppins font-normal"
           >
             Meet Our Team Experts
           </Typography>

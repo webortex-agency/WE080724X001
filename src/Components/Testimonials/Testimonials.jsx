@@ -94,7 +94,7 @@ const Testimonials = () => {
           <div className="my-5 md:my-0">
             <Typography
               variant="h4"
-              className="text-2xl sm:text-3xl md:text-xl lg:text-4xl text-headColor px-5 md:px-0 text-center md:text-left w-auto md:w-[450px] lg:w-[550px] font-poppins font-normal mt-4"
+              className="text-2xl sm:text-3xl md:text-xl lg:text-4xl text-headColor px-5 md:px-0 text-center md:text-left w-auto md:w-[450px] lg:w-[550px] font-poppins font-normal"
             >
               We work with customers across all industries
             </Typography>
