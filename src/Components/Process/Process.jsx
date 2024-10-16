@@ -83,7 +83,7 @@ export default function Process() {
           ></Typography>
           <Typography
             variant="h4"
-            className="text-2xl sm:text-4xl font-semibold md:text-3xl lg:text-4xl text-center font-poppins font-normal mt-4"
+            className="text-2xl sm:text-4xl md:text-3xl lg:text-4xl text-center font-poppins font-normal mt-4"
           >
             How We Work <br />
             <span className="text-lg font-poppins font-medium">

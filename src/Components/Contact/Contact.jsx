@@ -346,6 +346,87 @@ const Contact = () => {
                 md={12}
                 lg={12}
                 xl={12}
+                sx={{
+                  backgroundColor: "#222222",
+                  height: {
+                    xs: "230px",
+                    sm: "230px",
+                    md: "230px",
+                    lg: "230px",
+                    xl: "230px",
+                  },
+                  borderRadius: 3,
+                }}
+                item
+              >
+                <Grid item m={3}>
+                  <Typography
+                    variant="h6"
+                    className="bg-[#FFDC60] text-backgroundColor"
+                    sx={{
+                      borderRadius: 4,
+                      width: "70px",
+                      textAlign: "center",
+                      fontSize: "20px",
+                    }}
+                  >
+                    Call
+                  </Typography>
+                  <br />
+                  <hr style={{ color: "#ECECEC" }} />
+                  <Typography
+                    className="text-center mt-5"
+                    sx={{
+                      color: "white",
+                      fontSize: {
+                        xs: "23px",
+                        sm: "19px",
+                        md: "23px",
+                        lg: "23px",
+                        xl: "23px",
+                      },
+
+                      fontWeight: "100px",
+                    }}
+                  >
+                    <span style={{ color: "#5956E8" }}>
+                      <LocalPhoneOutlinedIcon
+                        sx={{
+                          fontSize: {
+                            xs: "33px",
+                            sm: "29px",
+                            md: "25px",
+                            lg: "33px",
+                            xl: "33px",
+                          },
+                        }}
+                      />
+                    </span>
+                    Phone
+                  </Typography>
+                  <Typography
+                    className="text-center mt-2"
+                    sx={{
+                      color: "#C0BEBE",
+                      fontSize: {
+                        xs: "15px",
+                        sm: "15px",
+                        md: "18px",
+                        lg: "16px",
+                        xl: "16px",
+                      },
+                    }}
+                  >
+                    +91 7975454350
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid
+                xs={8}
+                sm={5}
+                md={12}
+                lg={12}
+                xl={12}
                 item
                 sx={{
                   backgroundColor: "#222222",
@@ -382,6 +463,7 @@ const Contact = () => {
                   <br />
                   <hr style={{ color: "#ECECEC" }} />
                   <Typography
+                    className="text-center mt-5"
                     sx={{
                       color: "white",
                       fontSize: {
@@ -391,7 +473,6 @@ const Contact = () => {
                         lg: "23px",
                         xl: "23px",
                       },
-                      marginTop: "8px",
                     }}
                   >
                     <span style={{ color: "#5956E8" }}>
@@ -410,23 +491,10 @@ const Contact = () => {
                     Email
                   </Typography>
                   <Typography
+                    className="text-center mt-2"
                     sx={{
                       color: "#C0BEBE",
-                      marginLeft: {
-                        xs: "20px",
-                        sm: "16px",
-                        md: "40px",
-                        lg: "40px",
-                        xl: "40px",
-                      },
-                      marginTop: {
-                        xs: "1px",
-                        sm: 1,
-                        md: "1px",
-                        lg: "1px",
-                        xl: "1px",
-                      },
-                      paddingRight: "100px",
+
                       fontSize: {
                         xs: "15px",
                         sm: "15px",
@@ -437,99 +505,6 @@ const Contact = () => {
                     }}
                   >
                     contact@64framez.com
-                  </Typography>
-                </Grid>
-              </Grid>
-              <Grid
-                xs={8}
-                sm={5}
-                md={12}
-                lg={12}
-                xl={12}
-                sx={{
-                  backgroundColor: "#222222",
-                  height: {
-                    xs: "230px",
-                    sm: "230px",
-                    md: "230px",
-                    lg: "230px",
-                    xl: "230px",
-                  },
-                  borderRadius: 3,
-                }}
-                item
-              >
-                <Grid item m={3}>
-                  <Typography
-                    variant="h6"
-                    className="bg-[#FFDC60] text-backgroundColor"
-                    sx={{
-                      borderRadius: 4,
-                      width: "70px",
-                      textAlign: "center",
-                      fontSize: "20px",
-                    }}
-                  >
-                    Call
-                  </Typography>
-                  <br />
-                  <hr style={{ color: "#ECECEC" }} />
-                  <Typography
-                    sx={{
-                      color: "white",
-                      fontSize: {
-                        xs: "23px",
-                        sm: "19px",
-                        md: "23px",
-                        lg: "23px",
-                        xl: "23px",
-                      },
-                      marginTop: "8px",
-                      fontWeight: "100px",
-                    }}
-                  >
-                    <span style={{ color: "#5956E8" }}>
-                      <LocalPhoneOutlinedIcon
-                        sx={{
-                          fontSize: {
-                            xs: "33px",
-                            sm: "29px",
-                            md: "25px",
-                            lg: "33px",
-                            xl: "33px",
-                          },
-                        }}
-                      />
-                    </span>{" "}
-                    Phone
-                  </Typography>
-                  <Typography
-                    sx={{
-                      color: "#C0BEBE",
-                      marginLeft: {
-                        xs: "20px",
-                        sm: "16px",
-                        md: "40px",
-                        lg: "40px",
-                        xl: "40px",
-                      },
-                      marginTop: {
-                        xs: "1px",
-                        sm: 1,
-                        md: "1px",
-                        lg: "1px",
-                        xl: "1px",
-                      },
-                      fontSize: {
-                        xs: "15px",
-                        sm: "15px",
-                        md: "18px",
-                        lg: "16px",
-                        xl: "16px",
-                      },
-                    }}
-                  >
-                    +91 7975454350
                   </Typography>
                 </Grid>
               </Grid>
