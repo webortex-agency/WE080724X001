@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-
+import { useNavigate, useLocation } from "react-router-dom";
 import {
   Box,
   Button,
@@ -20,26 +20,36 @@ import CampaignOutlinedIcon from "@mui/icons-material/CampaignOutlined";
 import footerLogo from "../../assets/footerLogo.png";
 import emailjs from "@emailjs/browser";
 
-const PageLinks = [
+const pageLinks = [
   {
+    id: 1,
     name: "Home",
-    source: "/",
+    path: "/",
+    type: "route",
   },
   {
+    id: 2,
     name: "Services",
-    source: "#services",
+    path: "#services",
+    type: "section",
   },
   {
+    id: 3,
     name: "Projects",
-    source: "#projects",
+    path: "#projects",
+    type: "section",
   },
   {
+    id: 4,
     name: "Team",
-    source: "#team",
+    path: "#team",
+    type: "section",
   },
   {
+    id: 5,
     name: "About",
-    source: "#",
+    path: "/about",
+    type: "route",
   },
 ];
 
@@ -64,6 +74,8 @@ const SocialLinks = [
 ];
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [message, setMessage] = useState("");
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [email, setEmail] = useState("");
@@ -115,6 +127,31 @@ const Footer = () => {
   };
   const handleCloseSnackbar = () => {
     setSnackbarOpen(false);
+  };
+
+  const scrollToSection = (hashId) => {
+    const element = document.querySelector(hashId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
+  const handleNavigation = (pageLink) => {
+    if (pageLink.type === "section") {
+      if (location.pathname !== "/") {
+        navigate("/");
+        setTimeout(() => {
+          scrollToSection(pageLink.path);
+        }, 100);
+      } else {
+        scrollToSection(pageLink.path);
+      }
+    } else {
+      navigate(pageLink.path);
+    }
   };
 
   return (
@@ -362,15 +399,15 @@ const Footer = () => {
                     Pages
                   </Typography>
                   <Box className="flex flex-col pl-8 pt-4 gap-1">
-                    {PageLinks.map((PageLink, index) => (
+                    {pageLinks.map((pageLink) => (
                       <Link
-                        key={index}
+                        key={pageLink.id}
                         variant="body1"
-                        className="font-poppins text-sm sm:text-base md:text-sm lg:text-base"
-                        href={PageLink.source}
+                        className="font-poppins text-sm sm:text-base md:text-sm lg:text-base cursor-pointer"
+                        onClick={() => handleNavigation(pageLink)}
                         style={{ color: "white" }}
                       >
-                        {PageLink.name}
+                        {pageLink.name}
                       </Link>
                     ))}
                   </Box>
