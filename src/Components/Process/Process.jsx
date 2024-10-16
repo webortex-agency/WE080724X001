@@ -80,15 +80,15 @@ export default function Process() {
           <Typography
             className="text-[15px] text-backgroundColor font-poppins text-center mt-4"
             sx={{ letterSpacing: "3px", textTransform: "uppercase" }}
-          >
-            <span className="text-[#5956E8] mx-1">//</span>
-            03 . Process
-          </Typography>
+          ></Typography>
           <Typography
             variant="h4"
-            className="text-2xl sm:text-4xl md:text-3xl lg:text-4xl text-center font-poppins font-normal mt-4"
+            className="text-2xl sm:text-4xl font-semibold md:text-3xl lg:text-4xl text-center font-poppins font-normal mt-4"
           >
-            A simple, yet powerful and efficient process
+            How We Work <br />
+            <span className="text-lg font-poppins font-medium">
+              Turning Your Ideas into Masterpieces
+            </span>
           </Typography>
         </div>
       </div>

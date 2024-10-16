@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+
 import {
   Box,
   Button,
@@ -38,7 +39,7 @@ const PageLinks = [
   },
   {
     name: "About",
-    source: "#",
+    source: "",
   },
 ];
 
@@ -49,19 +50,20 @@ const SocialLinks = [
   },
   {
     name: "Instagram",
-    source: "#",
+    source:
+      "https://www.instagram.com/64.framez/profilecard/?igsh=bXNuNzBuYzFianky",
   },
   {
     name: "Twitter",
-    source: "#",
+    source: "https://x.com/64Framez",
   },
   {
     name: "LinkedIn",
-    source: "#",
+    source: "https://www.linkedin.com/company/64framez/",
   },
   {
-    name: "Pinterest",
-    source: "#",
+    name: "Art Station",
+    source: "http://artstation.com/sixty64_framez",
   },
 ];
 

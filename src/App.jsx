@@ -40,7 +40,6 @@ const App = () => {
 
   return (
     <LaunchWrapper>
-      !loading && (
       <>
         <Provider>
           <Router>

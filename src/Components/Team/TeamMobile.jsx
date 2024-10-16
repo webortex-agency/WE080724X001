@@ -39,13 +39,6 @@ const TeamMobile = () => {
         />
         <div className="my-5 text-center">
           <Typography
-            className="text-[15px] text-[#D0D0D0] font-poppins"
-            sx={{ letterSpacing: "3px", textTransform: "uppercase" }}
-          >
-            <span className="text-[#5956E8] mx-1">//</span>
-            05 . Our Team
-          </Typography>
-          <Typography
             variant="h4"
             className="text-2xl sm:text-3xl md:text-xl lg:text-4xl text-headColor px-5 md:px-0 text-center font-poppins font-normal mt-4"
           >

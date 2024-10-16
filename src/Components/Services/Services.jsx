@@ -135,10 +135,7 @@ const Services = () => {
               <Typography
                 className="text-[15px] text-[#D0D0D0] font-poppins"
                 sx={{ letterSpacing: "3px", textTransform: "uppercase" }}
-              >
-                <span className="text-[#FEC90C] mx-1"> // </span>
-                01 . Services
-              </Typography>
+              ></Typography>
               <Typography
                 variant="h4"
                 className="text-2xl sm:text-3xl md:text-xl lg:text-4xl text-headColor px-5 md:px-0 text-center md:text-left w-auto md:w-[450px] lg:w-[620px] font-poppins font-normal mt-4"
@@ -147,7 +144,7 @@ const Services = () => {
               </Typography>
             </div>
           </div>
-          <ColoredButton
+          {/* <ColoredButton
             className="text-[16px] font-poppins font-normal py-4 px-6 md:ml-auto rounded-lg gap-1 mx-auto md:mx-0 "
             sx={{
               maxWidth: "255px",
@@ -162,7 +159,7 @@ const Services = () => {
               className="bg-iconBgColor text-iconColor border-none w-[14px] h-[14px] rounded-lg p-[1px] "
               id="buttonIcon"
             />
-          </ColoredButton>
+          </ColoredButton> */}
         </Box>
         <Container className="my-5 py-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-10 text-headColor justify-self-center">
           {/* Card 01 */}

@@ -93,13 +93,6 @@ const Testimonials = () => {
           />
           <div className="my-5 md:my-0">
             <Typography
-              className="text-[15px] text-[#D0D0D0] font-poppins"
-              sx={{ letterSpacing: "3px", textTransform: "uppercase" }}
-            >
-              <span className="text-[#FEC90C] mx-1">//</span>
-              04 . Testimonial
-            </Typography>
-            <Typography
               variant="h4"
               className="text-2xl sm:text-3xl md:text-xl lg:text-4xl text-headColor px-5 md:px-0 text-center md:text-left w-auto md:w-[450px] lg:w-[550px] font-poppins font-normal mt-4"
             >

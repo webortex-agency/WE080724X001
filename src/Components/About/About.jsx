@@ -116,14 +116,14 @@ const About = () => {
 
         <Container
           maxWidth="md"
-          className="flex flex-wrap justify-between mt-16 md:mt-24 text-center"
+          className="flex flex-wrap justify-center items-center mt-16 md:mt-24 text-center mx-auto"
         >
           <div className="w-1/2 md:w-1/4 p-2">
             <h2 className="text-xl md:text-3xl lg:text-4xl font-semibold text-white">
               20+
             </h2>
             <p className="text-sm md:text-base text-textColor mt-2">
-              Year of Experience
+              Years of Experience
             </p>
           </div>
           <div className="w-1/2 md:w-1/4 p-2">
@@ -131,7 +131,7 @@ const About = () => {
               1,000+
             </h2>
             <p className="text-sm md:text-base text-textColor mt-2">
-              Project Done
+              Projects Done
             </p>
           </div>
           <div className="w-1/2 md:w-1/4 p-2">
@@ -140,14 +140,6 @@ const About = () => {
             </h2>
             <p className="text-sm md:text-base text-textColor mt-2">
               Satisfied Clients
-            </p>
-          </div>
-          <div className="w-1/2 md:w-1/4 p-2">
-            <h2 className="text-xl md:text-3xl lg:text-4xl font-semibold text-white">
-              64
-            </h2>
-            <p className="text-sm md:text-base text-textColor mt-2">
-              Certified Awards
             </p>
           </div>
         </Container>

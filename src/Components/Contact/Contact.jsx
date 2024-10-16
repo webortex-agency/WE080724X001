@@ -436,7 +436,7 @@ const Contact = () => {
                       },
                     }}
                   >
-                    nextlevel@marketing.com
+                    contact@64framez.com
                   </Typography>
                 </Grid>
               </Grid>
@@ -529,7 +529,7 @@ const Contact = () => {
                       },
                     }}
                   >
-                    +91 8888884565
+                    +91 7975454350
                   </Typography>
                 </Grid>
               </Grid>
