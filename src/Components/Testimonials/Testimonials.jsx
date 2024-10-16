@@ -138,13 +138,12 @@ const Testimonials = () => {
                   <Star>★</Star>
                   <Star>★</Star>
                   <Star>★</Star>
-                  <Star>★</Star>
                 </Stars>
               </Box>
               <Typography className="font-poppins text-backgroundColor text-[11px] leading-[18px] font-normal text-left mt-5">
-                Lorem Ipsum has been the industry's standard from dummy text
-                ever since the unknown printer to galley of type and make a type
-                specimen book.
+                "Incredible Design and Cinematography We hired 64 Framez for a
+                complete project overhaul, including graphic design, 3D
+                modeling, and cinematography for our marketing campaign."
               </Typography>
             </InnerCard>
             <div
@@ -192,9 +191,9 @@ const Testimonials = () => {
                 </Stars>
               </Box>
               <Typography className="font-poppins text-backgroundColor text-[11px] leading-[18px] font-normal text-left mt-5">
-                Lorem Ipsum has been the industry's standard from dummy text
-                ever since the unknown printer to galley of type and make a type
-                specimen book.
+                "Working with 64 Framez was like a dream come true. They handled
+                everything from web design and UI/UX development to product
+                photography and 2D animation."
               </Typography>
             </InnerCard>
             <div
@@ -237,14 +236,12 @@ const Testimonials = () => {
                   <Star>★</Star>
                   <Star>★</Star>
                   <Star>★</Star>
-                  <Star>★</Star>
-                  <Star>★</Star>
                 </Stars>
               </Box>
               <Typography className="font-poppins text-backgroundColor text-[11px] leading-[18px] font-normal text-left mt-5">
-                Lorem Ipsum has been the industry's standard from dummy text
-                ever since the unknown printer to galley of type and make a type
-                specimen book.
+                "I had a great experience with 64 Framez for a multi-service
+                project. They delivered outstanding graphic designs, followed by
+                cinematic video shoots."
               </Typography>
             </InnerCard>
             <div
@@ -263,11 +260,9 @@ const Testimonials = () => {
                 />
                 <Box className="self-center pl-2">
                   <Typography className="text-xs text-backgroundColor font-poppins font-medium">
-                    Peeter pawl
+                    Nani
                   </Typography>
-                  <Typography className="text-[11px] text-backgroundColor font-poppins font-normal">
-                    Designer
-                  </Typography>
+                  <Typography className="text-[11px] text-backgroundColor font-poppins font-normal"></Typography>
                 </Box>
               </Box>
             </div>
@@ -287,14 +282,14 @@ const Testimonials = () => {
                   <Star>★</Star>
                   <Star>★</Star>
                   <Star>★</Star>
-                  <Star>★</Star>
+
                   <Star>★</Star>
                 </Stars>
               </Box>
               <Typography className="font-poppins text-backgroundColor text-[11px] leading-[18px] font-normal text-left mt-5">
-                Lorem Ipsum has been the industry's standard from dummy text
-                ever since the unknown printer to galley of type and make a type
-                specimen book.
+                "We needed a package of services including web design, logo
+                creation, and video editing for our startup. 64 Framez delivered
+                all this under one roof, making it easy to communicate.
               </Typography>
             </InnerCard>
             <div
@@ -313,10 +308,10 @@ const Testimonials = () => {
                 />
                 <Box className="self-center pl-2">
                   <Typography className="text-xs text-backgroundColor font-poppins font-medium">
-                    Peeter pawl
+                    Saleem
                   </Typography>
                   <Typography className="text-[11px] text-backgroundColor font-poppins font-normal">
-                    Designer
+                    Developer
                   </Typography>
                 </Box>
               </Box>
