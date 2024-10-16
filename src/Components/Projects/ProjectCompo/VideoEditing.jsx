@@ -10,6 +10,19 @@ import {
 } from "@mui/material";
 import { Play, X } from "lucide-react";
 
+import Project1 from "../../../assets/Projects/VideoEditing/Project1.png";
+import Project2 from "../../../assets/Projects/VideoEditing/Project2.png";
+import Project3 from "../../../assets/Projects/VideoEditing/Project3.png";
+import Project4 from "../../../assets/Projects/VideoEditing/Project4.png";
+import Project5 from "../../../assets/Projects/VideoEditing/Project5.png";
+import Project6 from "../../../assets/Projects/VideoEditing/Project6.png";
+import Project7 from "../../../assets/Projects/VideoEditing/Project7.png";
+import Project8 from "../../../assets/Projects/VideoEditing/Project8.png";
+import Project9 from "../../../assets/Projects/VideoEditing/Project9.png";
+import Project10 from "../../../assets/Projects/VideoEditing/Project10.png";
+import Project11 from "../../../assets/Projects/VideoEditing/Project11.png";
+import Project12 from "../../../assets/Projects/VideoEditing/Project12.png";
+
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -84,14 +97,14 @@ const VideoEditing = () => {
       id: 1,
       videoId:
         "https://drive.google.com/file/d/1engmCgcH_FDyTspDGZUwNk86hTwY4F06/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project1,
       btnText: "Project 1",
     },
     {
       id: 2,
       videoId:
         "https://drive.google.com/file/d/1RAws9TmO_1TbQpZcC7_mVy61cdGdJSX_/preview",
-      thumbnail: "preview",
+      thumbnail: Project2,
       btnText: "Project 2",
     },
 
@@ -99,70 +112,70 @@ const VideoEditing = () => {
       id: 3,
       videoId:
         "https://drive.google.com/file/d/1OrEWU-dMQrzTc9s3Y3Dre9Nq__G4Ngdj/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project3,
       btnText: "Project 3",
     },
     {
       id: 4,
       videoId:
         "https://drive.google.com/file/d/1-U9YYAnqeRuW-yi1c1Xpesw2p7wpFmE6/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project4,
       btnText: "Project 4",
     },
     {
       id: 5,
       videoId:
         "https://drive.google.com/file/d/1styiCMb3m9fY7bhQlgWcSbTC8a9SgqXD/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project5,
       btnText: "Project 5",
     },
     {
       id: 6,
       videoId:
         "https://drive.google.com/file/d/1eAYFeJ6lHEF9rpRS75RLtIJXH_xmo15z/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project6,
       btnText: "Project 6",
     },
     {
       id: 7,
       videoId:
         "https://drive.google.com/file/d/1AvcYPJUQM20SgHszAio10EwqZ1iXxqru/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project7,
       btnText: "Project 7",
     },
     {
       id: 8,
       videoId:
         "https://drive.google.com/file/d/1wuoHEQj61d0xomiv0m38Fr6OEeMB5WZj/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project8,
       btnText: "Project 8",
     },
     {
       id: 9,
       videoId:
         "https://drive.google.com/file/d/1OuWlWV5JzwQGn6jDS6TTmBtDPUKHf316/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project9,
       btnText: "Project 9",
     },
     {
       id: 10,
       videoId:
         "https://drive.google.com/file/d/1tOxGsz88Kwp62bNeeoi7dT4hfd_CqAn8/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project10,
       btnText: "Project 10",
     },
     {
       id: 11,
       videoId:
         "https://drive.google.com/file/d/1-bG2sQYReQOxY3pG78XdODIKHFT3u20z/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project11,
       btnText: "Project 11",
     },
     {
       id: 12,
       videoId:
         "https://drive.google.com/file/d/10qs0TDtM33w6LVXVGpyAYi7YqDu3WVwe/preview",
-      thumbnail: "/path/to/thumbnail1.jpg",
+      thumbnail: Project12,
       btnText: "Project 12",
     },
   ];

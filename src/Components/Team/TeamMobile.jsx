@@ -31,7 +31,7 @@ const cardVariants = {
 
 const TeamMobile = () => {
   return (
-    <div style={{ marginBottom: "150px" }}>
+    <div style={{ marginBottom: "150px" }} id="team">
       <Grid container className="flex flex-col items-center">
         <Handshake
           sx={{ fontSize: 35 }}

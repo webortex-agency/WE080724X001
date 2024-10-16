@@ -22,7 +22,7 @@ import TeamImg8 from "../../assets/TeamMembers/gnana.jpg";
 
 const Team = () => {
   return (
-    <Container className="pt-16 pb-20">
+    <Container className="pt-16 pb-20" id="team">
       <Grid container className="flex flex-col items-center">
         <Handshake
           sx={{ fontSize: 35 }}
