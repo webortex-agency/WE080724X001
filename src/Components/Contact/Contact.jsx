@@ -100,13 +100,7 @@ const Contact = () => {
             <HandshakeIcon className="bg-iconBgColor text-iconColor h-[70px] w-[70px] p-[14px] rounded-full" />
           </div>
           <br />
-          <Typography
-            className="text-[15px] text-[#DEDEDE] font-poppins"
-            sx={{ letterSpacing: "3px", textTransform: "uppercase" }}
-          >
-            <span className="text-[#FEC90C] mx-1">&#47;&#47;</span>
-            01 . Contact us
-          </Typography>
+
           <Typography
             sx={{
               textAlign: "center",
