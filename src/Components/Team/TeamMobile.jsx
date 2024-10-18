@@ -198,7 +198,7 @@ const TeamMobile = () => {
               alt="team-mem-3"
               className="rounded-t-lg"
               style={{
-                height: "270px",
+                height: "220px",
                 width: "100%",
                 objectFit: "cover",
               }}
@@ -263,7 +263,7 @@ const TeamMobile = () => {
               alt="team-mem-4"
               className="rounded-t-lg"
               style={{
-                height: "264px",
+                height: "220px",
                 width: "100%",
                 objectFit: "cover",
               }}
@@ -458,7 +458,7 @@ const TeamMobile = () => {
               alt="team-mem-7"
               className="rounded-t-lg"
               style={{
-                height: "260px",
+                height: "220px",
                 width: "100%",
                 objectFit: "cover",
               }}

@@ -165,7 +165,7 @@ const Testimonials = () => {
                     John Carter
                   </Typography>
                   <Typography className="text-[11px] text-backgroundColor font-poppins font-normal">
-                    Marketing Lead at Google
+                    Marketing Lead
                   </Typography>
                 </Box>
               </Box>

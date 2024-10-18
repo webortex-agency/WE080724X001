@@ -142,7 +142,7 @@ const Team = () => {
             alt="Team Member 01"
             className="rounded-t-lg"
             style={{
-              height: "235px",
+              height: "220px",
               width: "100%",
               objectFit: "cover",
             }}
@@ -190,7 +190,7 @@ const Team = () => {
             alt="Team Member 01"
             className="rounded-t-lg"
             style={{
-              height: "235px",
+              height: "220px",
               width: "100%",
               objectFit: "cover",
             }}
